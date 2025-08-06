@@ -1,0 +1,1385 @@
+/* 游戏UI样式 */
+
+/* 基础布局 */
+.screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+}
+
+.overlay {
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 游戏主界面 */
+.game-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.character-sprite {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+    max-height: 80%;
+    max-width: 40%;
+    object-fit: contain;
+    z-index: 2;
+}
+
+/* 对话框样式 */
+.dialogue-container {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    right: 30px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 25px 30px;
+    z-index: 10;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+    animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dialogue-header {
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.speaker-name {
+    color: #64b5f6;
+    font-weight: 600;
+    font-size: 1.3rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(45deg, #64b5f6, #90caf9);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.dialogue-text {
+    color: #f5f5f5;
+    font-size: 1.15rem;
+    line-height: 1.7;
+    margin: 0;
+    min-height: 70px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    letter-spacing: 0.3px;
+}
+
+/* 选择框样式 */
+.choice-container {
+    position: absolute;
+    bottom: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    z-index: 15;
+    animation: fadeIn 0.5s ease;
+}
+
+.choice-button {
+    padding: 18px 35px;
+    margin: 20px 0;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 30px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    min-width: 350px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.choice-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.15), transparent);
+    transition: left 0.6s;
+}
+
+.choice-button:hover::before {
+    left: 100%;
+}
+
+.choice-button:hover {
+    background: rgba(33, 150, 243, 0.3);
+    border-color: rgba(33, 150, 243, 0.6);
+    color: white;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow: 0 8px 30px rgba(33, 150, 243, 0.4);
+}
+
+.choice-button:active {
+    transform: translateY(-1px) scale(1.01);
+}
+
+/* 游戏控制UI */
+.game-controls {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    display: flex;
+    gap: 12px;
+    z-index: 20;
+}
+
+
+
+.control-button {
+    padding: 10px 18px;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+    color: white;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.control-button:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.control-button:active {
+    transform: translateY(0);
+}
+
+/* 进度指示器 */
+.progress-indicator {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    z-index: 20;
+}
+
+.route-progress {
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(15px);
+    padding: 15px 20px;
+    border-radius: 15px;
+    color: white;
+    min-width: 250px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+
+.route-progress span {
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    color: #e3f2fd;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 8px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    margin-top: 8px;
+    overflow: hidden;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.progress-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #42a5f5, #64b5f6, #90caf9);
+    border-radius: 4px;
+    transition: width 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    width: 0%;
+    box-shadow: 0 0 10px rgba(66, 165, 245, 0.5);
+    position: relative;
+}
+
+.progress-fill::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: progressShimmer 2s ease-in-out infinite;
+}
+
+@keyframes progressShimmer {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* 路线选择界面 */
+#route-selection {
+    background: linear-gradient(135deg, 
+        rgba(30, 60, 114, 0.9) 0%, 
+        rgba(42, 82, 152, 0.9) 25%,
+        rgba(74, 20, 140, 0.9) 50%,
+        rgba(30, 60, 114, 0.9) 75%,
+        rgba(42, 82, 152, 0.9) 100%);
+    background-size: 400% 400%;
+    animation: gradientShift 12s ease infinite;
+    backdrop-filter: blur(20px);
+}
+
+.route-selection-content {
+    text-align: center;
+    color: white;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 40px;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.route-selection-content h2 {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 50px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+    background: linear-gradient(45deg, #fff, #e3f2fd, #bbdefb);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: textShimmer 3s ease-in-out infinite;
+}
+
+@keyframes textShimmer {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.route-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.route-option {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+}
+
+.route-option::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+.route-option:hover::before {
+    left: 100%;
+}
+
+.route-option:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(33, 150, 243, 0.6);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(33, 150, 243, 0.3);
+}
+
+.route-option h3 {
+    color: #64b5f6;
+    margin-bottom: 15px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.route-option p {
+    color: #e1f5fe;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+/* 保存/读取菜单 */
+.save-menu-content {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.save-menu-content h2 {
+    color: #64b5f6;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 30px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.save-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.save-slot {
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    color: white;
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.save-slot:hover {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: rgba(33, 150, 243, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+.save-slot h4 {
+    color: #90caf9;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.save-slot p {
+    font-size: 0.9rem;
+    color: #e1f5fe;
+    margin: 6px 0;
+    line-height: 1.4;
+}
+
+.save-slot button {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: rgba(33, 150, 243, 0.3);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(33, 150, 243, 0.5);
+    border-radius: 10px;
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 10px rgba(33, 150, 243, 0.2);
+}
+
+.save-slot button:hover:not(:disabled) {
+    background: rgba(33, 150, 243, 0.5);
+    border-color: rgba(33, 150, 243, 0.7);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.save-slot button:disabled {
+    background: rgba(100, 100, 100, 0.3);
+    border-color: rgba(100, 100, 100, 0.5);
+    cursor: not-allowed;
+    opacity: 0.6;
+}
+
+/* 设置菜单 */
+.settings-content {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 550px;
+    width: 90%;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.settings-content h2 {
+    color: #64b5f6;
+    font-size: 2rem;
+    font-weight: 300;
+    margin-bottom: 35px;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.setting-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+    padding: 15px 20px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
+}
+
+.setting-group:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.2);
+}
+
+.setting-group label {
+    font-weight: 500;
+    min-width: 140px;
+    color: #e3f2fd;
+    font-size: 1rem;
+}
+
+.setting-group input[type="range"] {
+    flex: 1;
+    margin-left: 25px;
+    height: 6px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+    outline: none;
+    -webkit-appearance: none;
+}
+
+.setting-group input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    background: #64b5f6;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(100, 181, 246, 0.4);
+}
+
+.setting-group input[type="range"]::-moz-range-thumb {
+    width: 18px;
+    height: 18px;
+    background: #64b5f6;
+    border-radius: 50%;
+    cursor: pointer;
+    border: none;
+    box-shadow: 0 2px 6px rgba(100, 181, 246, 0.4);
+}
+
+.setting-group input[type="checkbox"] {
+    margin-left: 25px;
+    width: 20px;
+    height: 20px;
+    accent-color: #64b5f6;
+    cursor: pointer;
+}
+
+/* 菜单按钮通用样式 */
+.menu-button {
+    padding: 18px 45px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 50px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 8px;
+    min-width: 220px;
+    position: relative;
+    overflow: hidden;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.menu-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+.menu-button:hover::before {
+    left: 100%;
+}
+
+.menu-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.4);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+}
+
+.menu-button:active {
+    transform: translateY(0px);
+}
+
+.menu-button.primary {
+    background: rgba(33, 150, 243, 0.3);
+    border-color: rgba(33, 150, 243, 0.5);
+    box-shadow: 0 4px 20px rgba(33, 150, 243, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+.menu-button.primary:hover {
+    background: rgba(33, 150, 243, 0.4);
+    border-color: rgba(33, 150, 243, 0.6);
+    box-shadow: 0 8px 30px rgba(33, 150, 243, 0.3);
+    backdrop-filter: blur(20px);
+}
+
+/* 封面界面 */
+.cover-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.cover-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+.click-hint {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    animation: pulse 2s infinite;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+}
+
+/* 开始菜单界面 */
+.start-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+.start-content {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 100vh;
+    text-align: center;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    padding-bottom: 60px;
+}
+
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    padding: 20px;
+    /* 移除背景容器，让背景视频更突出 */
+}
+
+.back-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    padding: 10px 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    border: none;
+    font-family: inherit;
+}
+
+.back-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* 渐变背景备选方案 */
+.gradient-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+    background-size: 400% 400%;
+    animation: gradientShift 8s ease infinite;
+    z-index: 0;
+    display: none;
+}
+
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* 顶部控制按钮 */
+.top-controls {
+    position: fixed;
+    top: 25px;
+    left: 25px;
+    z-index: 1000;
+}
+
+.music-control {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    z-index: 1000;
+}
+
+.top-control-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 50px;
+    color: white;
+    font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 
+        0 8px 32px rgba(0, 0, 0, 0.12),
+        0 2px 8px rgba(0, 0, 0, 0.08),
+        inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+    min-width: 90px;
+}
+
+.top-control-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s ease;
+}
+
+.top-control-button:hover::before {
+    left: 100%;
+}
+
+.top-control-button:hover {
+    background: rgba(255, 255, 255, 0.08);
+    border-color: rgba(255, 255, 255, 0.25);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 
+        0 12px 40px rgba(0, 0, 0, 0.15),
+        0 4px 12px rgba(0, 0, 0, 0.1),
+        inset 0 1px 0 rgba(255, 255, 255, 0.15);
+}
+
+.top-control-button:active {
+    transform: translateY(0) scale(0.98);
+    transition: all 0.1s ease;
+}
+
+.btn-icon {
+    font-size: 16px;
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+}
+
+.btn-text {
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    white-space: nowrap;
+}
+
+/* 返回按钮特殊样式 */
+.back-btn:hover {
+    background: rgba(74, 144, 226, 0.15);
+    border-color: rgba(74, 144, 226, 0.3);
+    color: #64b5f6;
+}
+
+.back-btn .btn-icon {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* 声音按钮特殊样式 */
+.sound-btn:hover {
+    background: rgba(76, 175, 80, 0.15);
+    border-color: rgba(76, 175, 80, 0.3);
+    color: #81c784;
+}
+
+.sound-btn.muted {
+    background: rgba(244, 67, 54, 0.2);
+    border-color: rgba(244, 67, 54, 0.3);
+    color: #ef5350;
+}
+
+.sound-btn.muted:hover {
+    background: rgba(244, 67, 54, 0.25);
+    border-color: rgba(244, 67, 54, 0.4);
+}
+
+.sound-btn.muted .btn-icon {
+    animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-2px); }
+    75% { transform: translateX(2px); }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .dialogue-container {
+        left: 15px;
+        right: 15px;
+        bottom: 15px;
+        padding: 20px;
+    }
+    
+    .choice-button {
+        min-width: 280px;
+        padding: 15px 25px;
+        font-size: 1rem;
+    }
+    
+    .game-controls {
+        top: 15px;
+        right: 15px;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+    
+    .control-button {
+        padding: 8px 14px;
+        font-size: 0.85rem;
+    }
+    
+    .progress-indicator {
+        top: 15px;
+        left: 15px;
+    }
+    
+    .route-progress {
+        min-width: 200px;
+        padding: 12px 16px;
+    }
+    
+    .route-list {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .route-selection-content {
+        padding: 40px 20px;
+    }
+    
+    .route-selection-content h2 {
+        font-size: 2rem;
+        margin-bottom: 30px;
+    }
+    
+    .save-slots {
+        grid-template-columns: 1fr;
+    }
+    
+    .save-menu-content,
+    .settings-content,
+    .game-menu-content {
+        padding: 30px 25px;
+        margin: 20px;
+    }
+    
+    .save-menu-content h2,
+    .settings-content h2,
+    .game-menu-content h2 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+    
+    .video-controls {
+        bottom: 25px;
+        right: 25px;
+    }
+    
+    #skip-video {
+        padding: 12px 24px;
+        font-size: 1rem;
+    }
+    
+    /* 开始菜单响应式 */
+    .start-content {
+        padding-bottom: 40px;
+    }
+    
+    .menu-buttons {
+        padding: 15px;
+        gap: 20px;
+    }
+    
+    .menu-button {
+        min-width: 200px;
+        padding: 16px 35px;
+        font-size: 1rem;
+    }
+    
+    .top-controls {
+        top: 15px;
+        left: 15px;
+    }
+    
+    .music-control {
+        top: 15px;
+        right: 15px;
+    }
+    
+    .top-control-button {
+        padding: 10px 16px;
+        font-size: 13px;
+        min-width: 80px;
+        gap: 6px;
+    }
+    
+    .btn-icon {
+        font-size: 14px;
+        width: 18px;
+        height: 18px;
+    }
+    
+    .back-btn .btn-icon {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dialogue-container {
+        left: 10px;
+        right: 10px;
+        bottom: 10px;
+        padding: 15px 18px;
+    }
+    
+    .dialogue-text {
+        font-size: 1rem;
+        min-height: 50px;
+    }
+    
+    .choice-button {
+        min-width: 250px;
+        padding: 14px 20px;
+        font-size: 0.95rem;
+    }
+    
+    .game-controls {
+        top: 10px;
+        right: 10px;
+        gap: 6px;
+    }
+    
+    .control-button {
+        padding: 6px 10px;
+        font-size: 0.8rem;
+    }
+    
+    .progress-indicator {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .route-progress {
+        min-width: 160px;
+        padding: 10px 12px;
+    }
+    
+    .route-selection-content {
+        padding: 30px 15px;
+    }
+    
+    .route-selection-content h2 {
+        font-size: 1.6rem;
+        margin-bottom: 25px;
+    }
+    
+    .route-option {
+        padding: 25px 20px;
+    }
+    
+    .save-menu-content,
+    .settings-content,
+    .game-menu-content {
+        padding: 25px 20px;
+        margin: 15px;
+    }
+    
+    .save-menu-content h2,
+    .settings-content h2,
+    .game-menu-content h2 {
+        font-size: 1.4rem;
+        margin-bottom: 20px;
+    }
+    
+    .setting-group {
+        padding: 12px 15px;
+        margin-bottom: 20px;
+    }
+    
+    .setting-group label {
+        min-width: 100px;
+        font-size: 0.9rem;
+    }
+    
+    .video-controls {
+        bottom: 20px;
+        right: 20px;
+    }
+    
+    #skip-video {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+    
+    .start-content {
+        padding-bottom: 30px;
+    }
+    
+    .menu-buttons {
+        padding: 10px;
+        gap: 18px;
+    }
+    
+    .menu-button {
+        min-width: 180px;
+        padding: 14px 30px;
+        font-size: 1rem;
+    }
+}
+
+/* 页面过渡效果系统 */
+.transition-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    pointer-events: none;
+    opacity: 0;
+}
+
+/* 1. 经典淡入淡出过渡 */
+.fade-transition {
+    background: linear-gradient(135deg, #000000 0%, #1a1a2e 50%, #16213e 100%);
+    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.fade-transition.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+/* 2. 电影级切镜过渡 */
+.cinematic-transition {
+    background: radial-gradient(circle at center, 
+        rgba(0, 0, 0, 0.9) 0%, 
+        rgba(0, 0, 0, 0.95) 50%, 
+        rgba(0, 0, 0, 1) 100%);
+    backdrop-filter: blur(0px);
+    transition: all 1.2s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.cinematic-transition.active {
+    opacity: 1;
+    backdrop-filter: blur(20px);
+    pointer-events: all;
+}
+
+/* 3. 波纹扩散过渡 */
+.ripple-transition {
+    background: radial-gradient(circle at 50% 50%, 
+        transparent 0%, 
+        transparent 30%, 
+        rgba(0, 0, 0, 0.8) 31%, 
+        rgba(0, 0, 0, 0.95) 100%);
+    transform: scale(0);
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.ripple-transition.active {
+    opacity: 1;
+    transform: scale(3);
+    pointer-events: all;
+}
+
+/* 4. 粒子消散效果 */
+.particle-transition {
+    background: 
+        radial-gradient(2px 2px at 20px 30px, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 40px 70px, rgba(255, 255, 255, 0.2), transparent),
+        radial-gradient(1px 1px at 90px 40px, rgba(255, 255, 255, 0.4), transparent),
+        radial-gradient(1px 1px at 130px 80px, rgba(255, 255, 255, 0.3), transparent),
+        radial-gradient(2px 2px at 160px 30px, rgba(255, 255, 255, 0.2), transparent),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(26, 26, 46, 0.95) 100%);
+    background-size: 200px 100px, 300px 150px, 250px 120px, 180px 90px, 220px 110px, 100% 100%;
+    animation: particleFloat 3s ease-in-out infinite;
+    transition: opacity 1s ease;
+}
+
+.particle-transition.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+@keyframes particleFloat {
+    0%, 100% { 
+        background-position: 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0% 0%; 
+    }
+    50% { 
+        background-position: 100% 100%, -100% -100%, 50% -50%, -50% 50%, 100% -100%, 0% 0%; 
+    }
+}
+
+/* 5. 光束扫描过渡 */
+.beam-transition {
+    background: linear-gradient(90deg, 
+        transparent 0%, 
+        transparent 45%, 
+        rgba(100, 181, 246, 0.3) 50%, 
+        transparent 55%, 
+        transparent 100%),
+        linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(26, 26, 46, 0.95) 100%);
+    background-size: 200% 100%, 100% 100%;
+    background-position: -200% 0%, 0% 0%;
+    transition: opacity 0.5s ease, background-position 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.beam-transition.active {
+    opacity: 1;
+    background-position: 200% 0%, 0% 0%;
+    pointer-events: all;
+}
+
+/* 6. 故障效果过渡 */
+.glitch-transition {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 0%, rgba(26, 26, 46, 0.95) 100%);
+    transition: opacity 0.6s ease;
+}
+
+.glitch-transition.active {
+    opacity: 1;
+    pointer-events: all;
+    animation: glitchEffect 0.8s ease-in-out;
+}
+
+@keyframes glitchEffect {
+    0%, 100% { 
+        transform: translate(0); 
+        filter: hue-rotate(0deg);
+    }
+    10% { 
+        transform: translate(-2px, 2px); 
+        filter: hue-rotate(90deg);
+    }
+    20% { 
+        transform: translate(-2px, -2px); 
+        filter: hue-rotate(180deg);
+    }
+    30% { 
+        transform: translate(2px, 2px); 
+        filter: hue-rotate(270deg);
+    }
+    40% { 
+        transform: translate(2px, -2px); 
+        filter: hue-rotate(360deg);
+    }
+    50% { 
+        transform: translate(-2px, 2px); 
+        filter: hue-rotate(90deg);
+    }
+    60% { 
+        transform: translate(-2px, -2px); 
+        filter: hue-rotate(180deg);
+    }
+    70% { 
+        transform: translate(2px, 2px); 
+        filter: hue-rotate(270deg);
+    }
+    80% { 
+        transform: translate(2px, -2px); 
+        filter: hue-rotate(360deg);
+    }
+    90% { 
+        transform: translate(-2px, 2px); 
+        filter: hue-rotate(90deg);
+    }
+}
+
+/* 过渡加载指示器 */
+.transition-loader {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    font-weight: 300;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.transition-loader::after {
+    content: '';
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    border-top: 2px solid #64b5f6;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideUp {
+    from { 
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to { 
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.dialogue-container {
+    animation: slideUp 0.3s ease;
+}
+
+.choice-container {
+    animation: fadeIn 0.5s ease;
+}
+
+.route-option {
+    animation: slideUp 0.3s ease;
+}
+
+.save-slot {
+    animation: fadeIn 0.3s ease;
+}
+
+/* 视频播放器样式 */
+#video-player {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #000000 0%, #1a1a1a 100%);
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#video-player video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+}
+
+.video-controls {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    z-index: 60;
+}
+
+#skip-video {
+    padding: 15px 30px;
+    background: rgba(0, 0, 0, 0.75);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 30px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+#skip-video::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: left 0.6s;
+}
+
+#skip-video:hover::before {
+    left: 100%;
+}
+
+#skip-video:hover {
+    background: rgba(33, 150, 243, 0.3);
+    border-color: rgba(33, 150, 243, 0.6);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 8px 30px rgba(33, 150, 243, 0.4);
+}
+
+#skip-video:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+/* 游戏内菜单 */
+.game-menu-content {
+    background: rgba(0, 0, 0, 0.85);
+    backdrop-filter: blur(25px);
+    border-radius: 20px;
+    padding: 40px;
+    max-width: 450px;
+    width: 90%;
+    text-align: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+    animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.game-menu-content h2 {
+    margin-bottom: 35px;
+    color: #64b5f6;
+    font-size: 2rem;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.game-menu-content .menu-buttons {
+    gap: 15px;
+    padding: 0;
+}
+
+/* 视频播放器响应式设计 */
+@media (max-width: 768px) {
+    .skip-video-btn {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .skip-video-btn {
+        bottom: 15px;
+        right: 15px;
+        padding: 8px 16px;
+        font-size: 0.85rem;
+    }
+}

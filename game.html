@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>校园奇遇记 - 互动视觉小说</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/game-ui.css">
+</head>
+<body>
+    <!-- 封面界面 -->
+    <div id="cover-screen" class="screen">
+        <!-- 封面视频 -->
+        <video id="cover-video" class="cover-video" loop playsinline>
+            <source src="start.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+        </video>
+        
+        <div class="cover-content">
+            <div class="click-hint">点击屏幕开始</div>
+        </div>
+    </div>
+
+    <!-- 开始菜单 -->
+    <div id="start-menu" class="screen hidden">
+        <!-- 渐变背景（备选方案） -->
+        <div id="gradient-bg" class="gradient-background"></div>
+        
+        <!-- 开始菜单视频 -->
+        <video id="start-video" class="start-video" loop playsinline>
+            <source src="opening.mp4" type="video/mp4">
+            您的浏览器不支持视频播放。
+        </video>
+        
+        <!-- 返回按钮 -->
+        <button id="back-to-cover" class="back-button">← 返回</button>
+        
+        <!-- 开始菜单内容 -->
+        <div class="start-content">
+            <div class="menu-buttons">
+                <button id="start-game" class="menu-button primary">开始游戏</button>
+                <button id="about" class="menu-button">关于</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主游戏界面 -->
+    <div id="game-screen" class="screen" style="display: none;">
+        <!-- 背景 -->
+        <div id="background" class="game-background"></div>
+        
+        <!-- 角色立绘 -->
+        <img id="character" class="character-sprite" style="display: none;">
+        
+        <!-- 对话框 -->
+        <div id="dialogue-box" class="dialogue-container">
+            <div class="dialogue-header">
+                <span id="speaker-name" class="speaker-name"></span>
+            </div>
+            <div class="dialogue-content">
+                <p id="dialogue-text" class="dialogue-text"></p>
+            </div>
+        </div>
+
+        <!-- 选择框 -->
+        <div id="choice-container" class="choice-container" style="display: none;">
+            <!-- 选择按钮将动态生成 -->
+        </div>
+
+        <!-- 顶部控制按钮 -->
+        <div class="top-controls">
+            <button id="back-to-menu" class="top-control-button back-btn">
+                <span class="btn-icon">←</span>
+                <span class="btn-text">返回</span>
+            </button>
+        </div>
+
+        <!-- 进度指示器 -->
+        <div class="progress-indicator" style="display: none;">
+            <div class="route-progress">
+                <span id="current-route">当前路线: 主线</span>
+                <div class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 视频播放器 -->
+    <div id="video-player" class="screen" style="display: none;">
+        <video id="game-video" controls autoplay>
+            <source src="" type="video/mp4">
+            <source src="" type="video/webm">
+            您的浏览器不支持视频播放。
+        </video>
+        <div class="video-controls">
+            <button id="skip-video" class="control-button">跳过</button>
+        </div>
+    </div>
+
+    <!-- 路线选择界面 -->
+    <div id="route-selection" class="screen" style="display: none;">
+        <div class="route-selection-content">
+            <h2>选择你想要的故事路线</h2>
+            <div id="route-list" class="route-list">
+                <!-- 路线选项将动态生成 -->
+            </div>
+        </div>
+    </div>
+
+    <!-- 保存/读取菜单 -->
+    <div id="save-menu" class="screen overlay" style="display: none;">
+        <div class="save-menu-content">
+            <h2 id="save-menu-title">保存游戏</h2>
+            <div id="save-slots" class="save-slots">
+                <!-- 存档槽将动态生成 -->
+            </div>
+            <button id="close-save-menu" class="menu-button">关闭</button>
+        </div>
+    </div>
+
+    <!-- 设置菜单 -->
+    <div id="settings-menu" class="screen overlay" style="display: none;">
+        <div class="settings-content">
+            <h2>游戏设置</h2>
+            <div class="setting-group">
+                <label>文字速度:</label>
+                <input type="range" id="text-speed" min="10" max="100" value="50">
+            </div>
+            <div class="setting-group">
+                <label>音乐音量:</label>
+                <input type="range" id="music-volume" min="0" max="100" value="70">
+            </div>
+            <div class="setting-group">
+                <label>音效音量:</label>
+                <input type="range" id="sfx-volume" min="0" max="100" value="80">
+            </div>
+            <div class="setting-group">
+                <label>全屏模式:</label>
+                <input type="checkbox" id="fullscreen-mode">
+            </div>
+            <button id="close-settings" class="menu-button">关闭</button>
+        </div>
+    </div>
+
+    <!-- 游戏内菜单 -->
+    <div id="game-menu" class="screen overlay" style="display: none;">
+        <div class="game-menu-content">
+            <h2>游戏菜单</h2>
+            <div class="menu-buttons">
+                <button id="resume-game" class="menu-button">继续游戏</button>
+                <button id="save-game-menu" class="menu-button">保存游戏</button>
+                <button id="load-game-menu" class="menu-button">读取游戏</button>
+                <button id="game-settings" class="menu-button">设置</button>
+                <button id="return-title" class="menu-button">返回标题</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 页面过渡效果系统 -->
+    <div id="transition-overlay" class="transition-overlay">
+        <div class="transition-loader">
+            <span id="transition-text">加载中...</span>
+        </div>
+    </div>
+
+    <!-- 音乐控制 -->
+    <div class="music-control">
+        <button id="music-toggle" class="top-control-button sound-btn">
+            <span class="btn-icon" id="music-icon">🔊</span>
+            <span class="btn-text">声音</span>
+        </button>
+    </div>
+
+    <!-- 加载脚本 -->
+    <script src="js/TransitionManager.js"></script>
+    <script type="module" src="js/GameController.js"></script>
+    <script>
+        // 初始化游戏
+        document.addEventListener('DOMContentLoaded', () => {
+            console.log('游戏初始化完成');
+        });
+    </script>
+</body>
+</html>
