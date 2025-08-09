@@ -156,7 +156,7 @@ hudongdemo2/
 ### 获取项目
 ```bash
 # 克隆仓库
-git clone https://github.com/your-username/hudongdemo2.git
+git clone https://github.com/chenxing3060/hudongdemo2.git
 cd hudongdemo2
 ```
 
@@ -179,8 +179,8 @@ cd hudongdemo2
 
 ### 在线体验
 项目已部署到GitHub Pages，可直接访问：
-- 游戏地址：`https://your-username.github.io/hudongdemo2/game.html`
-- 项目首页：`https://your-username.github.io/hudongdemo2/`
+- 游戏地址：`https://chenxing3060.github.io/hudongdemo2/game.html`
+- 项目首页：`https://chenxing3060.github.io/hudongdemo2/`
 
 ## 🔧 开发状态
 
