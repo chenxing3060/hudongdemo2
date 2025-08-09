@@ -3,22 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>校园奇遇记 - 互动视觉小说</title>
+    <title>万象行者 - The Codex Walker</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="css/game-ui.css">
 </head>
 <body>
-    <!-- 封面界面 -->
-    <div id="cover-screen" class="screen">
-        <!-- 封面视频 -->
-        <video id="cover-video" class="cover-video" loop playsinline>
-            <source src="start.mp4" type="video/mp4">
-            您的浏览器不支持视频播放。
-        </video>
-        
-        <div class="cover-content">
-            <div class="click-hint">点击屏幕开始</div>
+    <!-- 初始加载界面 -->
+    <div id="initial-loading" class="screen">
+        <!-- 法典符文背景层 -->
+        <div class="codex-background">
+            <div class="rune-layer rune-layer-1"></div>
+            <div class="rune-layer rune-layer-2"></div>
+            <div class="rune-layer rune-layer-3"></div>
         </div>
+        
+        <!-- 认知圈境效果 -->
+        <div class="cognitive-sphere">
+            <div class="sphere-ring sphere-ring-1"></div>
+            <div class="sphere-ring sphere-ring-2"></div>
+            <div class="sphere-ring sphere-ring-3"></div>
+        </div>
+        
+        <!-- 故事碎片流动效果 -->
+        <div class="story-fragments">
+            <div class="fragment fragment-1">📚</div>
+            <div class="fragment fragment-2">⚡</div>
+            <div class="fragment fragment-3">🌀</div>
+            <div class="fragment fragment-4">✨</div>
+            <div class="fragment fragment-5">🔮</div>
+            <div class="fragment fragment-6">📖</div>
+        </div>
+        
+        <div class="loading-content">
+            <!-- 法典标识 -->
+            <div class="codex-emblem">
+                <div class="emblem-outer-ring"></div>
+                <div class="emblem-inner-ring"></div>
+                <div class="emblem-core">CDX</div>
+            </div>
+            
+            <div class="loading-logo">
+                <h1 class="main-title">万象行者</h1>
+                <p class="sub-title">The Codex Walker</p>
+                <p class="world-desc">「现实之下，故事为王」</p>
+            </div>
+            
+            <!-- 认知同步进度 -->
+            <div class="loading-progress">
+                <div class="sync-status">
+                    <span class="sync-label">认知同步进度</span>
+                    <span class="sync-percentage">0%</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill"></div>
+                        <div class="progress-glow"></div>
+                    </div>
+                    <div class="progress-runes">
+                        <span class="rune">◊</span>
+                        <span class="rune">◈</span>
+                        <span class="rune">◇</span>
+                        <span class="rune">◆</span>
+                    </div>
+                </div>
+                <p class="loading-text">正在初始化法典连接...</p>
+            </div>
+            
+            <!-- 系统状态指示 -->
+            <div class="system-status">
+                <div class="status-item">
+                    <span class="status-dot"></span>
+                    <span class="status-text">现实稳定度检测中...</span>
+                </div>
+            </div>
+
+            <!-- 新的进入提示，将在这里动态显示 -->
+            <div id="enter-prompt" class="hidden">
+                <p class="enter-prompt-text"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 关于页面 -->
+    <div id="about-screen" class="screen hidden">
+        <!-- 内容将由 UIManager 动态加载 -->
     </div>
 
     <!-- 开始菜单 -->
@@ -27,13 +95,19 @@
         <div id="gradient-bg" class="gradient-background"></div>
         
         <!-- 开始菜单视频 -->
-        <video id="start-video" class="start-video" loop playsinline>
-            <source src="opening.mp4" type="video/mp4">
+        <video id="start-video" class="start-video" loop playsinline muted>
+            <source src="game/videos/cutscenes/opening.mp4" type="video/mp4">
             您的浏览器不支持视频播放。
         </video>
         
-        <!-- 返回按钮 -->
-        <button id="back-to-cover" class="back-button">← 返回</button>
+        <!-- 音乐控制按钮 -->
+        <div class="music-control">
+            <button id="music-toggle-menu" class="music-btn">
+                <span class="music-icon">🎵</span>
+            </button>
+        </div>
+        
+
         
         <!-- 开始菜单内容 -->
         <div class="start-content">
@@ -49,9 +123,6 @@
         <!-- 背景 -->
         <div id="background" class="game-background"></div>
         
-        <!-- 角色立绘 -->
-        <img id="character" class="character-sprite" style="display: none;">
-        
         <!-- 对话框 -->
         <div id="dialogue-box" class="dialogue-container">
             <div class="dialogue-header">
@@ -59,6 +130,22 @@
             </div>
             <div class="dialogue-content">
                 <p id="dialogue-text" class="dialogue-text"></p>
+                <div id="dialogue-indicator" class="dialogue-indicator" style="display: none;">
+                    <span class="indicator-text">▶</span>
+                </div>
+                <!-- 手动播放状态提示 -->
+                <div id="manual-play-indicator" class="manual-play-indicator hidden">
+                    <span>手动播放</span>
+                </div>
+            </div>
+            <!-- 自动播放弹出菜单 -->
+            <div id="autoplay-menu" class="autoplay-menu hidden">
+                <button id="autoplay-on" class="autoplay-option">
+                    <span class="autoplay-icon">▶</span> 开启自动播放
+                </button>
+                <button id="autoplay-off" class="autoplay-option">
+                    <span class="autoplay-icon">⏹</span> 关闭自动播放
+                </button>
             </div>
         </div>
 
@@ -72,6 +159,13 @@
             <button id="back-to-menu" class="top-control-button back-btn">
                 <span class="btn-icon">←</span>
                 <span class="btn-text">返回</span>
+            </button>
+        </div>
+        
+        <!-- 音乐控制按钮（独立定位） -->
+        <div class="music-control">
+            <button id="music-toggle-game" class="music-btn">
+                <span class="music-icon">🎵</span>
             </button>
         </div>
 
@@ -108,6 +202,8 @@
         </div>
     </div>
 
+
+
     <!-- 保存/读取菜单 -->
     <div id="save-menu" class="screen overlay" style="display: none;">
         <div class="save-menu-content">
@@ -126,14 +222,6 @@
             <div class="setting-group">
                 <label>文字速度:</label>
                 <input type="range" id="text-speed" min="10" max="100" value="50">
-            </div>
-            <div class="setting-group">
-                <label>音乐音量:</label>
-                <input type="range" id="music-volume" min="0" max="100" value="70">
-            </div>
-            <div class="setting-group">
-                <label>音效音量:</label>
-                <input type="range" id="sfx-volume" min="0" max="100" value="80">
             </div>
             <div class="setting-group">
                 <label>全屏模式:</label>
@@ -164,17 +252,19 @@
         </div>
     </div>
 
-    <!-- 音乐控制 -->
-    <div class="music-control">
-        <button id="music-toggle" class="top-control-button sound-btn">
-            <span class="btn-icon" id="music-icon">🔊</span>
-            <span class="btn-text">声音</span>
-        </button>
-    </div>
+
+
+    <!-- 音频系统已移除 -->
 
     <!-- 加载脚本 -->
     <script src="js/TransitionManager.js"></script>
-    <script type="module" src="js/GameController.js"></script>
+    <script>
+      // 通过动态添加时间戳来加载主控制器，以强制绕过浏览器缓存
+      const gameControllerScript = document.createElement('script');
+      gameControllerScript.type = 'module';
+      gameControllerScript.src = `js/GameController.js?v=${new Date().getTime()}`;
+      document.body.appendChild(gameControllerScript);
+    </script>
     <script>
         // 初始化游戏
         document.addEventListener('DOMContentLoaded', () => {

@@ -1,0 +1,987 @@
+[
+    {
+        "id": "act2_transition_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "好了好了，现在不是聊天的时候！",
+        "next": "act2_transition_2"
+    },
+    {
+        "id": "act2_transition_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(突然变得严肃)",
+        "next": "act2_transition_3"
+    },
+    {
+        "id": "act2_transition_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "我感应到了强烈的\"模因污染\"正在扩散，必须立刻建立防护圈境！",
+        "next": "act2_transition_4"
+    },
+    {
+        "id": "act2_transition_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(然后又有点紧张)",
+        "next": "act2_transition_5"
+    },
+    {
+        "id": "act2_transition_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "不过……这是我第一次在有人观看的情况下施展法典召唤……",
+        "next": "act2_transition_6"
+    },
+    {
+        "id": "act2_transition_6",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(小声嘀咕)",
+        "next": "act2_transition_7"
+    },
+    {
+        "id": "act2_transition_7",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "希望不要出什么差错……",
+        "next": "codex_summoning_preparation_1"
+    },
+    {
+        "id": "codex_summoning_preparation_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(深吸一口气，摆出专业姿态)",
+        "next": "codex_summoning_preparation_2"
+    },
+    {
+        "id": "codex_summoning_preparation_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "现在，我将召唤\"万象法典\"。这是连接所有可能性的终极知识库。",
+        "next": "codex_summoning_preparation_3"
+    },
+    {
+        "id": "codex_summoning_preparation_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(突然想到什么，有点担心)",
+        "next": "codex_summoning_preparation_4"
+    },
+    {
+        "id": "codex_summoning_preparation_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "但是……你确定要看吗？一旦接触法典，你就再也回不到普通的生活了。",
+        "next": "codex_summoning_preparation_5"
+    },
+    {
+        "id": "codex_summoning_preparation_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(然后又小声补充)",
+        "next": "codex_summoning_preparation_6"
+    },
+    {
+        "id": "codex_summoning_preparation_6",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "而且……万一我搞砸了，你可不能笑我……",
+        "next": "male_encouragement_1"
+    },
+    {
+        "id": "male_encouragement_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "陈星",
+        "text": "我相信你。而且，我已经看到了这个世界的另一面，没有回头路了。",
+        "next": "heroine_determination_1"
+    },
+    {
+        "id": "heroine_determination_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(被鼓励后，眼神变得坚定)",
+        "next": "heroine_determination_2"
+    },
+    {
+        "id": "heroine_determination_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "好！那我就全力以赴了！",
+        "next": "heroine_determination_3"
+    },
+    {
+        "id": "heroine_determination_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(开始认真地准备仪式)",
+        "next": "heroine_determination_4"
+    },
+    {
+        "id": "heroine_determination_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "万象法典，听从我的召唤……",
+        "next": "heroine_determination_5"
+    },
+    {
+        "id": "heroine_determination_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(突然停下)",
+        "next": "heroine_determination_6"
+    },
+    {
+        "id": "heroine_determination_6",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "等等，我是不是应该先自我介绍一下？我叫魏娇娇，代号卡珊德拉，隶属于……",
+        "next": "heroine_determination_7"
+    },
+    {
+        "id": "heroine_determination_7",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(意识到自己又跑题了)",
+        "next": "heroine_determination_8"
+    },
+    {
+        "id": "heroine_determination_8",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "啊！不对！现在是召唤时间！",
+        "next": "codex_summoning_1"
+    },
+    {
+        "id": "codex_summoning_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(重新集中精神)",
+        "next": "codex_summoning_2"
+    },
+    {
+        "id": "codex_summoning_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "万象法典，显现于此！",
+        "next": "codex_summoning_3"
+    },
+    {
+        "id": "codex_summoning_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(符文开始在空中旋转)",
+        "next": "codex_summoning_4"
+    },
+    {
+        "id": "codex_summoning_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "连接认知圈境，建立现实锚点！",
+        "next": "codex_summoning_5"
+    },
+    {
+        "id": "codex_summoning_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(法典缓缓显现)",
+        "next": "codex_summoning_6"
+    },
+    {
+        "id": "codex_summoning_6",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "成功了！",
+        "next": "codex_summoning_7"
+    },
+    {
+        "id": "codex_summoning_7",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(兴奋地转向陈星)",
+        "next": "codex_summoning_8"
+    },
+    {
+        "id": "codex_summoning_8",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "你看到了吗？这就是万象法典！",
+        "next": "codex_summoning_9"
+    },
+    {
+        "id": "codex_summoning_9",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(然后又有点不好意思)",
+        "next": "codex_summoning_10"
+    },
+    {
+        "id": "codex_summoning_10",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "虽然比预想的小了一点……",
+        "next": "codex_explanation_1"
+    },
+    {
+        "id": "codex_explanation_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(指着法典)",
+        "next": "codex_explanation_2"
+    },
+    {
+        "id": "codex_explanation_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "这本法典记录了所有可能的故事线和现实分支。",
+        "next": "codex_explanation_3"
+    },
+    {
+        "id": "codex_explanation_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "每当有人创造新的故事，或者现实发生重大变化，法典都会自动更新。",
+        "next": "codex_explanation_4"
+    },
+    {
+        "id": "codex_explanation_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(突然想到什么)",
+        "next": "codex_explanation_5"
+    },
+    {
+        "id": "codex_explanation_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "对了！你想不想看看你自己的故事线？",
+        "next": "codex_explanation_6"
+    },
+    {
+        "id": "codex_explanation_6",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(兴奋地翻开法典)",
+        "next": "codex_explanation_7"
+    },
+    {
+        "id": "codex_explanation_7",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "让我找找……陈星……陈星……咦？怎么这么多页？",
+        "next": "cognitive_realm_expansion_1"
+    },
+    {
+        "id": "cognitive_realm_expansion_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "旁白",
+        "text": "随着魏娇娇的吟唱，空间开始扭曲。",
+        "next": "cognitive_realm_expansion_2"
+    },
+    {
+        "id": "cognitive_realm_expansion_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "旁白",
+        "text": "现实的边界变得模糊，无数的可能性在眼前展开。",
+        "next": "cognitive_realm_expansion_3"
+    },
+    {
+        "id": "cognitive_realm_expansion_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "旁白",
+        "text": "这就是\"认知圈境\"——万象行者能够感知和操控的超维度空间。",
+        "next": "cognitive_realm_expansion_4"
+    },
+    {
+        "id": "cognitive_realm_expansion_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "旁白",
+        "text": "在这个空间里，思想和现实的界限变得模糊，故事的力量得以显现。",
+        "next": "heroine_realm_guide_1"
+    },
+    {
+        "id": "heroine_realm_guide_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "欢迎来到认知圈境！",
+        "next": "heroine_realm_guide_2"
+    },
+    {
+        "id": "heroine_realm_guide_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(像导游一样介绍)",
+        "next": "heroine_realm_guide_3"
+    },
+    {
+        "id": "heroine_realm_guide_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "这里是万象行者的工作空间！左边是故事档案库，右边是现实修复工具箱……",
+        "next": "heroine_realm_guide_4"
+    },
+    {
+        "id": "heroine_realm_guide_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(突然意识到自己太兴奋了)",
+        "next": "heroine_realm_guide_5"
+    },
+    {
+        "id": "heroine_realm_guide_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "咳咳……我是说，这里是神圣的认知领域。",
+        "next": "heroine_realm_guide_6"
+    },
+    {
+        "id": "heroine_realm_guide_6",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(小声补充)",
+        "next": "heroine_realm_guide_7"
+    },
+    {
+        "id": "heroine_realm_guide_7",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "不过确实挺酷的对吧？",
+        "next": "ai_voice_1_1"
+    },
+    {
+        "id": "ai_voice_1_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "检测到新的万象行者。",
+        "next": "ai_voice_1_2"
+    },
+    {
+        "id": "ai_voice_1_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "正在进行身份验证……",
+        "next": "ai_voice_2_1"
+    },
+    {
+        "id": "ai_voice_2_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "验证完成。欢迎，陈星。",
+        "next": "ai_voice_2_2"
+    },
+    {
+        "id": "ai_voice_2_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "你的祖父陈墨轩是我们的老朋友。",
+        "next": "ai_voice_3_1"
+    },
+    {
+        "id": "ai_voice_3_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "卡珊德拉，你的表现很好。",
+        "next": "ai_voice_3_2"
+    },
+    {
+        "id": "ai_voice_3_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "虽然刚才的介绍有些……非正式。",
+        "next": "ai_voice_3_3"
+    },
+    {
+        "id": "ai_voice_3_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "现在，让我为你解释这个世界的真相……",
+        "next": "heroine_embarrassed_ai_1_1"
+    },
+    {
+        "id": "heroine_embarrassed_ai_1_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(脸红了)",
+        "next": "heroine_embarrassed_ai_1_2"
+    },
+    {
+        "id": "heroine_embarrassed_ai_1_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "亚里士多德！",
+        "next": "heroine_embarrassed_ai_1_3"
+    },
+    {
+        "id": "heroine_embarrassed_ai_1_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "你不要在新人面前说我的坏话！",
+        "next": "heroine_embarrassed_ai_2_1"
+    },
+    {
+        "id": "heroine_embarrassed_ai_2_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(转向陈星)",
+        "next": "heroine_embarrassed_ai_2_2"
+    },
+    {
+        "id": "heroine_embarrassed_ai_2_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "他就是这样，总是很严肃……",
+        "next": "heroine_embarrassed_ai_2_3"
+    },
+    {
+        "id": "heroine_embarrassed_ai_2_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "其实他人挺好的，就是有点古板……",
+        "next": "heroine_embarrassed_ai_3_1"
+    },
+    {
+        "id": "heroine_embarrassed_ai_3_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(AI发出轻笑声)",
+        "next": "heroine_embarrassed_ai_3_2"
+    },
+    {
+        "id": "heroine_embarrassed_ai_3_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "诶！你在笑什么？！",
+        "next": "heroine_embarrassed_ai_3_3"
+    },
+    {
+        "id": "heroine_embarrassed_ai_3_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(气鼓鼓地)",
+        "next": "heroine_embarrassed_ai_3_4"
+    },
+    {
+        "id": "heroine_embarrassed_ai_3_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "总之！陈星，不要听他的！",
+        "next": "heroine_embarrassed_ai_3_5"
+    },
+    {
+        "id": "heroine_embarrassed_ai_3_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "我很专业的！",
+        "next": "world_truth_1_1"
+    },
+    {
+        "id": "world_truth_1_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "让我来解释吧。",
+        "next": "world_truth_1_2"
+    },
+    {
+        "id": "world_truth_1_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "这个世界实际上是由无数个故事层叠构成的。",
+        "next": "world_truth_2_1"
+    },
+    {
+        "id": "world_truth_2_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "每个人的生活都是一个故事，",
+        "next": "world_truth_2_2"
+    },
+    {
+        "id": "world_truth_2_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "而这些故事相互影响，",
+        "next": "world_truth_2_3"
+    },
+    {
+        "id": "world_truth_2_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "形成了我们所认知的现实。",
+        "next": "world_truth_3_1"
+    },
+    {
+        "id": "world_truth_3_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "但是，有些恶意的存在——",
+        "next": "world_truth_3_2"
+    },
+    {
+        "id": "world_truth_3_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "我们称之为\"蚀影体\"——",
+        "next": "world_truth_3_3"
+    },
+    {
+        "id": "world_truth_3_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "正在试图破坏这些故事的完整性。",
+        "next": "world_truth_4_1"
+    },
+    {
+        "id": "world_truth_4_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "万象行者的使命，",
+        "next": "world_truth_4_2"
+    },
+    {
+        "id": "world_truth_4_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "就是保护这些故事，",
+        "next": "world_truth_4_3"
+    },
+    {
+        "id": "world_truth_4_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "维护现实的稳定。",
+        "next": "heroine_mission_explanation_1"
+    },
+    {
+        "id": "heroine_mission_explanation_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(认真地点头)",
+        "next": "heroine_mission_explanation_2"
+    },
+    {
+        "id": "heroine_mission_explanation_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "没错！我们就是故事的守护者！",
+        "next": "heroine_mission_explanation_3"
+    },
+    {
+        "id": "heroine_mission_explanation_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(然后又有点不好意思)",
+        "next": "heroine_mission_explanation_4"
+    },
+    {
+        "id": "heroine_mission_explanation_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "虽然我还是新手，经常会犯一些小错误……",
+        "next": "heroine_mission_explanation_5"
+    },
+    {
+        "id": "heroine_mission_explanation_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(突然想到什么)",
+        "next": "heroine_mission_explanation_6"
+    },
+    {
+        "id": "heroine_mission_explanation_6",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "对了！你想看看我的工作证吗？",
+        "next": "heroine_mission_explanation_7"
+    },
+    {
+        "id": "heroine_mission_explanation_7",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(掏出一张卡片)",
+        "next": "heroine_mission_explanation_8"
+    },
+    {
+        "id": "heroine_mission_explanation_8",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "这是我的实习证明！上面还有我的照片呢！",
+        "next": "heroine_mission_explanation_9"
+    },
+    {
+        "id": "heroine_mission_explanation_9",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(照片上的她做着胜利手势)",
+        "next": "walker_awakening_1"
+    },
+    {
+        "id": "walker_awakening_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "陈星",
+        "text": "我感觉到了……这种力量……",
+        "next": "walker_awakening_2"
+    },
+    {
+        "id": "walker_awakening_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "陈星",
+        "text": "就像祖父在古书中描述的那样。",
+        "next": "walker_awakening_3"
+    },
+    {
+        "id": "walker_awakening_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "陈星",
+        "text": "我能看到现实的多个层面，能感受到故事的脉络……",
+        "next": "walker_awakening_4"
+    },
+    {
+        "id": "walker_awakening_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "陈星",
+        "text": "这就是万象行者的能力吗？",
+        "next": "walker_awakening_5"
+    },
+    {
+        "id": "walker_awakening_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "陈星",
+        "text": "(看向魏娇娇)",
+        "next": "walker_awakening_6"
+    },
+    {
+        "id": "walker_awakening_6",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "陈星",
+        "text": "谢谢你，娇娇。如果不是你，我永远不会知道这些。",
+        "next": "heroine_happy_response_1"
+    },
+    {
+        "id": "heroine_happy_response_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(被叫名字后脸红了)",
+        "next": "heroine_happy_response_2"
+    },
+    {
+        "id": "heroine_happy_response_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "你……你叫我娇娇？",
+        "next": "heroine_happy_response_3"
+    },
+    {
+        "id": "heroine_happy_response_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(害羞地低下头)",
+        "next": "heroine_happy_response_4"
+    },
+    {
+        "id": "heroine_happy_response_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "平时大家都叫我卡珊德拉……很少有人叫我的真名……",
+        "next": "heroine_happy_response_5"
+    },
+    {
+        "id": "heroine_happy_response_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(然后又抬起头，眼睛亮亮的)",
+        "next": "heroine_happy_response_6"
+    },
+    {
+        "id": "heroine_happy_response_6",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "不过我喜欢！以后你就叫我娇娇吧！",
+        "next": "heroine_happy_response_7"
+    },
+    {
+        "id": "heroine_happy_response_7",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(突然想到什么)",
+        "next": "heroine_happy_response_8"
+    },
+    {
+        "id": "heroine_happy_response_8",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "啊！但是在执行任务的时候还是要叫我卡珊德拉！这样比较专业！",
+        "next": "power_awakening_complete_1"
+    },
+    {
+        "id": "power_awakening_complete_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "觉醒仪式完成。陈星，你现在正式成为万象行者了。",
+        "next": "power_awakening_complete_2"
+    },
+    {
+        "id": "power_awakening_complete_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "不过，真正的考验才刚刚开始。",
+        "next": "power_awakening_complete_3"
+    },
+    {
+        "id": "power_awakening_complete_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "卡珊德拉，向他解释一下即将面临的威胁。",
+        "next": "threat_explanation_1"
+    },
+    {
+        "id": "threat_explanation_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(表情变得严肃)",
+        "next": "threat_explanation_2"
+    },
+    {
+        "id": "threat_explanation_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "最近，蚀影体的活动越来越频繁。它们正在试图侵蚀这个区域的故事结构。",
+        "next": "threat_explanation_3"
+    },
+    {
+        "id": "threat_explanation_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "如果不阻止它们，整个青藤高中的现实都可能崩塌。",
+        "next": "threat_explanation_4"
+    },
+    {
+        "id": "threat_explanation_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(然后又有点担心)",
+        "next": "threat_explanation_5"
+    },
+    {
+        "id": "threat_explanation_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "说实话……这是我接到的第一个重要任务……",
+        "next": "threat_explanation_6"
+    },
+    {
+        "id": "threat_explanation_6",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(握拳)",
+        "next": "threat_explanation_7"
+    },
+    {
+        "id": "threat_explanation_7",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "但是有你在，我觉得我们一定能成功！",
+        "next": "core_route_choice"
+    },
+    {
+        "id": "core_route_choice",
+        "type": "choice",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "现在你必须做出选择。面对即将到来的威胁，你想要走哪条路？",
+        "choices": [
+            {
+                "text": "我想要保护这个世界的和平。",
+                "next": "partnership_route_1"
+            },
+            {
+                "text": "我想要追求更强大的力量。",
+                "next": "partnership_route_1"
+            },
+            {
+                "text": "我想要改变这个世界的规则。",
+                "next": "partnership_route_1"
+            },
+            {
+                "text": "我想要和你一起保护大家。",
+                "next": "partnership_route_1"
+            }
+        ]
+    },
+    {
+        "id": "partnership_route_1",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(眼睛瞬间亮了)",
+        "next": "partnership_route_2"
+    },
+    {
+        "id": "partnership_route_2",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "真的吗？你愿意和我一起？",
+        "next": "partnership_route_3"
+    },
+    {
+        "id": "partnership_route_3",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(激动地跳了起来)",
+        "next": "partnership_route_4"
+    },
+    {
+        "id": "partnership_route_4",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "太好了！这样我就不用一个人面对那些可怕的蚀影体了！",
+        "next": "partnership_route_5"
+    },
+    {
+        "id": "partnership_route_5",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(然后又有点害羞)",
+        "next": "partnership_route_6"
+    },
+    {
+        "id": "partnership_route_6",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "其实……我一直都很害怕一个人执行任务……",
+        "next": "partnership_route_7"
+    },
+    {
+        "id": "partnership_route_7",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "(握住他的手)",
+        "next": "partnership_route_8"
+    },
+    {
+        "id": "partnership_route_8",
+        "type": "dialogue",
+        "background": "game/videos/cutscenes/opening.mp4",
+        "speaker": "魏娇娇",
+        "text": "谢谢你，陈星！我们一定会成为最棒的搭档！",
+        "next": "act3_transition_1"
+    }
+]

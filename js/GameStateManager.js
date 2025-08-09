@@ -1,8 +1,9 @@
 // 游戏状态管理器
 class GameStateManager {
     constructor() {
-        this.currentState = 'COVER'; // COVER, START_MENU, MALE_PERFORMANCE, MEET_HEROINE, BRANCH_SELECTION, ROUTE_1, ROUTE_2, ROUTE_3, ROUTE_4, ENDING
+        this.currentState = 'START_MENU'; // START_MENU, MALE_PERFORMANCE, MEET_HEROINE, BRANCH_SELECTION, ROUTE_1, ROUTE_2, ROUTE_3, ROUTE_4, ENDING
         this.isMusicEnabled = true; // 音乐开关状态
+        this.isAutoPlay = false; // 自动播放状态
         this.gameData = {
             playerName: '',
             heroineRelationship: 0,
@@ -10,7 +11,8 @@ class GameStateManager {
             currentRoute: null,
             routeProgress: {},
             choices: [],
-            flags: {}
+            flags: {},
+            unlockedCodex: new Set() // 使用Set来存储已解锁的词条ID
         };
         this.saveSlots = 5; // 支持5个存档位
     }
@@ -78,11 +80,32 @@ class GameStateManager {
         console.log('显示结局');
     }
 
+    // 重置游戏状态
+    resetGame() {
+        console.log('重置游戏状态');
+        this.currentState = 'GAME_START';
+        this.gameData = {
+            playerName: '',
+            heroineRelationship: 0,
+            completedRoutes: [],
+            currentRoute: null,
+            routeProgress: {},
+            choices: [],
+            flags: {},
+            unlockedCodex: new Set()
+        };
+    }
+
     // 保存游戏
     saveGame(slot = 1) {
+        // 在保存前，将Set转换为数组，因为JSON不支持Set
+        const savableGameData = {
+            ...this.gameData,
+            unlockedCodex: Array.from(this.gameData.unlockedCodex)
+        };
         const saveData = {
             state: this.currentState,
-            gameData: this.gameData,
+            gameData: savableGameData,
             timestamp: new Date().toISOString()
         };
         localStorage.setItem(`game_save_${slot}`, JSON.stringify(saveData));
@@ -96,6 +119,8 @@ class GameStateManager {
             const data = JSON.parse(saveData);
             this.currentState = data.state;
             this.gameData = data.gameData;
+            // 将存档中的数组转回Set，并兼容旧存档
+            this.gameData.unlockedCodex = new Set(this.gameData.unlockedCodex || []);
             return true;
         }
         return false;
@@ -114,6 +139,31 @@ class GameStateManager {
             };
         }
         return { exists: false };
+    }
+
+    // 设置自动播放状态
+    setAutoPlay(isOn) {
+        if (typeof isOn === 'boolean' && this.isAutoPlay !== isOn) {
+            this.isAutoPlay = isOn;
+            console.log(`自动播放已${this.isAutoPlay ? '开启' : '关闭'}`);
+        }
+        return this.isAutoPlay;
+    }
+
+    // 解锁一个法典词条
+    unlockCodexEntry(codexId) {
+        if (!this.gameData.unlockedCodex.has(codexId)) {
+            this.gameData.unlockedCodex.add(codexId);
+            console.log(`新法典词条已解锁: ${codexId}`);
+            // 在这里可以触发一个UI提示
+            return true; // 返回true表示是新解锁的
+        }
+        return false; // 返回false表示已经解锁过了
+    }
+
+    // 检查法典词条是否已解锁
+    isCodexEntryUnlocked(codexId) {
+        return this.gameData.unlockedCodex.has(codexId);
     }
 }
 

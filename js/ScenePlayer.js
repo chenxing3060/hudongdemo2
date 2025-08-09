@@ -1,0 +1,146 @@
+class ScenePlayer {
+    constructor({ uiManager, stateManager, sceneDataManager, routeManager, assetLoader }) {
+        this.uiManager = uiManager;
+        this.stateManager = stateManager;
+        this.sceneDataManager = sceneDataManager;
+        this.routeManager = routeManager;
+        this.assetLoader = assetLoader;
+
+        this.currentScene = null;
+    }
+
+    playScene(sceneId) {
+        const scene = this.sceneDataManager.getSceneById(sceneId);
+        if (!scene) {
+            console.error(`无法播放场景，因为找不到ID为 "${sceneId}" 的场景。`);
+            return;
+        }
+        
+        this.currentScene = scene;
+        console.log('播放场景:', sceneId);
+
+        // 检查并解锁法典词条
+        if (scene.unlocksCodex) {
+            if (this.stateManager.unlockCodexEntry(scene.unlocksCodex)) {
+                // 如果是新解锁的，就显示提示
+                const codexEntry = this.sceneDataManager.getCodexEntryById(scene.unlocksCodex);
+                if (codexEntry) {
+                    this.uiManager.showCodexUnlockToast(codexEntry.title);
+                }
+            }
+        }
+
+        // 预加载下一个场景的资源
+        this.preloadNextSceneAssets(scene);
+
+        switch (scene.type) {
+            case 'narration':
+            case 'dialogue':
+                this.uiManager.showScreen('game');
+                this.uiManager.setVideoBackground(scene.background);
+                // 默认隐藏手动提示，因为它只在等待输入时显示
+                this.uiManager.updatePlayModeIndicator(true);
+                this.uiManager.updateDialogue(scene.speaker, scene.text, () => this.onDialogueComplete(scene));
+                break;
+            case 'choice':
+                this.uiManager.showScreen('game');
+                this.uiManager.setVideoBackground(scene.background);
+                this.uiManager.updateDialogue(scene.speaker, scene.text);
+                this.uiManager.displayChoices(scene.choices, (choice, index) => this.makeChoice(choice, index));
+                break;
+            case 'video':
+                this.uiManager.playFullscreenVideo(scene.video, () => {
+                    if (scene.next) this.playScene(scene.next);
+                });
+                break;
+            case 'ending':
+                this.uiManager.showScreen('game');
+                this.uiManager.setVideoBackground(scene.background);
+                this.uiManager.updateDialogue(scene.speaker, scene.text);
+                // 可以在此为结局场景添加特殊的UI效果
+                break;
+            default:
+                console.error('未知场景类型:', scene.type);
+        }
+    }
+
+    makeChoice(choice, index) {
+        this.stateManager.gameData.choices.push({
+            sceneId: this.currentScene.id,
+            choiceIndex: index,
+            choiceText: choice.text
+        });
+
+        if (choice.route) {
+            this.startRoute(choice.route);
+        } else if (choice.next) {
+            this.playScene(choice.next);
+        }
+    }
+
+    startRoute(routeId) {
+        this.stateManager.setState(`ROUTE_${routeId.slice(-1)}`);
+        this.routeManager.startRoute(routeId, this.stateManager.gameData);
+        this.playScene(`${routeId}_start`);
+    }
+
+    onDialogueComplete(scene) {
+        // 如果场景自带自动前进，则遵循场景设定
+        if (scene.next && scene.autoAdvance === true) {
+            setTimeout(() => this.playScene(scene.next), 3000); // 稍作停留后自动播放
+            return;
+        }
+
+        // 如果用户开启了自动播放模式，则立即进入下一场
+        if (this.stateManager.isAutoPlay && scene.next) {
+            // 增加一个短暂的延迟，让玩家有时间阅读完最后一句
+            setTimeout(() => this.playScene(scene.next), 1000);
+            return;
+        }
+        
+        // 如果不自动前进，则显示手动播放提示
+        this.uiManager.updatePlayModeIndicator(false);
+    }
+
+    preloadNextSceneAssets(currentScene) {
+        // 预加载直接的下一个场景
+        if (currentScene.next) {
+            const nextScene = this.sceneDataManager.getSceneById(currentScene.next);
+            this.assetLoader.preloadAssetsForScene(nextScene);
+        }
+
+        // 预加载所有选项指向的场景
+        if (currentScene.choices) {
+            currentScene.choices.forEach(choice => {
+                if (choice.next) {
+                    const choiceScene = this.sceneDataManager.getSceneById(choice.next);
+                    this.assetLoader.preloadAssetsForScene(choiceScene);
+                }
+            });
+        }
+    }
+
+    nextDialogue(isManual = true) {
+        // 如果是玩家手动点击，并且自动播放已开启，则屏蔽该次点击
+        if (isManual && this.stateManager.isAutoPlay) {
+            console.log('手动播放被自动播放模式阻止。');
+            return;
+        }
+
+        if (!this.currentScene) return;
+
+        // 确保有下一场，并且该场景不是自带的自动前进类型（防止意外跳过）
+        if (this.currentScene.next && this.currentScene.autoAdvance !== true) {
+            this.playScene(this.currentScene.next);
+        }
+    }
+
+    skipVideo() {
+        if (this.currentScene && this.currentScene.next) {
+            this.uiManager.stopAllBackgroundVideos(); // 停止视频播放
+            this.playScene(this.currentScene.next);
+        }
+    }
+}
+
+export default ScenePlayer;

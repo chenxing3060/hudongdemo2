@@ -10,17 +10,33 @@ body {
     background: #000;
     overflow: hidden;
     user-select: none;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
 }
 
 /* 视频容器 */
 .video-container {
     position: relative;
-    width: 100vw;
-    height: 100vh;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
 }
 
-video {
+/* 封面和开始菜单视频 */
+.cover-video, .start-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* 游戏内视频 */
+#game-video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -82,37 +98,7 @@ h2 {
     box-shadow: 0 5px 15px rgba(255, 255, 255, 0.2);
 }
 
-/* 音乐控制按钮 */
-.music-control {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-}
-
-.music-toggle {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: none;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-    font-size: 20px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.music-toggle:hover {
-    background: rgba(0, 0, 0, 0.9);
-    transform: scale(1.1);
-}
-
-.music-toggle.muted {
-    background: rgba(255, 0, 0, 0.7);
-}
+/* 音乐控制样式已移除 */
 
 /* 点击提示 */
 .click-hint {

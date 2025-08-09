@@ -22,7 +22,7 @@ class TransitionManager {
         // 过渡文本提示
         this.transitionTexts = {
             fade: '场景切换中...',
-            cinematic: '',
+            cinematic: '进入游戏世界...',
             ripple: '时空涟漪展开...',
             particle: '粒子重组中...',
             beam: '光束扫描中...',
@@ -57,9 +57,7 @@ class TransitionManager {
      */
     smartTransition(fromScene, toScene) {
         // 智能选择过渡效果
-        if (fromScene === 'cover' && toScene === 'start') {
-            this.currentTransition = 'cinematic';
-        } else if (fromScene === 'start' && toScene === 'game') {
+        if (fromScene === 'start' && toScene === 'game') {
             this.currentTransition = 'beam';
         } else if (toScene === 'video') {
             this.currentTransition = 'fade';
@@ -215,7 +213,6 @@ class TransitionManager {
      */
     static getSceneTransitions() {
         return {
-            'cover-to-start': 'cinematic',
             'start-to-game': 'beam',
             'game-to-video': 'fade',
             'video-to-game': 'fade',

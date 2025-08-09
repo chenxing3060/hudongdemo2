@@ -3,27 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>关于创作者 - 陈星</title>
+    <title>万象行者 - 作品与创作者介绍</title>
     <link rel="stylesheet" href="style.css">
     <style>
         .about-container {
             min-height: 100vh;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
             padding: 20px;
+            position: relative;
         }
         
         .about-card {
             background: rgba(255, 255, 255, 0.95);
             border-radius: 20px;
             padding: 40px;
-            max-width: 600px;
+            max-width: 800px;
             width: 100%;
+            margin: 0 auto;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
             backdrop-filter: blur(10px);
             text-align: center;
+            position: relative;
+        }
+        
+        .top-back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            z-index: 10;
+        }
+        
+        .top-back-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            padding: 30px;
+            background: rgba(102, 126, 234, 0.05);
+            border-radius: 15px;
+            border-left: 5px solid #667eea;
+        }
+        
+        .section-title {
+            font-size: 1.8rem;
+            color: #667eea;
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-align: left;
+        }
+        
+        .worldview-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .concept-card {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            border-left: 4px solid #764ba2;
+        }
+        
+        .concept-title {
+            font-size: 1.2rem;
+            color: #764ba2;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .concept-desc {
+            font-size: 0.95rem;
+            color: #555;
+            line-height: 1.6;
         }
         
         .avatar {
@@ -103,27 +170,54 @@
             font-weight: 500;
         }
         
-        .back-button {
-            background: linear-gradient(45deg, #667eea, #764ba2);
+
+        
+        .contact-info {
+            margin-top: 25px;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 12px;
             color: white;
-            border: none;
-            padding: 12px 30px;
-            border-radius: 25px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s ease;
-            text-decoration: none;
-            display: inline-block;
         }
         
-        .back-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        .contact-info h4 {
+            margin: 0 0 15px 0;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        
+        .contact-item {
+            margin: 0;
+            font-size: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .contact-label {
+            font-weight: 500;
+            opacity: 0.9;
+        }
+        
+        .contact-value {
+            font-weight: 600;
+            font-family: 'Courier New', monospace;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 6px;
+            letter-spacing: 1px;
         }
         
         @media (max-width: 768px) {
             .about-card {
-                padding: 30px 20px;
+                padding: 60px 20px 30px 20px;
+            }
+            
+            .top-back-button {
+                top: 15px;
+                left: 15px;
+                padding: 8px 16px;
+                font-size: 0.8rem;
             }
             
             .name {
@@ -137,43 +231,112 @@
             .description {
                 font-size: 1rem;
             }
+            
+            .worldview-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
 <body>
     <div class="about-container">
         <div class="about-card">
-            <div class="avatar">陈</div>
-            <h1 class="name">陈星</h1>
-            <p class="title">AI应用开发者</p>
+            <!-- 左上角返回按钮 -->
+            <a href="game.html#start-menu" class="top-back-button">
+                <span>←</span>
+                <span>返回开始界面</span>
+            </a>
             
-            <div class="description">
-                <p>你好！我是陈星，一名专注于AI应用开发的全栈工程师。我热衷于将人工智能技术与实际应用场景相结合，创造出既实用又有趣的产品。</p>
+            <!-- 世界观介绍部分 -->
+            <div class="section">
+                <h2 class="section-title">🌍 万象行者 - 宏大世界观设定</h2>
+                <div class="description">
+                    <p>在我们生活的现实之下，隐藏着一个由无数"故事"编织而成的巨大法典(Codex)。这个法典记录着人类文明的所有叙事原型，从古老的神话传说到现代的都市传说，每一个故事都是现实的基石。当故事被污染或扭曲时，整个世界的根基都会动摇...</p>
+                    
+                    <p><strong>🏛️ 世界架构：</strong>现实世界分为七个层次，从表层的"日常现实"到深层的"原型海洋"，每一层都蕴含着不同程度的叙事力量。只有万象行者能够穿越这些层次，触及故事的本质。</p>
+                </div>
                 
-                <p><strong>专业领域：</strong></p>
-                <ul>
-                    <li><strong>B端AI解决方案：</strong>构建企业级智能系统，包括智能客服、数据分析平台、自动化工作流等，帮助企业提升效率和决策能力。</li>
-                    <li><strong>C端产品开发：</strong>专注于用户体验设计，开发直观易用的AI应用，让普通用户也能轻松享受AI技术带来的便利。</li>
-                    <li><strong>创意技术融合：</strong>探索AI在游戏、娱乐、教育等创意领域的应用，如这个互动视觉小说demo。</li>
-                </ul>
+                <div class="worldview-grid">
+                    <div class="concept-card">
+                        <div class="concept-title">📚 法典 (Codex)</div>
+                        <div class="concept-desc">由无数故事构成的现实基盘，记录着人类文明的所有叙事原型。法典共分为九大卷轴：创世神话、英雄史诗、爱情传说、科幻未来、恐怖传说、日常生活、战争史诗、魔法奇幻、末日预言。每个卷轴都拥有改变现实的巨大力量。</div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-title">🚶‍♂️ 万象行者 (Codex Walker)</div>
+                        <div class="concept-desc">拥有"认知敏感"能力的特殊个体，全球仅有不到1000人。他们能够看见现实的另一面，调用法典中的故事原型来重构现实。根据能力强弱分为：见习行者、正式行者、高级行者、传说行者、神话行者五个等级。</div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-title">👩‍💼 认知管理员组织</div>
+                        <div class="concept-desc">成立有数千年历史的秘密国际组织，总部位于神秘国家地下的"永恒认知馆"。下设监察局、修复部、研究院、特勤队四大部门，在全球设有72个分部，拥有超过10万名成员，致力于维护现实稳定和法典完整性。</div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-title">👹 蚀影体</div>
+                        <div class="concept-desc">由扭曲或污染的故事产生的异常实体，按危险等级分为：D级(轻微扭曲)、C级(局部影响)、B级(区域威胁)、A级(城市危机)、S级(国家级灾难)、EX级(世界末日)。最强的EX级蚀影体"虚无吞噬者"曾在1908年差点毁灭整个法典。</div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-title">🌀 认知圈境</div>
+                        <div class="concept-desc">当现实与故事发生冲突时形成的特殊空间维度，在这里叙事的力量会显现为可见的符文和能量场。圈境内的物理法则会被故事逻辑所替代，时间和空间都可能发生扭曲。已知最大的圈境是"亚特兰蒂斯回响"，覆盖整个大西洋海底。</div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-title">⚡ 原型调用</div>
+                        <div class="concept-desc">万象行者的核心能力，通过调用法典中的经典故事原型来重构现实。主要包括：EVA系列(机甲战斗)、Fate系列(英灵召唤)、Overwatch系列(超能力战斗)、Marvel系列(超级英雄)、Genshin系列(元素魔法)等数百个原型体系。</div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-title">🏫 青藤高中</div>
+                        <div class="concept-desc">表面上是普通的私立高中，实际上是认知管理员组织在东亚地区的重要据点。学校地下隐藏着巨大的"故事实验室"，专门研究叙事原型的应用。许多学生都是潜在的万象行者，在这里接受秘密训练。</div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-title">🌐 全球分部网络</div>
+                        <div class="concept-desc">认知管理员组织在全球设有72个分部，包括：神秘总部(永恒图书馆)、纽约分部(自由塔)、北京分部(香山神社)、巴黎分部(卢浮宫地下)、开罗分部(金字塔内部)等。每个分部都守护着特定的故事领域和地理区域。</div>
+                    </div>
+                    
+                    <div class="concept-card">
+                        <div class="concept-title">⚔️ 三大阵营</div>
+                        <div class="concept-desc">世界被三大势力瓜分：认知管理员(维护秩序)、自由行者联盟(追求自由使用故事力量)、虚无教团(试图摧毁所有故事回归混沌)。三方势力的博弈决定着整个世界的命运走向。</div>
+                    </div>
+                </div>
                 
-                <p><strong>技术栈：</strong>熟练掌握前端开发（React、Vue、JavaScript）、后端开发（Node.js、Python、Java）、AI/ML框架（TensorFlow、PyTorch）以及云服务部署。</p>
-                
-                <p><strong>项目理念：</strong>我相信技术应该服务于人，让复杂的AI技术变得简单易用，为用户创造真正的价值。这个视觉小说demo展示了AI在创意内容生成和交互体验设计方面的潜力。</p>
-                
-                <p>如果你对AI应用开发感兴趣，或者有项目合作的想法，欢迎与我交流！</p>
+                <div class="description">
+                    <p><strong>📖 故事背景：</strong>在青藤高中，转校生陈星意外发现自己拥有"认知敏感"的能力，能够看见普通人无法察觉的现实扭曲。当他遇到执行神秘"协议"的"认知管理员"魏娇娇(代号：卡珊德拉)时，一个关于法典、万象行者和蚀影体的宏大世界观逐渐展开...</p>
+                    
+                    <p><strong>🎯 核心冲突：</strong>随着全球蚀影体活动的异常增加，古老的预言"第七次故事大崩坏"似乎正在应验。陈星必须在三大阵营的复杂博弈中找到自己的道路，阻止世界陷入永恒的混沌，同时揭开自己身世的惊天秘密...</p>
+                </div>
             </div>
             
-            <div class="skills">
-                <span class="skill-tag">AI应用开发</span>
-                <span class="skill-tag">全栈开发</span>
-                <span class="skill-tag">B端解决方案</span>
-                <span class="skill-tag">C端产品设计</span>
-                <span class="skill-tag">用户体验</span>
-                <span class="skill-tag">创意技术</span>
+            <!-- 作者介绍部分 -->
+            <div class="section">
+                <h2 class="section-title">👨‍💻 关于作者</h2>
+                <div class="author-info">
+                    <div class="author-avatar">
+                        <div class="avatar-placeholder">
+                            <span>🎮</span>
+                        </div>
+                    </div>
+                    <div class="author-details">
+                        <h3 class="author-name">陈星</h3>
+                        <p class="author-title">互动小说创作者 & 游戏设计师</p>
+                        <div class="author-description">
+                            <p>专注于创造沉浸式的互动体验，将传统小说的叙事深度与现代游戏的互动性完美结合。</p>
+                            <p>致力于探索新的叙事形式，让每一个选择都充满意义，让每一段故事都值得回味。</p>
+                        </div>
+                        
+                        <div class="contact-info">
+                            <h4>📞 联系方式</h4>
+                            <p class="contact-item">
+                                <span class="contact-label">微信/电话：</span>
+                                <span class="contact-value">13141305408</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
             </div>
-            
-            <a href="game.html" class="back-button">返回游戏</a>
         </div>
     </div>
 </body>
