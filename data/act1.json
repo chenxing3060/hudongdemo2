@@ -146,7 +146,7 @@
   {
     "id": "male_intro_1_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro.mp4",
     "speaker": "陈星",
     "text": "转校第一天，第十二次在同一个校园里迷路……",
     "next": "male_intro_1_2"
@@ -154,7 +154,7 @@
   {
     "id": "male_intro_1_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro.mp4",
     "speaker": "陈星",
     "text": "果然，我的方向感已经烂到超越了人类的极限。",
     "next": "male_intro_1_3"
@@ -162,7 +162,7 @@
   {
     "id": "male_intro_1_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro.mp4",
     "speaker": "陈星",
     "text": "但又不是普通的迷路……",
     "next": "male_intro_1_4"
@@ -170,7 +170,7 @@
   {
     "id": "male_intro_1_4",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro.mp4",
     "speaker": "陈星",
     "text": "更像是这个空间本身在对我撒谎。",
     "next": "male_intro_2_1"
@@ -178,7 +178,7 @@
   {
     "id": "male_intro_2_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro.mp4",
     "speaker": "陈星",
     "text": "比如现在，教学楼的轮廓线在轻微地\"融化\"，",
     "next": "male_intro_2_2"
@@ -186,7 +186,7 @@
   {
     "id": "male_intro_2_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro.mp4",
     "speaker": "陈星",
     "text": "就像夏日柏油路上的热浪，",
     "next": "male_intro_2_3"
@@ -194,7 +194,7 @@
   {
     "id": "male_intro_2_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro.mp4",
     "speaker": "陈星",
     "text": "可今天明明是个秋高气爽的日子。",
     "next": "male_intro_3_1"
