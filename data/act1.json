@@ -202,7 +202,7 @@
   {
     "id": "male_intro_3_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro_34.mp4",
     "speaker": "陈星",
     "text": "祖父常说，我们家的人能看到\"世界的另一面\"。",
     "next": "male_intro_3_2"
@@ -210,7 +210,7 @@
   {
     "id": "male_intro_3_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro_34.mp4",
     "speaker": "陈星",
     "text": "以前我只当是故事，",
     "next": "male_intro_3_3"
@@ -218,7 +218,7 @@
   {
     "id": "male_intro_3_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro_34.mp4",
     "speaker": "陈星",
     "text": "但自从他把那本《星图异闻录》留给我之后，",
     "next": "male_intro_3_4"
@@ -226,7 +226,7 @@
   {
     "id": "male_intro_3_4",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro_34.mp4",
     "speaker": "陈星",
     "text": "这种\"异常\"就越来越频繁了……",
     "next": "male_intro_4_1"
@@ -234,7 +234,7 @@
   {
     "id": "male_intro_4_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro_34.mp4",
     "speaker": "陈星",
     "text": "嗯？那是……在做什么？",
     "next": "male_intro_4_2"
@@ -242,7 +242,7 @@
   {
     "id": "male_intro_4_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro_34.mp4",
     "speaker": "陈星",
     "text": "那个女生……",
     "next": "male_intro_4_3"
@@ -250,7 +250,7 @@
   {
     "id": "male_intro_4_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro_34.mp4",
     "speaker": "陈星",
     "text": "她在对着空气说话？",
     "next": "male_intro_4_4"
@@ -258,7 +258,7 @@
   {
     "id": "male_intro_4_4",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/opening.mp4",
+    "background": "game/videos/cutscenes/male_intro_34.mp4",
     "speaker": "陈星",
     "text": "还是在念什么咒语？",
     "next": "heroine_protocol_1_1"
