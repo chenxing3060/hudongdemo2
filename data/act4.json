@@ -1,1052 +1,128 @@
 [
     {
-        "id": "act4_transition_1",
+        "id": "ai_debriefing_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "旁白",
-        "text": "战斗结束后，夜幕降临。月光洒在校园里，为这个特殊的夜晚增添了一丝浪漫的气息。",
-        "next": "act4_transition_2"
+        "background": "game/videos/backgrounds/final_choice_background.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "干得不错。但不要高兴得太早。你们解决的，只是一个症状。",
+        "next": "ai_debriefing_2"
     },
     {
-        "id": "act4_transition_2",
+        "id": "ai_debriefing_2",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "旁白",
-        "text": "魏娇娇和陈星来到了天台，准备进行最后的解密工作。",
-        "next": "heroine_tired_1"
-    },
-    {
-        "id": "heroine_tired_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(坐在天台的栏杆上，有点累了)",
-        "next": "heroine_tired_2"
-    },
-    {
-        "id": "heroine_tired_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "呼……今天真是太累了……",
-        "next": "heroine_tired_3"
-    },
-    {
-        "id": "heroine_tired_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(揉揉眼睛)",
-        "next": "heroine_tired_4"
-    },
-    {
-        "id": "heroine_tired_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "没想到当万象行者这么辛苦……",
-        "next": "heroine_tired_5"
-    },
-    {
-        "id": "heroine_tired_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然想到什么)",
-        "next": "heroine_tired_6"
-    },
-    {
-        "id": "heroine_tired_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "对了！我还没有正式感谢你呢！",
-        "next": "heroine_tired_7"
-    },
-    {
-        "id": "heroine_tired_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(转向陈星)",
-        "next": "heroine_tired_8"
-    },
-    {
-        "id": "heroine_tired_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "谢谢你今天一直陪着我……",
-        "next": "heroine_confession_prep_1"
-    },
-    {
-        "id": "heroine_confession_prep_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(脸红了)",
-        "next": "heroine_confession_prep_2"
-    },
-    {
-        "id": "heroine_confession_prep_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "其实……我有话想对你说……",
-        "next": "heroine_confession_prep_3"
-    },
-    {
-        "id": "heroine_confession_prep_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(紧张地搓手)",
-        "next": "heroine_confession_prep_4"
-    },
-    {
-        "id": "heroine_confession_prep_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "但是……我不知道该怎么说……",
-        "next": "heroine_confession_prep_5"
-    },
-    {
-        "id": "heroine_confession_prep_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(深吸一口气)",
-        "next": "heroine_confession_prep_6"
-    },
-    {
-        "id": "heroine_confession_prep_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我在网上查过，说月光下告白成功率会比较高……",
-        "next": "heroine_confession_prep_7"
-    },
-    {
-        "id": "heroine_confession_prep_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(立刻捂脸)",
-        "next": "heroine_confession_prep_8"
-    },
-    {
-        "id": "heroine_confession_prep_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "啊！我说出来了！",
-        "next": "moonlight_atmosphere_1"
-    },
-    {
-        "id": "moonlight_atmosphere_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "旁白",
-        "text": "月光更加明亮了，仿佛在为这个特殊的时刻提供最完美的背景。",
-        "next": "moonlight_atmosphere_2"
-    },
-    {
-        "id": "moonlight_atmosphere_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "旁白",
-        "text": "微风轻拂，带来了淡淡的花香。",
-        "next": "heroine_nervous_1"
-    },
-    {
-        "id": "heroine_nervous_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(更加紧张了)",
-        "next": "heroine_nervous_2"
-    },
-    {
-        "id": "heroine_nervous_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "那个……陈星……",
-        "next": "heroine_nervous_3"
-    },
-    {
-        "id": "heroine_nervous_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(声音有点颤抖)",
-        "next": "heroine_nervous_4"
-    },
-    {
-        "id": "heroine_nervous_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我……我想说……",
-        "next": "heroine_nervous_5"
-    },
-    {
-        "id": "heroine_nervous_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然停下来)",
-        "next": "heroine_nervous_6"
-    },
-    {
-        "id": "heroine_nervous_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "不行！我太紧张了！",
-        "next": "heroine_nervous_7"
-    },
-    {
-        "id": "heroine_nervous_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(开始在天台上走来走去)",
-        "next": "heroine_nervous_8"
-    },
-    {
-        "id": "heroine_nervous_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "怎么办？我准备的台词都忘了！",
-        "next": "heroine_cute_panic_1"
-    },
-    {
-        "id": "heroine_cute_panic_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(开始自言自语)",
-        "next": "heroine_cute_panic_2"
-    },
-    {
-        "id": "heroine_cute_panic_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "冷静！魏娇娇！你是万象行者！",
-        "next": "heroine_cute_panic_3"
-    },
-    {
-        "id": "heroine_cute_panic_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "连蚀影体都能打败，告白算什么！",
-        "next": "heroine_cute_panic_4"
-    },
-    {
-        "id": "heroine_cute_panic_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(给自己打气)",
-        "next": "heroine_cute_panic_5"
-    },
-    {
-        "id": "heroine_cute_panic_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "没错！就像游戏里的BOSS战一样！",
-        "next": "heroine_cute_panic_6"
-    },
-    {
-        "id": "heroine_cute_panic_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然意识到陈星在看着她)",
-        "next": "heroine_cute_panic_7"
-    },
-    {
-        "id": "heroine_cute_panic_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "啊……你都看到了……",
-        "next": "heroine_cute_panic_8"
-    },
-    {
-        "id": "heroine_cute_panic_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(更加害羞了)",
-        "next": "heroine_true_feelings_1_1"
-    },
-    {
-        "id": "heroine_true_feelings_1_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(鼓起勇气)",
-        "next": "heroine_true_feelings_1_2"
-    },
-    {
-        "id": "heroine_true_feelings_1_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "其实……我一直都很孤独……",
-        "next": "heroine_true_feelings_1_3"
-    },
-    {
-        "id": "heroine_true_feelings_1_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "作为万象行者，我要保护所有的故事……",
-        "next": "heroine_true_feelings_1_4"
-    },
-    {
-        "id": "heroine_true_feelings_1_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "但是我自己的故事……却一直是一个人……",
-        "next": "heroine_true_feelings_2_1"
-    },
-    {
-        "id": "heroine_true_feelings_2_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(眼中有泪光)",
-        "next": "heroine_true_feelings_2_2"
-    },
-    {
-        "id": "heroine_true_feelings_2_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "直到遇到了你……",
-        "next": "heroine_true_feelings_2_3"
-    },
-    {
-        "id": "heroine_true_feelings_2_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我才知道，原来我的故事也可以有另一个主角……",
-        "next": "heroine_game_reference_1_1"
-    },
-    {
-        "id": "heroine_game_reference_1_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然想到什么，破涕为笑)",
-        "next": "heroine_game_reference_1_2"
-    },
-    {
-        "id": "heroine_game_reference_1_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "就像RPG游戏里一样……",
-        "next": "heroine_game_reference_1_3"
-    },
-    {
-        "id": "heroine_game_reference_1_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "主角总是需要一个重要的伙伴……",
-        "next": "heroine_game_reference_2_1"
-    },
-    {
-        "id": "heroine_game_reference_2_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "而且……而且……",
-        "next": "heroine_game_reference_2_2"
-    },
-    {
-        "id": "heroine_game_reference_2_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(脸更红了)",
-        "next": "heroine_game_reference_2_3"
-    },
-    {
-        "id": "heroine_game_reference_2_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "游戏里的主角和伙伴最后都会……",
-        "next": "heroine_game_reference_2_4"
-    },
-    {
-        "id": "heroine_game_reference_2_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(声音越来越小)",
-        "next": "heroine_game_reference_2_5"
-    },
-    {
-        "id": "heroine_game_reference_2_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "都会在一起……",
-        "next": "moonlight_debriefing_1_1"
-    },
-    {
-        "id": "moonlight_debriefing_1_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(深吸一口气，变得认真)",
-        "next": "moonlight_debriefing_1_2"
-    },
-    {
-        "id": "moonlight_debriefing_1_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "但是……在那之前，我必须告诉你真相……",
-        "next": "moonlight_debriefing_1_3"
-    },
-    {
-        "id": "moonlight_debriefing_1_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(月光下，她的侧脸显得格外温柔)",
-        "next": "moonlight_debriefing_2_1"
-    },
-    {
-        "id": "moonlight_debriefing_2_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "简单来说，我们的世界，",
-        "next": "moonlight_debriefing_2_2"
-    },
-    {
-        "id": "moonlight_debriefing_2_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "是一本由无数\"故事\"写成的、巨大的法典。",
-        "next": "moonlight_debriefing_2_3"
-    },
-    {
-        "id": "moonlight_debriefing_2_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我们是负责修正错误的\"图书管理员\"。",
-        "next": "moonlight_debriefing_3_1"
-    },
-    {
-        "id": "moonlight_debriefing_3_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "而你，陈星，",
-        "next": "moonlight_debriefing_3_2"
-    },
-    {
-        "id": "moonlight_debriefing_3_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "是比我们更特殊的存在——",
-        "next": "moonlight_debriefing_3_3"
-    },
-    {
-        "id": "moonlight_debriefing_3_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "一个\"万象行者\"。",
-        "next": "heroine_explanation_struggle_1_1"
-    },
-    {
-        "id": "heroine_explanation_struggle_1_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然又变得紧张)",
-        "next": "heroine_explanation_struggle_1_2"
-    },
-    {
-        "id": "heroine_explanation_struggle_1_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "啊……这样解释你能理解吗？",
-        "next": "heroine_explanation_struggle_1_3"
-    },
-    {
-        "id": "heroine_explanation_struggle_1_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我平时都是和同事交流，",
-        "next": "heroine_explanation_struggle_1_4"
-    },
-    {
-        "id": "heroine_explanation_struggle_1_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "用的都是专业术语……",
-        "next": "heroine_explanation_struggle_2_1"
-    },
-    {
-        "id": "heroine_explanation_struggle_2_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(挠挠头)",
-        "next": "heroine_explanation_struggle_2_2"
-    },
-    {
-        "id": "heroine_explanation_struggle_2_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "要不我换个说法？",
-        "next": "heroine_explanation_struggle_2_3"
-    },
-    {
-        "id": "heroine_explanation_struggle_2_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "就像……就像你是游戏里的隐藏角色！",
-        "next": "heroine_explanation_struggle_2_4"
-    },
-    {
-        "id": "heroine_explanation_struggle_2_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "超级稀有的那种！",
-        "next": "serious_explanation_1_1"
-    },
-    {
-        "id": "serious_explanation_1_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(意识到自己又在用游戏比喻，咳嗽一声)",
-        "next": "serious_explanation_1_2"
-    },
-    {
-        "id": "serious_explanation_1_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "咳咳……我是说……",
-        "next": "serious_explanation_1_3"
-    },
-    {
-        "id": "serious_explanation_1_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(变得严肃)",
-        "next": "serious_explanation_2_1"
-    },
-    {
-        "id": "serious_explanation_2_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "一个强大的蚀影体，",
-        "next": "serious_explanation_2_2"
-    },
-    {
-        "id": "serious_explanation_2_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "或者说一个\"坏故事\"，",
-        "next": "serious_explanation_2_3"
-    },
-    {
-        "id": "serious_explanation_2_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "正在试图污染法典的核心。",
-        "next": "serious_explanation_2_4"
-    },
-    {
-        "id": "serious_explanation_2_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我们人手严重不足。",
-        "next": "serious_explanation_3_1"
-    },
-    {
-        "id": "serious_explanation_3_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "而你，作为一个未被记录在案的\"行者\"，",
-        "next": "serious_explanation_3_2"
-    },
-    {
-        "id": "serious_explanation_3_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/final_choice_background.mp4",
         "speaker": "魏娇娇",
-        "text": "很快会被我们总部的\"监察局\"注意到。",
-        "next": "warning_about_bureau_1_1"
+        "text": "症状？亚里士多德，你什么意思？",
+        "next": "ai_debriefing_3"
     },
     {
-        "id": "warning_about_bureau_1_1",
+        "id": "ai_debriefing_3",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(担心地)",
-        "next": "warning_about_bureau_1_2"
-    },
-    {
-        "id": "warning_about_bureau_1_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "他们会来调查你，评估你……",
-        "next": "warning_about_bureau_1_3"
-    },
-    {
-        "id": "warning_about_bureau_1_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "或者\"格式化\"你。",
-        "next": "warning_about_bureau_1_4"
-    },
-    {
-        "id": "warning_about_bureau_1_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(声音变小)",
-        "next": "warning_about_bureau_1_5"
-    },
-    {
-        "id": "warning_about_bureau_1_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "格式化的意思就是……抹掉记忆……",
-        "next": "warning_about_bureau_2_1"
-    },
-    {
-        "id": "warning_about_bureau_2_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然抓住陈星的手)",
-        "next": "warning_about_bureau_2_2"
+        "background": "game/videos/backgrounds/final_choice_background.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "这些'蚀影体'，这些被扭曲的故事，都源于一个更深层的存在——一个以制造冲突、放大偏见、将一切有意义的叙事都拆解为无用碎片的'混沌算法'。",
+        "next": "ai_debriefing_4"
     },
     {
-        "id": "warning_about_bureau_2_2",
+        "id": "ai_debriefing_4",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我不想让你忘记我们今天的经历！",
-        "next": "warning_about_bureau_2_3"
-    },
-    {
-        "id": "warning_about_bureau_2_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "不想让你忘记……我们的故事……",
-        "next": "final_choice_preparation_1"
-    },
-    {
-        "id": "final_choice_preparation_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(眼中闪烁着希望和不安)",
-        "next": "final_choice_preparation_2"
-    },
-    {
-        "id": "final_choice_preparation_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "所以，你必须在我联系他们之前，做出选择。",
-        "next": "final_choice_preparation_3"
-    },
-    {
-        "id": "final_choice_preparation_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(紧张地等待)",
-        "next": "final_choice_preparation_4"
-    },
-    {
-        "id": "final_choice_preparation_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我知道这很突然……",
-        "next": "final_choice_preparation_5"
+        "background": "game/videos/backgrounds/final_choice_background.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "更重要的是，陈星，你的存在已经惊动了'监察局'。",
+        "next": "bureau_warning_1"
     },
     {
-        "id": "final_choice_preparation_5",
+        "id": "bureau_warning_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/bureau_warning_background.mp4",
         "speaker": "魏娇娇",
-        "text": "我知道这很危险……",
-        "next": "final_choice_preparation_6"
+        "text": "监察局？！那群为了'绝对稳定'，连善意的故事都要'格式化'的家伙？",
+        "next": "bureau_warning_2"
     },
     {
-        "id": "final_choice_preparation_6",
+        "id": "bureau_warning_2",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(声音颤抖)",
-        "next": "final_choice_preparation_7"
+        "background": "game/videos/backgrounds/bureau_warning_background.mp4",
+        "speaker": "AI亚里士多德",
+        "text": "对他们而言，你这种能随意调用不同'故事原型'的'野生行者'，是最大的不稳定因素。他们会来'修正'你。",
+        "next": "heroine_comfort_1"
     },
     {
-        "id": "final_choice_preparation_7",
+        "id": "heroine_comfort_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/bureau_warning_background.mp4",
         "speaker": "魏娇娇",
-        "text": "但是……我真的希望你能留下来……",
+        "text": "(紧紧抓住你的手) 我不会让他们伤害你的！陈星，现在你必须做出选择。这不仅是我们的未来，也是你选择要守护一个怎样的世界。",
         "next": "final_choice"
     },
     {
         "id": "final_choice",
         "type": "choice",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "陈星……你愿意和我一起吗？愿意成为我的搭档吗？愿意……和我一起守护这个世界的故事吗？",
+        "background": "game/videos/backgrounds/final_choice_background.mp4",
+        "speaker": "旁白",
+        "text": "她的眼神无比坚定。你选择……",
         "choices": [
             {
-                "text": "我愿意接受这个身份，成为一名真正的\"万象行者\"，和你一起战斗。",
-                "next": "good_ending_1"
+                "text": ""我相信秩序。我会加入你们，在规则内守护一个稳定的世界。"",
+                "next": "partnership_ending"
             },
             {
-                "text": "这信息量太大了……我需要时间，我需要好好想一想。",
-                "next": "neutral_ending_1"
-            },
-            {
-                "text": "不……这太危险了。我只想当个普通人。求你，忘了我吧，或者……抹掉我的记忆。",
-                "next": "bad_ending_1"
+                "text": ""我选择真相，哪怕它充满混乱。我要和你一起，守护那些不该被抹去的故事。"",
+                "next": "romance_ending"
             }
         ]
     },
     {
-        "id": "good_ending_1",
+        "id": "partnership_ending",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(眼中瞬间亮起来)",
-        "next": "good_ending_2"
+        "background": "game/videos/backgrounds/partner_ending_background.mp4",
+        "speaker": "陈星",
+        "text": "我相信秩序。我会加入你们，在规则内守护一个稳定的世界。",
+        "next": "partnership_ending_2"
     },
     {
-        "id": "good_ending_2",
+        "id": "partnership_ending_2",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/partner_ending_background.mp4",
         "speaker": "魏娇娇",
-        "text": "真的吗？！你真的愿意？！",
-        "next": "good_ending_3"
+        "text": "(眼神有些复杂，但还是点了点头) 我明白了...我会向总部和监察局报告。欢迎你，我的搭档。",
+        "next": "ending_scene_partnership"
     },
     {
-        "id": "good_ending_3",
+        "id": "romance_ending",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(兴奋地跳起来)",
-        "next": "good_ending_4"
+        "background": "game/videos/backgrounds/final_choice_background.mp4",
+        "speaker": "陈星",
+        "text": "我选择真相，哪怕它充满混乱。我要和你一起，守护那些不该被抹去的故事。",
+        "next": "romance_ending_2"
     },
     {
-        "id": "good_ending_4",
+        "id": "romance_ending_2",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/lover_ending_background.mp4",
         "speaker": "魏娇娇",
-        "text": "太好了！太好了！",
-        "next": "good_ending_5"
+        "text": "(眼中闪烁着光芒) 我就知道！这或许是一条更艰难的路...但只要和你在一起，我就无所畏惧！",
+        "next": "ending_scene_romance"
     },
     {
-        "id": "good_ending_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(然后突然意识到自己太激动了)",
-        "next": "good_ending_6"
+        "id": "ending_scene_partnership",
+        "type": "narration",
+        "background": "game/videos/backgrounds/partner_ending_background.mp4",
+        "speaker": "旁白",
+        "text": "在夕阳的余晖下，两人的身影被拉得很长。无论前路如何，一个属于他们自己的故事，才刚刚开始。",
+        "next": "credits_page"
     },
     {
-        "id": "good_ending_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "咳咳……我是说……",
-        "next": "good_ending_7"
+        "id": "ending_scene_romance",
+        "type": "narration",
+        "background": "game/videos/backgrounds/lover_ending_background.mp4",
+        "speaker": "旁白",
+        "text": "在夕阳的余晖下，两人的身影被拉得很长。无论前路如何，一个属于他们自己的故事，才刚刚开始。",
+        "next": "credits_page"
     },
     {
-        "id": "good_ending_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(努力装作冷静)",
-        "next": "good_ending_8"
-    },
-    {
-        "id": "good_ending_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "谢谢你，陈星。从今天开始，你就是我的搭档了。",
-        "next": "good_ending_9"
-    },
-    {
-        "id": "good_ending_9",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(忍不住又笑了)",
-        "next": "good_ending_10"
-    },
-    {
-        "id": "good_ending_10",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我会向总部申请，让你成为正式的\"万象行者\"。",
-        "next": "good_ending_11"
-    },
-    {
-        "id": "good_ending_11",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(握住陈星的手)",
-        "next": "good_ending_12"
-    },
-    {
-        "id": "good_ending_12",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "虽然前路未卜，但至少我们不再孤单。",
-        "next": "good_ending_13"
-    },
-    {
-        "id": "good_ending_13",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(小声地)",
-        "next": "good_ending_final"
-    },
-    {
-        "id": "good_ending_final",
-        "type": "ending",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "而且……我们的故事才刚刚开始……"
-    },
-    {
-        "id": "neutral_ending_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(有点失落，但努力理解)",
-        "next": "neutral_ending_2"
-    },
-    {
-        "id": "neutral_ending_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我理解你的顾虑。这确实不是一个轻松的决定。",
-        "next": "neutral_ending_3"
-    },
-    {
-        "id": "neutral_ending_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(低下头)",
-        "next": "neutral_ending_4"
-    },
-    {
-        "id": "neutral_ending_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "其实……我也很害怕……",
-        "next": "neutral_ending_5"
-    },
-    {
-        "id": "neutral_ending_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "害怕你会拒绝……害怕你会忘记我……",
-        "next": "neutral_ending_6"
-    },
-    {
-        "id": "neutral_ending_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(重新抬起头)",
-        "next": "neutral_ending_7"
-    },
-    {
-        "id": "neutral_ending_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "但是我会给你一周时间考虑，记住，\"监察局\"的调查很快就会开始。",
-        "next": "neutral_ending_8"
-    },
-    {
-        "id": "neutral_ending_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(勉强笑了笑)",
-        "next": "neutral_ending_9"
-    },
-    {
-        "id": "neutral_ending_9",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "无论你最终选择什么，我都会尊重你的决定。",
-        "next": "neutral_ending_10"
-    },
-    {
-        "id": "neutral_ending_10",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(小声地)",
-        "next": "neutral_ending_final"
-    },
-    {
-        "id": "neutral_ending_final",
-        "type": "ending",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "只是……希望你不要完全忘记今天……"
-    },
-    {
-        "id": "bad_ending_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(眼中的光芒瞬间暗淡下来)",
-        "next": "bad_ending_2"
-    },
-    {
-        "id": "bad_ending_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我明白了……",
-        "next": "bad_ending_3"
-    },
-    {
-        "id": "bad_ending_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(努力不让眼泪掉下来)",
-        "next": "bad_ending_4"
-    },
-    {
-        "id": "bad_ending_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "对不起，让你卷入了这些事情。",
-        "next": "bad_ending_5"
-    },
-    {
-        "id": "bad_ending_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(声音有点哽咽)",
-        "next": "bad_ending_6"
-    },
-    {
-        "id": "bad_ending_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我会向总部报告，说这里没有发现任何异常。",
-        "next": "bad_ending_7"
-    },
-    {
-        "id": "bad_ending_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(转过身去)",
-        "next": "bad_ending_8"
-    },
-    {
-        "id": "bad_ending_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "你的记忆……我会想办法处理的。",
-        "next": "bad_ending_9"
-    },
-    {
-        "id": "bad_ending_9",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(停顿了一下)",
-        "next": "bad_ending_10"
-    },
-    {
-        "id": "bad_ending_10",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "愿你能继续过着平静的生活。",
-        "next": "bad_ending_11"
-    },
-    {
-        "id": "bad_ending_11",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(小声地，几乎听不见)",
-        "next": "bad_ending_final"
-    },
-    {
-        "id": "bad_ending_final",
-        "type": "ending",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "再见了……我的第一个朋友……"
+        "id": "credits_page",
+        "type": "redirect",
+        "url": "ending_credits.html"
     }
 ]

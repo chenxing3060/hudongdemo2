@@ -2,292 +2,36 @@
     {
         "id": "act3_transition_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/dream_sludge_floating.mp4",
         "speaker": "魏娇娇",
-        "text": "(突然警报声响起)",
-        "next": "act3_transition_2"
+        "text": "警告！前方高能反应！一个'故事'被污染了，它正在变成一个'蚀影体'——一堆充满了恶意、断章取义的碎片化信息！",
+        "next": "battle_scene_intro_1"
     },
     {
-        "id": "act3_transition_2",
+        "id": "battle_scene_intro_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/dream_sludge_floating.mp4",
         "speaker": "魏娇娇",
-        "text": "警告！检测到大型蚀影体正在接近！",
-        "next": "act3_transition_3"
-    },
-    {
-        "id": "act3_transition_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(慌张地查看设备)",
-        "next": "act3_transition_4"
-    },
-    {
-        "id": "act3_transition_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "这个能量读数……比我之前遇到的都要强！",
-        "next": "act3_transition_5"
-    },
-    {
-        "id": "act3_transition_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(转向陈星，有点紧张)",
-        "next": "act3_transition_6"
-    },
-    {
-        "id": "act3_transition_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "陈星，我们必须立刻行动！但是……",
-        "next": "act3_transition_7"
-    },
-    {
-        "id": "act3_transition_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(咬着手指)",
-        "next": "act3_transition_8"
-    },
-    {
-        "id": "act3_transition_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我还没有和搭档一起战斗过……会不会拖你后腿？",
-        "next": "battle_preparation_1"
-    },
-    {
-        "id": "battle_preparation_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "不会的，娇娇。我们是搭档，要相信彼此。",
-        "next": "heroine_battle_prep_1"
-    },
-    {
-        "id": "heroine_battle_prep_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(被鼓励后，眼神变得坚定)",
-        "next": "heroine_battle_prep_2"
-    },
-    {
-        "id": "heroine_battle_prep_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "好！那我们就并肩作战！",
-        "next": "heroine_battle_prep_3"
-    },
-    {
-        "id": "heroine_battle_prep_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(开始准备装备)",
-        "next": "heroine_battle_prep_4"
-    },
-    {
-        "id": "heroine_battle_prep_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "让我看看……战斗模式启动……",
-        "next": "heroine_battle_prep_5"
-    },
-    {
-        "id": "heroine_battle_prep_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然想到什么)",
-        "next": "heroine_battle_prep_6"
-    },
-    {
-        "id": "heroine_battle_prep_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "对了！你想看我的变身吗？",
-        "next": "heroine_battle_prep_7"
-    },
-    {
-        "id": "heroine_battle_prep_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(兴奋地)",
-        "next": "heroine_battle_prep_8"
-    },
-    {
-        "id": "heroine_battle_prep_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "虽然还不是很熟练，但是很帅的！",
-        "next": "transformation_scene_1"
-    },
-    {
-        "id": "transformation_scene_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(摆出变身姿势)",
-        "next": "transformation_scene_2"
-    },
-    {
-        "id": "transformation_scene_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "万象行者，卡珊德拉，变身！",
-        "next": "transformation_scene_3"
-    },
-    {
-        "id": "transformation_scene_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(光芒闪烁)",
-        "next": "transformation_scene_4"
-    },
-    {
-        "id": "transformation_scene_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "诶？怎么没反应？",
-        "next": "transformation_scene_5"
-    },
-    {
-        "id": "transformation_scene_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(检查设备)",
-        "next": "transformation_scene_6"
-    },
-    {
-        "id": "transformation_scene_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "啊！忘记充电了！",
-        "next": "transformation_scene_7"
-    },
-    {
-        "id": "transformation_scene_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(尴尬地笑)",
-        "next": "transformation_scene_8"
-    },
-    {
-        "id": "transformation_scene_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "那个……我们先用普通模式战斗吧……",
-        "next": "enemy_appears_1"
-    },
-    {
-        "id": "enemy_appears_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "旁白",
-        "text": "巨大的蚀影体从空间裂缝中涌出，它的形态不断变化，散发着扭曲现实的恶意能量。",
-        "next": "enemy_appears_2"
-    },
-    {
-        "id": "enemy_appears_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "旁白",
-        "text": "这是一个前所未见的强大敌人，仅仅是它的存在就让周围的空间开始崩塌。",
-        "next": "heroine_analysis_1"
-    },
-    {
-        "id": "heroine_analysis_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(认真地分析)",
-        "next": "heroine_analysis_2"
-    },
-    {
-        "id": "heroine_analysis_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "这个蚀影体……它在模拟多个故事原型！",
-        "next": "heroine_analysis_3"
-    },
-    {
-        "id": "heroine_analysis_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我看到了机甲、魔法、科幻……它在试图融合所有的故事类型！",
-        "next": "heroine_analysis_4"
-    },
-    {
-        "id": "heroine_analysis_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然兴奋起来)",
-        "next": "heroine_analysis_5"
-    },
-    {
-        "id": "heroine_analysis_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "等等！这意味着我们也可以选择对应的故事模式来对抗它！",
-        "next": "heroine_analysis_6"
-    },
-    {
-        "id": "heroine_analysis_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(转向陈星)",
-        "next": "heroine_analysis_7"
-    },
-    {
-        "id": "heroine_analysis_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "你想要哪种战斗风格？",
+        "text": "要对抗这种信息污染，我们必须用一个更强大的'故事原型'去覆盖它！你选择哪种'哲学'来战斗？",
         "next": "battle_style_choice"
     },
     {
         "id": "battle_style_choice",
         "type": "choice",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "快选择！我们需要确定战斗模式！",
+        "background": "game/videos/backgrounds/dream_sludge_floating.mp4",
+        "speaker": "旁白",
+        "text": "面对由谎言和碎片构成的敌人，你选择用何种信念对抗？",
         "choices": [
             {
-                "text": "机甲战斗模式！",
+                "text": "用内心的真实抵御外界的喧嚣。——EVA",
                 "next": "eva_route_battle_1"
             },
             {
-                "text": "魔法骑士模式！",
+                "text": "用不变的理想斩断扭曲的现实。——Saber",
                 "next": "saber_route_battle_1"
             },
             {
-                "text": "科幻射击模式！",
+                "text": "用解构的玩法战胜既定的规则。——D.Va",
                 "next": "dva_route_battle_1"
             }
         ]
@@ -295,889 +39,131 @@
     {
         "id": "eva_route_battle_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/eva_route_background.mp4",
         "speaker": "魏娇娇",
-        "text": "机甲模式启动！",
+        "text": "(眼神变得空洞) '原型'同步...Rei Ayanami。展开'心之壁'(AT Field)，拒绝一切虚假信息的侵蚀。",
         "next": "eva_route_battle_2"
     },
     {
         "id": "eva_route_battle_2",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/eva_route_background.mp4",
         "speaker": "魏娇娇",
-        "text": "(兴奋地)",
+        "text": "(突然变回自己，慌张地) 哇！这个同步率好高！感觉自己快要没有感情了！不过...只要微笑就好了，对吗？",
         "next": "eva_route_battle_3"
     },
     {
         "id": "eva_route_battle_3",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "你强行调用了\"机甲末日\"类的Codex？！",
+        "background": "game/videos/backgrounds/eva_route_background.mp4",
+        "speaker": "陈星",
+        "text": "它的攻击就是那些恶意的弹幕和评论！娇娇，相信你的心，用你的AT力场挡住它们！",
         "next": "eva_route_battle_4"
     },
     {
         "id": "eva_route_battle_4",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/eva_route_background.mp4",
         "speaker": "魏娇娇",
-        "text": "同步率400%！",
-        "next": "eva_route_battle_5"
+        "text": "(再次进入状态，眼神坚定) 命令确认。朗基努斯之枪，再构成。以真实，击穿虚伪。",
+        "next": "eva_route_video_1"
     },
     {
-        "id": "eva_route_battle_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我的\"秩序壁垒\"被重构成了\"AT力场\"！",
-        "next": "eva_route_battle_6"
-    },
-    {
-        "id": "eva_route_battle_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然有点担心)",
-        "next": "eva_route_battle_7"
-    },
-    {
-        "id": "eva_route_battle_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "不过……我还没有驾驶过真正的机甲……",
-        "next": "eva_route_battle_8"
-    },
-    {
-        "id": "eva_route_battle_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(立刻摇头)",
-        "next": "eva_route_battle_9"
-    },
-    {
-        "id": "eva_route_battle_9",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "但是没关系！",
-        "next": "eva_route_battle_10"
-    },
-    {
-        "id": "eva_route_battle_10",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我看过很多机甲动画！",
-        "next": "eva_heroine_struggle_1"
-    },
-    {
-        "id": "eva_heroine_struggle_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(操控着虚拟机甲，但明显不太熟练)",
-        "next": "eva_heroine_struggle_2"
-    },
-    {
-        "id": "eva_heroine_struggle_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "诶？这个按钮是什么？",
-        "next": "eva_heroine_struggle_3"
-    },
-    {
-        "id": "eva_heroine_struggle_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(机甲突然做了个奇怪的动作)",
-        "next": "eva_heroine_struggle_4"
-    },
-    {
-        "id": "eva_heroine_struggle_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "啊！不是这个！",
-        "next": "eva_heroine_struggle_5"
-    },
-    {
-        "id": "eva_heroine_struggle_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(慌张地)",
-        "next": "eva_heroine_struggle_6"
-    },
-    {
-        "id": "eva_heroine_struggle_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "陈星！操作手册在哪里？!",
-        "next": "eva_heroine_struggle_7"
-    },
-    {
-        "id": "eva_heroine_struggle_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(敌人攻击过来)",
-        "next": "eva_heroine_struggle_8"
-    },
-    {
-        "id": "eva_heroine_struggle_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "哇啊啊！",
-        "next": "eva_male_response_1"
-    },
-    {
-        "id": "eva_male_response_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "娇娇！不要慌！",
-        "next": "eva_male_response_2"
-    },
-    {
-        "id": "eva_male_response_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "我能感觉到！",
-        "next": "eva_male_response_3"
-    },
-    {
-        "id": "eva_male_response_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "它的核心就在那片最扭曲的阴影里！",
-        "next": "eva_male_response_4"
-    },
-    {
-        "id": "eva_male_response_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "那就是它的\"使徒核心\"！",
-        "next": "eva_male_response_5"
-    },
-    {
-        "id": "eva_male_response_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "相信你的直觉，不要依赖操作手册！",
-        "next": "eva_heroine_awakening_1"
-    },
-    {
-        "id": "eva_heroine_awakening_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(深吸一口气，眼神变得坚定)",
-        "next": "eva_heroine_awakening_2"
-    },
-    {
-        "id": "eva_heroine_awakening_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "你说得对！我不需要手册！",
-        "next": "eva_heroine_awakening_3"
-    },
-    {
-        "id": "eva_heroine_awakening_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(机甲开始稳定运行)",
-        "next": "eva_heroine_awakening_4"
-    },
-    {
-        "id": "eva_heroine_awakening_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我是万象行者！",
-        "next": "eva_heroine_awakening_5"
-    },
-    {
-        "id": "eva_heroine_awakening_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我是故事的守护者！",
-        "next": "eva_heroine_awakening_6"
-    },
-    {
-        "id": "eva_heroine_awakening_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(自信地)",
-        "next": "eva_heroine_awakening_7"
-    },
-    {
-        "id": "eva_heroine_awakening_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "而且……我看过的机甲动画可不是白看的！",
-        "next": "eva_final_attack_1"
-    },
-    {
-        "id": "eva_final_attack_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(摆出帅气的姿势)",
-        "next": "eva_final_attack_2"
-    },
-    {
-        "id": "eva_final_attack_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "朗基努斯之枪，再构成！",
-        "next": "eva_final_attack_3"
-    },
-    {
-        "id": "eva_final_attack_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(能量聚集)",
-        "next": "eva_final_attack_4"
-    },
-    {
-        "id": "eva_final_attack_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "这一击，承载着我们的羁绊！",
-        "next": "eva_final_attack_5"
-    },
-    {
-        "id": "eva_final_attack_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "喝！",
-        "next": "eva_final_attack_6"
-    },
-    {
-        "id": "eva_final_attack_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(攻击命中)",
-        "next": "eva_final_attack_7"
-    },
-    {
-        "id": "eva_final_attack_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "成功了！我们做到了！",
-        "next": "eva_victory_celebration_1"
-    },
-    {
-        "id": "eva_victory_celebration_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(兴奋地跳起来)",
-        "next": "eva_victory_celebration_2"
-    },
-    {
-        "id": "eva_victory_celebration_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我们赢了！我们真的赢了！",
-        "next": "eva_victory_celebration_3"
-    },
-    {
-        "id": "eva_victory_celebration_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(然后突然意识到自己太兴奋了)",
-        "next": "eva_victory_celebration_4"
-    },
-    {
-        "id": "eva_victory_celebration_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "咳咳……我是说，任务完成。",
-        "next": "eva_victory_celebration_5"
-    },
-    {
-        "id": "eva_victory_celebration_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(偷偷地)",
-        "next": "eva_victory_celebration_6"
-    },
-    {
-        "id": "eva_victory_celebration_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "不过刚才真的很帅对吧？",
-        "next": "act4_transition_1"
+        "id": "eva_route_video_1",
+        "type": "video",
+        "video": "game/videos/cutscenes/eva_route_lance_of_longinus.mp4",
+        "next": "battle_victory_1"
     },
     {
         "id": "saber_route_battle_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/cutscenes/saber_route_main_cg.mp4",
         "speaker": "魏娇娇",
-        "text": "魔法骑士模式启动！",
+        "text": "(气质变得庄严，手握光剑) Servant Saber，遵从召唤而来。我将以我的理想，斩断一切歪曲的言论！",
         "next": "saber_route_battle_2"
     },
     {
         "id": "saber_route_battle_2",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/cutscenes/saber_route_main_cg.mp4",
         "speaker": "魏娇娇",
-        "text": "(认真地)",
+        "text": "(突然变回自己，有点不好意思) 那个...我的剑术还不是很熟练，万一砍歪了你可不许笑我！",
         "next": "saber_route_battle_3"
     },
     {
         "id": "saber_route_battle_3",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "契约成立！以\"圣杯\"之名，我将成为你的Servant！",
+        "background": "game/videos/cutscenes/saber_route_main_cg.mp4",
+        "speaker": "陈星",
+        "text": "它的谎言正在实体化！娇娇，用你守护的信念，展现真正的'骑士道'！",
         "next": "saber_route_battle_4"
     },
     {
         "id": "saber_route_battle_4",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/cutscenes/saber_route_main_cg.mp4",
         "speaker": "魏娇娇",
-        "text": "(然后又有点不好意思)",
-        "next": "saber_route_battle_5"
+        "text": "(眼神变得锐利) 我明白了！我的誓言就是守护真相！Excalibur！",
+        "next": "saber_route_excalibur_cutscene"
     },
     {
-        "id": "saber_route_battle_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "虽然我的剑术还不是很好……",
-        "next": "saber_route_battle_6"
-    },
-    {
-        "id": "saber_route_battle_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(握紧法杖)",
-        "next": "saber_route_battle_7"
-    },
-    {
-        "id": "saber_route_battle_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "但是我会全力保护你的！",
-        "next": "saber_heroine_determination_1"
-    },
-    {
-        "id": "saber_heroine_determination_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(摆出骑士姿态，但有点僵硬)",
-        "next": "saber_heroine_determination_2"
-    },
-    {
-        "id": "saber_heroine_determination_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我以骑士的名义发誓……",
-        "next": "saber_heroine_determination_3"
-    },
-    {
-        "id": "saber_heroine_determination_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然忘词了)",
-        "next": "saber_heroine_determination_4"
-    },
-    {
-        "id": "saber_heroine_determination_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "呃……发誓什么来着？",
-        "next": "saber_heroine_determination_5"
-    },
-    {
-        "id": "saber_heroine_determination_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(赶紧翻小抄)",
-        "next": "saber_heroine_determination_6"
-    },
-    {
-        "id": "saber_heroine_determination_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "啊！发誓保护正义！",
-        "next": "saber_heroine_determination_7"
-    },
-    {
-        "id": "saber_heroine_determination_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(敌人攻击过来)",
-        "next": "saber_heroine_determination_8"
-    },
-    {
-        "id": "saber_heroine_determination_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "哇！它不等我念完誓词！",
-        "next": "saber_male_response_1"
-    },
-    {
-        "id": "saber_male_response_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "娇娇！不需要完美的誓词！",
-        "next": "saber_male_response_2"
-    },
-    {
-        "id": "saber_male_response_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "那是\"影之骑士团\"的残党。",
-        "next": "saber_male_response_3"
-    },
-    {
-        "id": "saber_male_response_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "看好了——这就是真正的\"骑士道\"！",
-        "next": "saber_male_response_4"
-    },
-    {
-        "id": "saber_male_response_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "\"我即剑之所向，心之所往！\"",
-        "next": "saber_heroine_inspiration_1"
-    },
-    {
-        "id": "saber_heroine_inspiration_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(被感动了)",
-        "next": "saber_heroine_inspiration_2"
-    },
-    {
-        "id": "saber_heroine_inspiration_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "原来如此……骑士道不在于华丽的誓词……",
-        "next": "saber_heroine_inspiration_3"
-    },
-    {
-        "id": "saber_heroine_inspiration_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(眼神变得坚定)",
-        "next": "saber_heroine_inspiration_4"
-    },
-    {
-        "id": "saber_heroine_inspiration_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "而在于保护重要之人的决心！",
-        "next": "saber_heroine_inspiration_5"
-    },
-    {
-        "id": "saber_heroine_inspiration_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(举起法杖)",
-        "next": "saber_heroine_inspiration_6"
-    },
-    {
-        "id": "saber_heroine_inspiration_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "那么，我的誓词就是……",
-        "next": "saber_heroine_inspiration_7"
-    },
-    {
-        "id": "saber_heroine_inspiration_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我要保护陈星！保护这个世界的故事！",
-        "next": "saber_final_attack_1"
-    },
-    {
-        "id": "saber_final_attack_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(充满决心地)",
-        "next": "saber_final_attack_2"
-    },
-    {
-        "id": "saber_final_attack_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "虽然我什么都做不到，但至少能站在这里！",
-        "next": "saber_final_attack_3"
-    },
-    {
-        "id": "saber_final_attack_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "这就是我的骑士道！",
-        "next": "saber_final_attack_4"
-    },
-    {
-        "id": "saber_final_attack_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(法杖发出耀眼光芒)",
-        "next": "saber_final_attack_5"
-    },
-    {
-        "id": "saber_final_attack_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "圣光，净化一切黑暗！",
-        "next": "saber_final_attack_6"
-    },
-    {
-        "id": "saber_final_attack_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(攻击成功)",
-        "next": "saber_final_attack_7"
-    },
-    {
-        "id": "saber_final_attack_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "我……我做到了！",
-        "next": "act4_transition_1"
+        "id": "saber_route_excalibur_cutscene",
+        "type": "video",
+        "video": "game/videos/cutscenes/saber_route_excalibur_cutscene.mp4",
+        "next": "battle_victory_1"
     },
     {
         "id": "dva_route_battle_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/cutscenes/dva_route_main_cg.mp4",
         "speaker": "魏娇娇",
-        "text": "科幻射击模式启动！",
+        "text": "(戴上虚拟耳机，语气俏皮) D.Va，上线！管他什么阴谋诡计，当成游戏打就对了！看我操作！",
         "next": "dva_route_battle_2"
     },
     {
         "id": "dva_route_battle_2",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/cutscenes/dva_route_main_cg.mp4",
         "speaker": "魏娇娇",
-        "text": "(突然变得很兴奋)",
+        "text": "(小声嘀咕) 嘿，这不比开着直播打排位刺激多了？不过...输了应该不会掉分吧？",
         "next": "dva_route_battle_3"
     },
     {
         "id": "dva_route_battle_3",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "哇！这个模式我最熟悉了！",
+        "background": "game/videos/cutscenes/dva_route_main_cg.mp4",
+        "speaker": "陈星",
+        "text": "它在用'404'屏障防御！娇娇，用你的'防御矩阵'吸收伤害，找到它的核心代码！",
         "next": "dva_route_battle_4"
     },
     {
         "id": "dva_route_battle_4",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/cutscenes/dva_route_main_cg.mp4",
         "speaker": "魏娇娇",
-        "text": "(然后又有点紧张)",
-        "next": "dva_route_battle_5"
+        "text": "收到！正在积攒最终技能！Nerf this！(游戏结束！) 爱你哟~",
+        "next": "dva_route_nerf_this_cutscene"
     },
     {
-        "id": "dva_route_battle_5",
+        "id": "dva_route_nerf_this_cutscene",
+        "type": "video",
+        "video": "game/videos/cutscenes/dva_route_nerf_this_cutscene.mp4",
+        "next": "battle_victory_1"
+    },
+    {
+        "id": "battle_victory_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/dream_sludge_floating.mp4",
         "speaker": "魏娇娇",
-        "text": "喂！别拍啊！\"星际维和部队\"的身份曝光会扣绩效的！",
-        "next": "dva_route_battle_6"
+        "text": "呼...净化完成！这个'故事'的真相被还原了！",
+        "next": "battle_victory_2"
     },
     {
-        "id": "dva_route_battle_6",
+        "id": "battle_victory_2",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
+        "background": "game/videos/backgrounds/dream_sludge_floating.mp4",
         "speaker": "魏娇娇",
-        "text": "(指着敌人)",
-        "next": "dva_route_battle_7"
-    },
-    {
-        "id": "dva_route_battle_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "这些是\"智械叛乱\"的余党，我奉命清理\"低轨道污染源\"。",
-        "next": "dva_heroine_gaming_1"
-    },
-    {
-        "id": "dva_heroine_gaming_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然变得很专业)",
-        "next": "dva_heroine_gaming_2"
-    },
-    {
-        "id": "dva_heroine_gaming_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "这就像我最喜欢的射击游戏一样！",
-        "next": "dva_heroine_gaming_3"
-    },
-    {
-        "id": "dva_heroine_gaming_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(开始操作虚拟武器)",
-        "next": "dva_heroine_gaming_4"
-    },
-    {
-        "id": "dva_heroine_gaming_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "瞄准……射击！",
-        "next": "dva_heroine_gaming_5"
-    },
-    {
-        "id": "dva_heroine_gaming_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(命中目标)",
-        "next": "dva_heroine_gaming_6"
-    },
-    {
-        "id": "dva_heroine_gaming_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "太棒了！连击数+1！",
-        "next": "dva_heroine_gaming_7"
-    },
-    {
-        "id": "dva_heroine_gaming_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(然后意识到这是现实)",
-        "next": "dva_heroine_gaming_8"
-    },
-    {
-        "id": "dva_heroine_gaming_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "啊！这不是游戏！要认真一点！",
-        "next": "dva_male_response_1"
-    },
-    {
-        "id": "dva_male_response_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "不，娇娇！就保持这种感觉！",
-        "next": "dva_male_response_2"
-    },
-    {
-        "id": "dva_male_response_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "\"正在启动机甲模式！\"",
-        "next": "dva_male_response_3"
-    },
-    {
-        "id": "dva_male_response_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "\"D.Va爱你哟～\"",
-        "next": "dva_male_response_4"
-    },
-    {
-        "id": "dva_male_response_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "陈星",
-        "text": "\"看我用\"防御矩阵\"把你们打成渣渣！\"",
-        "next": "dva_heroine_confidence_1"
-    },
-    {
-        "id": "dva_heroine_confidence_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(重新找回自信)",
-        "next": "dva_heroine_confidence_2"
-    },
-    {
-        "id": "dva_heroine_confidence_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "没错！游戏技巧在现实中也很有用！",
-        "next": "dva_heroine_confidence_3"
-    },
-    {
-        "id": "dva_heroine_confidence_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(熟练地操作)",
-        "next": "dva_heroine_confidence_4"
-    },
-    {
-        "id": "dva_heroine_confidence_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "看我的连续技！",
-        "next": "dva_heroine_confidence_5"
-    },
-    {
-        "id": "dva_heroine_confidence_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(各种华丽的攻击)",
-        "next": "dva_heroine_confidence_6"
-    },
-    {
-        "id": "dva_heroine_confidence_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "这就是职业玩家的实力！",
-        "next": "dva_heroine_confidence_7"
-    },
-    {
-        "id": "dva_heroine_confidence_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然想到什么)",
-        "next": "dva_heroine_confidence_8"
-    },
-    {
-        "id": "dva_heroine_confidence_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "对了！我还没告诉你，我其实是游戏高手！",
-        "next": "dva_final_attack_1"
-    },
-    {
-        "id": "dva_final_attack_1",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(摆出胜利姿势)",
-        "next": "dva_final_attack_2"
-    },
-    {
-        "id": "dva_final_attack_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "收到请求支援！",
-        "next": "dva_final_attack_3"
-    },
-    {
-        "id": "dva_final_attack_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "终极技能准备完毕！",
-        "next": "dva_final_attack_4"
-    },
-    {
-        "id": "dva_final_attack_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "自爆模式启动！",
-        "next": "dva_final_attack_5"
-    },
-    {
-        "id": "dva_final_attack_5",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(巨大爆炸)",
-        "next": "dva_final_attack_6"
-    },
-    {
-        "id": "dva_final_attack_6",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "GAME OVER！我们赢了！",
-        "next": "dva_final_attack_7"
-    },
-    {
-        "id": "dva_final_attack_7",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "(兴奋地)",
-        "next": "dva_final_attack_8"
-    },
-    {
-        "id": "dva_final_attack_8",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/opening.mp4",
-        "speaker": "魏娇娇",
-        "text": "这比游戏还要刺激！",
-        "next": "act4_transition_1"
+        "text": "(兴奋地抱住你) 陈星，我们做到了！我们一起守护了真相！",
+        "next": "ai_debriefing_1"
     }
 ]

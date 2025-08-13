@@ -130,22 +130,11 @@
             </div>
             <div class="dialogue-content">
                 <p id="dialogue-text" class="dialogue-text"></p>
-                <div id="dialogue-indicator" class="dialogue-indicator" style="display: none;">
-                    <span class="indicator-text">▶</span>
-                </div>
-                <!-- 手动播放状态提示 -->
-                <div id="manual-play-indicator" class="manual-play-indicator hidden">
-                    <span>手动播放</span>
-                </div>
             </div>
-            <!-- 自动播放弹出菜单 -->
-            <div id="autoplay-menu" class="autoplay-menu hidden">
-                <button id="autoplay-on" class="autoplay-option">
-                    <span class="autoplay-icon">▶</span> 开启自动播放
-                </button>
-                <button id="autoplay-off" class="autoplay-option">
-                    <span class="autoplay-icon">⏹</span> 关闭自动播放
-                </button>
+            <!-- 对话结束/播放控制智能图标 -->
+            <div id="next-indicator" class="next-indicator indicator-hidden">
+                <span class="icon play-icon">▶</span>
+                <span class="icon pause-icon">❚❚</span>
             </div>
         </div>
 
@@ -255,6 +244,15 @@
 
 
     <!-- 音频系统已移除 -->
+
+    <!-- 名词解释弹窗 -->
+    <div id="codex-modal" class="codex-modal-overlay hidden">
+        <div class="codex-modal-content">
+            <button id="codex-close" class="codex-close-button">&times;</button>
+            <h2 id="codex-title" class="codex-title"></h2>
+            <p id="codex-content" class="codex-text"></p>
+        </div>
+    </div>
 
     <!-- 加载脚本 -->
     <script src="js/TransitionManager.js"></script>

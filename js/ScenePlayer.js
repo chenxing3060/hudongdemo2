@@ -9,20 +9,25 @@ class ScenePlayer {
         this.currentScene = null;
     }
 
-    playScene(sceneId) {
+    async playScene(sceneId) {
         const scene = this.sceneDataManager.getSceneById(sceneId);
         if (!scene) {
             console.error(`无法播放场景，因为找不到ID为 "${sceneId}" 的场景。`);
             return;
         }
-        
+
+        const isBackgroundChanging = !this.currentScene || this.currentScene.background !== scene.background;
+        const needsTransition = scene.type !== 'video' && isBackgroundChanging;
+
+        if (needsTransition) {
+            await this.uiManager.transitionManager.show('fade');
+        }
+
         this.currentScene = scene;
         console.log('播放场景:', sceneId);
 
-        // 检查并解锁法典词条
         if (scene.unlocksCodex) {
             if (this.stateManager.unlockCodexEntry(scene.unlocksCodex)) {
-                // 如果是新解锁的，就显示提示
                 const codexEntry = this.sceneDataManager.getCodexEntryById(scene.unlocksCodex);
                 if (codexEntry) {
                     this.uiManager.showCodexUnlockToast(codexEntry.title);
@@ -30,7 +35,6 @@ class ScenePlayer {
             }
         }
 
-        // 预加载下一个场景的资源
         this.preloadNextSceneAssets(scene);
 
         switch (scene.type) {
@@ -38,8 +42,6 @@ class ScenePlayer {
             case 'dialogue':
                 this.uiManager.showScreen('game');
                 this.uiManager.setVideoBackground(scene.background);
-                // 默认隐藏手动提示，因为它只在等待输入时显示
-                this.uiManager.updatePlayModeIndicator(true);
                 this.uiManager.updateDialogue(scene.speaker, scene.text, () => this.onDialogueComplete(scene));
                 break;
             case 'choice':
@@ -52,15 +54,26 @@ class ScenePlayer {
                 this.uiManager.playFullscreenVideo(scene.video, () => {
                     if (scene.next) this.playScene(scene.next);
                 });
-                break;
+                return; 
             case 'ending':
                 this.uiManager.showScreen('game');
                 this.uiManager.setVideoBackground(scene.background);
                 this.uiManager.updateDialogue(scene.speaker, scene.text);
-                // 可以在此为结局场景添加特殊的UI效果
                 break;
+            case 'redirect':
+                // 处理页面重定向
+                if (scene.url) {
+                    window.location.href = scene.url;
+                } else {
+                    console.error('重定向场景缺少URL:', scene);
+                }
+                return;
             default:
                 console.error('未知场景类型:', scene.type);
+        }
+
+        if (needsTransition) {
+            this.uiManager.transitionManager.hide('fade');
         }
     }
 
@@ -98,8 +111,10 @@ class ScenePlayer {
             return;
         }
         
-        // 如果不自动前进，则显示手动播放提示
-        this.uiManager.updatePlayModeIndicator(false);
+        // 如果不自动前进，则显示指示器，等待玩家操作
+        if (scene.next) {
+            this.uiManager.showIndicator();
+        }
     }
 
     preloadNextSceneAssets(currentScene) {

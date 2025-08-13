@@ -150,6 +150,13 @@ class GameStateManager {
         return this.isAutoPlay;
     }
 
+    // 切换自动播放状态
+    toggleAutoPlay() {
+        this.isAutoPlay = !this.isAutoPlay;
+        console.log(`自动播放已切换为: ${this.isAutoPlay ? '开启' : '关闭'}`);
+        return this.isAutoPlay;
+    }
+
     // 解锁一个法典词条
     unlockCodexEntry(codexId) {
         if (!this.gameData.unlockedCodex.has(codexId)) {

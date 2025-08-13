@@ -62,16 +62,7 @@ class GameController {
             onBackToMenu: () => this.uiManager.showStartMenu(),
             onNextDialogue: () => this.scenePlayer.nextDialogue(true), // 明确是手动调用
             onSkipVideo: () => this.scenePlayer.skipVideo(),
-            onToggleAutoplayMenu: () => this.uiManager.toggleAutoplayMenu(),
-            onSetAutoplay: (shouldBeOn) => {
-                const isAutoPlay = this.stateManager.setAutoPlay(shouldBeOn);
-                this.uiManager.updateAutoplayButton(isAutoPlay);
-                this.uiManager.updatePlayModeIndicator(isAutoPlay);
-                // 如果是开启自动播放，则立即尝试推进一次对话，以激活流程
-                if (shouldBeOn) {
-                    this.scenePlayer.nextDialogue(false); // 程序化调用
-                }
-            }
+            onToggleAutoplay: () => this.toggleAutoplay()
         });
 
         // 5. Load the external scene data
@@ -79,6 +70,17 @@ class GameController {
 
         // 6. Start the visual loading animation
         this.startInitialLoading();
+    }
+
+    // 切换自动播放状态
+    toggleAutoplay() {
+        const isAutoPlay = this.stateManager.toggleAutoPlay();
+        this.uiManager.updateAutoplayIndicator(isAutoPlay);
+        
+        // 如果刚开启自动播放，则立即触发下一句
+        if (isAutoPlay) {
+            this.scenePlayer.nextDialogue(false); // 程序化调用
+        }
     }
 
     // Method to start a new game

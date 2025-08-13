@@ -1,8 +1,36 @@
+import TransitionManager from './TransitionManager.js';
+
 class UIManager {
     constructor({ musicManager }) {
         this.musicManager = musicManager;
+        this.codexData = {}; // 用于存储名词解释数据
         this.initializeElements();
         this.textSpeed = 50; // 默认打字速度
+        this.loadCodexData(); // 初始化时加载名词解释数据
+        this.transitionManager = new TransitionManager();
+    }
+
+    async loadCodexData() {
+        try {
+            const response = await fetch('data/codex.json');
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
+            }
+            const data = await response.json();
+            // 转换数据结构为便于查找的格式
+            this.codexData = {};
+            if (data.codex_entries) {
+                data.codex_entries.forEach(entry => {
+                    this.codexData[entry.id] = {
+                        title: entry.title,
+                        content: entry.description
+                    };
+                });
+            }
+            console.log('名词解释数据加载成功:', this.codexData);
+        } catch (error) {
+            console.error('加载名词解释数据失败:', error);
+        }
     }
 
     initializeElements() {
@@ -10,7 +38,7 @@ class UIManager {
         this.screens = {
             initialLoading: document.getElementById('initial-loading'),
             startMenu: document.getElementById('start-menu'),
-            about: document.getElementById('about-screen'), // 新增
+            about: document.getElementById('about-screen'),
             game: document.getElementById('game-screen'),
             video: document.getElementById('video-player'),
             routeSelection: document.getElementById('route-selection'),
@@ -25,19 +53,23 @@ class UIManager {
             dialogueContainer: document.getElementById('dialogue-box'),
             speakerName: document.getElementById('speaker-name'),
             dialogueText: document.getElementById('dialogue-text'),
-            dialogueIndicator: document.getElementById('dialogue-indicator'),
-            manualPlayIndicator: document.getElementById('manual-play-indicator'),
+            dialogueIndicator: document.getElementById('next-indicator'), // 更新ID
             choiceContainer: document.getElementById('choice-container'),
             videoPlayer: document.getElementById('video-player'),
             gameVideo: document.getElementById('game-video'),
             progressIndicator: document.getElementById('progress-indicator'),
             routeProgress: document.getElementById('route-progress'),
-            progressFill: document.getElementById('progress-fill'),
-            autoplayMenu: document.getElementById('autoplay-menu'),
-            autoplayOnButton: document.getElementById('autoplay-on'),
-            autoplayOffButton: document.getElementById('autoplay-off')
+            progressFill: document.getElementById('progress-fill')
         };
         
+        // 名词解释弹窗元素
+        this.codexModal = {
+            overlay: document.getElementById('codex-modal'),
+            title: document.getElementById('codex-title'),
+            content: document.getElementById('codex-content'),
+            closeButton: document.getElementById('codex-close')
+        };
+
         // 开始菜单元素
         this.startVideo = document.getElementById('start-video');
         this.gradientBg = document.getElementById('gradient-bg');
@@ -59,46 +91,40 @@ class UIManager {
         document.getElementById('start-game')?.addEventListener('click', callbacks.onStartGame);
         document.getElementById('about')?.addEventListener('click', () => this.showAboutScreen());
         
-        // 关于页面按钮 - 现在动态绑定
-
         // 游戏界面
         document.getElementById('back-to-menu')?.addEventListener('click', callbacks.onBackToMenu);
+        
+        // 智能图标点击事件 -> 切换自动播放状态
         this.gameElements.dialogueIndicator?.addEventListener('click', (e) => {
-            e.stopPropagation(); // 防止事件冒泡到整个屏幕
-            callbacks.onToggleAutoplayMenu();
+            e.stopPropagation(); // 防止事件冒泡到下面的全屏点击
+            callbacks.onToggleAutoplay();
         });
         
+        // 游戏主屏幕点击事件 -> 手动进行下一句
         this.screens.game?.addEventListener('click', (e) => {
-            // 如果点击的是菜单或其子元素，则不执行任何操作
-            if (this.gameElements.autoplayMenu?.contains(e.target)) {
+            // 如果点击的是名词解释，则显示弹窗
+            if (e.target.classList.contains('codex-term')) {
+                this.showCodexModal(e.target.dataset.term);
                 return;
             }
-            // 如果点击的是对话框指示器，则不执行任何操作
-            if (this.gameElements.dialogueIndicator?.contains(e.target)) {
-                return;
-            }
-            // 如果点击的是选择按钮或顶部控件，则不执行任何操作
-            if (e.target.classList.contains('choice-button') || e.target.closest('.top-controls')) {
+            // 如果点击的是智能图标、选项按钮或顶部控制按钮，则不触发下一句
+            if (e.target.closest('.next-indicator, .choice-button, .top-controls')) {
                 return;
             }
             
-            // 隐藏菜单并进入下一段对话
-            this.toggleAutoplayMenu(false);
             callbacks.onNextDialogue();
-        });
-
-        // 自动播放菜单按钮
-        this.gameElements.autoplayOnButton?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            callbacks.onSetAutoplay(true);
-        });
-        this.gameElements.autoplayOffButton?.addEventListener('click', (e) => {
-            e.stopPropagation();
-            callbacks.onSetAutoplay(false);
         });
 
         // 视频播放器
         document.getElementById('skip-video')?.addEventListener('click', callbacks.onSkipVideo);
+
+        // 名词解释弹窗关闭事件
+        this.codexModal.closeButton?.addEventListener('click', () => this.hideCodexModal());
+        this.codexModal.overlay?.addEventListener('click', (e) => {
+            if (e.target === this.codexModal.overlay) {
+                this.hideCodexModal();
+            }
+        });
     }
 
     // 更新加载动画
@@ -297,9 +323,11 @@ class UIManager {
     // 更新对话框内容
     updateDialogue(speaker, text, onComplete) {
         this.gameElements.dialogueContainer.style.display = 'block';
-        this.gameElements.dialogueIndicator.style.display = 'none';
+        this.hideIndicator(); // 在开始时明确隐藏
         this.gameElements.speakerName.textContent = speaker || '';
-        this.typewriterEffect(this.gameElements.dialogueText, text, onComplete);
+        
+        const processedText = this.highlightCodexTerms(text);
+        this.typewriterEffect(this.gameElements.dialogueText, processedText, onComplete);
     }
 
     // 显示选项
@@ -331,83 +359,89 @@ class UIManager {
         }
     }
 
-    // 打字机效果（支持特效标签）
+    // 高亮文本中的名词解释
+    highlightCodexTerms(text) {
+        if (!this.codexData || Object.keys(this.codexData).length === 0) {
+            return text;
+        }
+        
+        const terms = Object.keys(this.codexData).join('|');
+        const regex = new RegExp(`\\b(${terms})\\b`, 'g');
+        
+        return text.replace(regex, (match) => {
+            return `<strong class="codex-term" data-term="${match}">${match}</strong>`;
+        });
+    }
+
+    // 显示名词解释弹窗
+    showCodexModal(term) {
+        const termData = this.codexData[term];
+        if (!termData || !this.codexModal.overlay) return;
+
+        this.codexModal.title.textContent = termData.title;
+        this.codexModal.content.textContent = termData.content;
+        this.codexModal.overlay.classList.remove('hidden');
+    }
+
+    // 隐藏名词解释弹窗
+    hideCodexModal() {
+        if (this.codexModal.overlay) {
+            this.codexModal.overlay.classList.add('hidden');
+        }
+    }
+
+    // 打字机效果（支持特效标签和高亮标签）
     typewriterEffect(element, text, onComplete) {
-        element.innerHTML = ''; // 使用innerHTML以支持HTML标签
+        element.innerHTML = '';
         let i = 0;
-        let currentSpan = null;
-        let inTag = false;
+        const tempContainer = document.createElement('div');
+        tempContainer.innerHTML = text;
+        const nodes = Array.from(tempContainer.childNodes);
+        let nodeIndex = 0;
+        let textIndex = 0;
 
         const type = () => {
-            if (i >= text.length) {
+            if (nodeIndex >= nodes.length) {
                 clearInterval(intervalId);
-                this.gameElements.dialogueIndicator.style.display = 'block';
+                // 不再由打字机效果控制显示，交由ScenePlayer控制
                 if (onComplete) onComplete();
                 return;
             }
 
-            let char = text[i];
+            const currentNode = nodes[nodeIndex];
 
-            if (char === '<') {
-                const tagMatch = text.substring(i).match(/^<(\/?)([^>]+)>/);
-                if (tagMatch) {
-                    const [fullTag, isClosing, tagName] = tagMatch;
-                    i += fullTag.length;
-
-                    if (isClosing) {
-                        currentSpan = null; // 退出特效标签，恢复正常文本
-                    } else {
-                        currentSpan = document.createElement('span');
-                        currentSpan.className = `text-effect-${tagName}`;
-                        element.appendChild(currentSpan);
-                    }
-                    type(); // 立即处理下一个字符
-                    return;
+            if (currentNode.nodeType === Node.TEXT_NODE) {
+                if (textIndex < currentNode.textContent.length) {
+                    element.innerHTML += currentNode.textContent[textIndex];
+                    textIndex++;
+                } else {
+                    nodeIndex++;
+                    textIndex = 0;
                 }
+            } else if (currentNode.nodeType === Node.ELEMENT_NODE) {
+                // 对于HTML元素（如<strong>），一次性完整显示
+                element.appendChild(currentNode.cloneNode(true));
+                nodeIndex++;
+            } else {
+                nodeIndex++;
             }
-            
-            const target = currentSpan || element;
-            target.innerHTML += char;
-            i++;
         };
 
         const intervalId = setInterval(type, this.textSpeed);
     }
 
-    // 切换自动播放菜单的显示状态
-    toggleAutoplayMenu(forceState) {
-        const menu = this.gameElements.autoplayMenu;
-        if (!menu) return;
-
-        const isHidden = menu.classList.contains('hidden');
-        
-        if (typeof forceState === 'boolean') {
-            if (forceState) {
-                menu.classList.remove('hidden');
-            } else {
-                menu.classList.add('hidden');
-            }
-        } else {
-            menu.classList.toggle('hidden');
-        }
+    // 更新自动播放状态的视觉指示器
+    updateAutoplayIndicator(isAutoPlay) {
+        document.body.classList.toggle('auto-play-active', isAutoPlay);
     }
 
-    // 更新自动播放按钮的状态
-    updateAutoplayButton(isAutoPlay) {
-        if (this.gameElements.autoplayOnButton && this.gameElements.autoplayOffButton) {
-            this.gameElements.autoplayOnButton.classList.toggle('active', isAutoPlay);
-            this.gameElements.autoplayOffButton.classList.toggle('active', !isAutoPlay);
-        }
-        // 隐藏菜单
-        this.toggleAutoplayMenu(false);
+    // 显示/隐藏播放指示器
+    showIndicator() {
+        this.gameElements.dialogueIndicator?.classList.remove('indicator-hidden');
     }
 
-    // 更新播放模式提示
-    updatePlayModeIndicator(isAutoPlay) {
-        if (this.gameElements.manualPlayIndicator) {
-            // 如果不是自动播放，则显示“手动播放”提示
-            this.gameElements.manualPlayIndicator.classList.toggle('hidden', isAutoPlay);
-        }
+    hideIndicator() {
+        this.gameElements.dialogueIndicator?.classList.add('indicator-hidden');
     }
 
     // 显示法典解锁提示
