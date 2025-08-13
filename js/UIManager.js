@@ -1,5 +1,3 @@
-import TransitionManager from './TransitionManager.js';
-
 class UIManager {
     constructor({ musicManager }) {
         this.musicManager = musicManager;
@@ -270,6 +268,11 @@ class UIManager {
         this.gameElements.gameVideo?.pause();
     }
 
+    // 获取当前背景视频元素
+    getCurrentBackgroundVideo() {
+        return this.gameElements.background?.querySelector('video');
+    }
+
     // 设置游戏背景
     setVideoBackground(videoPath) {
         const backgroundElement = this.gameElements.background;
@@ -470,4 +473,4 @@ class UIManager {
     }
 }
 
-export default UIManager;
+// UIManager类已定义，无需export

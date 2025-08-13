@@ -174,4 +174,4 @@ class GameStateManager {
     }
 }
 
-export default GameStateManager;
+// GameStateManager类已定义，无需export

@@ -164,4 +164,4 @@ class MusicManager {
     }
 }
 
-export default MusicManager;
+// MusicManager类已定义，无需export

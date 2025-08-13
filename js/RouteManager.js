@@ -127,4 +127,4 @@ class RouteManager {
     }
 }
 
-export default RouteManager;
+// RouteManager类已定义，无需export

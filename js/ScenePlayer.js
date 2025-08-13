@@ -104,10 +104,22 @@ class ScenePlayer {
             return;
         }
 
-        // 如果用户开启了自动播放模式，则立即进入下一场
+        // 如果用户开启了自动播放模式
         if (this.stateManager.isAutoPlay && scene.next) {
-            // 增加一个短暂的延迟，让玩家有时间阅读完最后一句
-            setTimeout(() => this.playScene(scene.next), 1000);
+            const video = this.uiManager.getCurrentBackgroundVideo();
+
+            // 检查是否有正在播放的背景视频
+            if (video && !video.paused && !video.ended) {
+                // 如果视频正在播放，则等待其结束后再继续
+                video.onended = () => {
+                    // 清除事件监听器，避免重复触发
+                    video.onended = null; 
+                    this.playScene(scene.next);
+                };
+            } else {
+                // 如果没有视频或视频已结束，则增加短暂延迟后继续
+                setTimeout(() => this.playScene(scene.next), 1000);
+            }
             return;
         }
         
@@ -158,4 +170,4 @@ class ScenePlayer {
     }
 }
 
-export default ScenePlayer;
+// ScenePlayer类已定义，无需export

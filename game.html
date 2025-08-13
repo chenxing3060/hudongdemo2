@@ -254,15 +254,16 @@
         </div>
     </div>
 
-    <!-- 加载脚本 -->
+    <!-- 按依赖顺序加载所有JavaScript文件 -->
+    <script src="js/GameStateManager.js"></script>
+    <script src="js/RouteManager.js"></script>
+    <script src="js/SceneDataManager.js"></script>
+    <script src="js/MusicManager.js"></script>
+    <script src="js/UIManager.js"></script>
+    <script src="js/ScenePlayer.js"></script>
+    <script src="js/AssetLoader.js"></script>
     <script src="js/TransitionManager.js"></script>
-    <script>
-      // 通过动态添加时间戳来加载主控制器，以强制绕过浏览器缓存
-      const gameControllerScript = document.createElement('script');
-      gameControllerScript.type = 'module';
-      gameControllerScript.src = `js/GameController.js?v=${new Date().getTime()}`;
-      document.body.appendChild(gameControllerScript);
-    </script>
+    <script src="js/GameController.js"></script>
     <script>
         // 初始化游戏
         document.addEventListener('DOMContentLoaded', () => {

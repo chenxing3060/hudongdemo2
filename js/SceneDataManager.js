@@ -22,9 +22,10 @@ class SceneDataManager {
             const codexFile = 'data/codex.json';
 
             // 并行获取所有文件
+            const cacheBuster = `?v=${new Date().getTime()}`;
             const responses = await Promise.all([
-                ...chapterFiles.map(file => fetch(file)),
-                fetch(codexFile)
+                ...chapterFiles.map(file => fetch(`${file}${cacheBuster}`)),
+                fetch(`${codexFile}${cacheBuster}`)
             ]);
 
             // 检查所有请求是否成功
@@ -99,4 +100,4 @@ class SceneDataManager {
     }
 }
 
-export default SceneDataManager;
+// SceneDataManager类已定义，无需export

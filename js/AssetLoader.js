@@ -46,4 +46,4 @@ class AssetLoader {
     }
 }
 
-export default AssetLoader;
+// AssetLoader类已定义，无需export

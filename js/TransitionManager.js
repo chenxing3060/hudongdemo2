@@ -37,4 +37,4 @@ class TransitionManager {
     }
 }
 
-export default TransitionManager;
+// TransitionManager类已定义，无需export

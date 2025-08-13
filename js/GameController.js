@@ -1,41 +1,10 @@
-// GameController now uses dynamic imports to defeat aggressive caching.
 class GameController {
     constructor() {
-        // The constructor is now very simple, just kicking off the async initialization.
         this.initializeGame();
     }
 
     async initializeGame() {
-        // 1. Dynamically import all modules with a cache-busting query string
-        const version = 'v=' + Date.now(); // Use a timestamp for a guaranteed new version
-        const [
-            GameStateManagerModule,
-            RouteManagerModule,
-            SceneDataManagerModule,
-            MusicManagerModule,
-            UIManagerModule,
-            ScenePlayerModule,
-            AssetLoaderModule
-        ] = await Promise.all([
-            import(`./GameStateManager.js?${version}`),
-            import(`./RouteManager.js?${version}`),
-            import(`./SceneDataManager.js?${version}`),
-            import(`./MusicManager.js?${version}`),
-            import(`./UIManager.js?${version}`),
-            import(`./ScenePlayer.js?${version}`),
-            import(`./AssetLoader.js?${version}`)
-        ]);
-
-        // Extract the default exports from the loaded modules
-        const GameStateManager = GameStateManagerModule.default;
-        const RouteManager = RouteManagerModule.default;
-        const SceneDataManager = SceneDataManagerModule.default;
-        const MusicManager = MusicManagerModule.default;
-        const UIManager = UIManagerModule.default;
-        const ScenePlayer = ScenePlayerModule.default;
-        const AssetLoader = AssetLoaderModule.default;
-
-        // 2. Now that modules are loaded, initialize all managers
+        // 直接实例化所有管理器类（传统方式）
         this.stateManager = new GameStateManager();
         this.routeManager = new RouteManager();
         this.sceneDataManager = new SceneDataManager();
@@ -43,7 +12,7 @@ class GameController {
         this.uiManager = new UIManager({ musicManager: this.musicManager });
         this.assetLoader = new AssetLoader();
         
-        // 3. Initialize the scene player with its dependencies
+        // 初始化场景播放器
         this.scenePlayer = new ScenePlayer({
             uiManager: this.uiManager,
             stateManager: this.stateManager,
@@ -52,10 +21,10 @@ class GameController {
             assetLoader: this.assetLoader
         });
         
-        // Set a global for debugging purposes
+        // 设置全局调试变量
         window.gameController = this;
         
-        // 4. Bind UI events to the correct handlers
+        // 绑定UI事件
         this.uiManager.bindEvents({
             onStartGame: () => this.startGame(),
             onShowAbout: () => this.showAbout(),
@@ -65,10 +34,10 @@ class GameController {
             onToggleAutoplay: () => this.toggleAutoplay()
         });
 
-        // 5. Load the external scene data
+        // 加载场景数据
         await this.sceneDataManager.loadScenes();
 
-        // 6. Start the visual loading animation
+        // 开始加载动画
         this.startInitialLoading();
     }
 
