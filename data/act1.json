@@ -10,7 +10,7 @@
   {
     "id": "dream_prologue_1_2",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "身前是从液态甲烷般的幽暗中升起的未知存在。",
     "next": "dream_prologue_1_3"
@@ -18,7 +18,7 @@
   {
     "id": "dream_prologue_1_3",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "她的双眸如星辰般闪烁，",
     "next": "dream_prologue_1_4"
@@ -26,7 +26,7 @@
   {
     "id": "dream_prologue_1_4",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "却透露着千年的疲惫。",
     "next": "dream_prologue_1_5"
@@ -34,7 +34,7 @@
   {
     "id": "dream_prologue_1_5",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "在这个超越时空的维度里，她是唯一的守望者。",
     "next": "dream_prologue_1_2_1"
@@ -42,7 +42,7 @@
   {
     "id": "dream_prologue_1_2_1",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "也是最后的希望。",
     "next": "dream_prologue_2_1"
@@ -50,7 +50,7 @@
   {
     "id": "dream_prologue_2_1",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "她对峙的，或许是这实体本身，",
     "next": "dream_prologue_2_2"
@@ -58,7 +58,7 @@
   {
     "id": "dream_prologue_2_2",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "或许是它折射出的、超越日常维度的认知褶皱——",
     "next": "dream_prologue_2_3"
@@ -66,7 +66,7 @@
   {
     "id": "dream_prologue_2_3",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "那些视网膜无法解析的现实裂缝。",
     "next": "dream_prologue_2_4"
@@ -74,7 +74,7 @@
   {
     "id": "dream_prologue_2_4",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "每一次呼吸，都是对混沌的抗争。",
     "next": "dream_prologue_2_5"
@@ -82,7 +82,7 @@
   {
     "id": "dream_prologue_2_5",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "每一次心跳，都在为即将到来的命运做准备。",
     "next": "dream_prologue_3_1"
@@ -90,7 +90,7 @@
   {
     "id": "dream_prologue_3_1",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "认知时间以千年为刻度流淌，",
     "next": "dream_prologue_3_2"
@@ -98,7 +98,7 @@
   {
     "id": "dream_prologue_3_2",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "身旁过客如现实碎片般更迭。",
     "next": "dream_prologue_3_3"
@@ -106,7 +106,7 @@
   {
     "id": "dream_prologue_3_3",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "但当圈境的符文潮汐退去，",
     "next": "dream_prologue_3_4"
@@ -114,7 +114,7 @@
   {
     "id": "dream_prologue_3_4",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "当蚀影体的低语沉入维度夹缝，",
     "next": "dream_prologue_3_5"
@@ -122,7 +122,7 @@
   {
     "id": "dream_prologue_3_5",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "唯有她的身影仍在原地。",
     "next": "dream_prologue_3_2_1"
@@ -130,7 +130,7 @@
   {
     "id": "dream_prologue_3_2_1",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "孤独，是万象行者永恒的宿命。",
     "next": "dream_prologue_3_2_2"
@@ -138,7 +138,7 @@
   {
     "id": "dream_prologue_3_2_2",
     "type": "narration",
-    "background": "game/videos/backgrounds/dream_prologue.mp4",
+    "background": "game/videos/bg/bg_dream_prologue.mp4",
     "speaker": "旁白",
     "text": "直到那个少年的出现……",
     "next": "male_intro_1_1"
@@ -154,7 +154,7 @@
   {
     "id": "male_intro_1_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro.mp4",
+    "background": "game/videos/cg/cg_male_intro_part1.mp4",
     "speaker": "陈星",
     "text": "果然，我的方向感已经烂到超越了人类的极限。",
     "next": "male_intro_1_3"
@@ -162,7 +162,7 @@
   {
     "id": "male_intro_1_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro.mp4",
+    "background": "game/videos/cg/cg_male_intro_part1.mp4",
     "speaker": "陈星",
     "text": "但又不是普通的迷路……",
     "next": "male_intro_1_4"
@@ -170,7 +170,7 @@
   {
     "id": "male_intro_1_4",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro.mp4",
+    "background": "game/videos/cg/cg_male_intro_part1.mp4",
     "speaker": "陈星",
     "text": "更像是这个空间本身在对我撒谎。",
     "next": "male_intro_2_1"
@@ -178,7 +178,7 @@
   {
     "id": "male_intro_2_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro.mp4",
+    "background": "game/videos/cg/cg_male_intro_part1.mp4",
     "speaker": "陈星",
     "text": "比如现在，教学楼的轮廓线在轻微地\"融化\"，",
     "next": "male_intro_2_2"
@@ -186,7 +186,7 @@
   {
     "id": "male_intro_2_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro.mp4",
+    "background": "game/videos/cg/cg_male_intro_part1.mp4",
     "speaker": "陈星",
     "text": "就像夏日柏油路上的热浪，",
     "next": "male_intro_2_3"
@@ -194,7 +194,7 @@
   {
     "id": "male_intro_2_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro.mp4",
+    "background": "game/videos/cg/cg_male_intro_part1.mp4",
     "speaker": "陈星",
     "text": "可今天明明是个秋高气爽的日子。",
     "next": "male_intro_3_1"
@@ -210,7 +210,7 @@
   {
     "id": "male_intro_3_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro_34.mp4",
+    "background": "game/videos/cg/cg_male_intro_part2.mp4",
     "speaker": "陈星",
     "text": "以前我只当是故事，",
     "next": "male_intro_3_3"
@@ -218,7 +218,7 @@
   {
     "id": "male_intro_3_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro_34.mp4",
+    "background": "game/videos/cg/cg_male_intro_part2.mp4",
     "speaker": "陈星",
     "text": "但自从他把那本《星图异闻录》留给我之后，",
     "next": "male_intro_3_4"
@@ -226,15 +226,21 @@
   {
     "id": "male_intro_3_4",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro_34.mp4",
+    "background": "game/videos/cg/cg_male_intro_part2.mp4",
     "speaker": "陈星",
     "text": "这种\"异常\"就越来越频繁了……",
     "next": "male_intro_video_1"
   },
   {
+    "id": "male_intro_video_1",
+    "type": "video",
+    "video": "game/videos/cg/cg_male_observes_heroine.mp4",
+    "next": "male_intro_4_1"
+  },
+  {
     "id": "male_intro_4_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro_34.mp4",
+    "background": "game/videos/cg/cg_male_intro_part2.mp4",
     "speaker": "陈星",
     "text": "嗯？那是……在做什么？",
     "next": "male_intro_4_2"
@@ -242,7 +248,7 @@
   {
     "id": "male_intro_4_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro_34.mp4",
+    "background": "game/videos/cg/cg_male_intro_part2.mp4",
     "speaker": "陈星",
     "text": "那个女生……",
     "next": "male_intro_4_3"
@@ -250,7 +256,7 @@
   {
     "id": "male_intro_4_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro_34.mp4",
+    "background": "game/videos/cg/cg_male_intro_part2.mp4",
     "speaker": "陈星",
     "text": "她在对着空气说话？",
     "next": "male_intro_4_4"
@@ -258,16 +264,10 @@
   {
     "id": "male_intro_4_4",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_intro_34.mp4",
+    "background": "game/videos/cg/cg_male_intro_part2.mp4",
     "speaker": "陈星",
     "text": "还是在念什么咒语？",
     "next": "heroine_protocol_1_1"
-  },
-  {
-    "id": "male_intro_video_1",
-    "type": "video",
-    "video": "game/videos/cg/cg_male_observes_heroine.mp4",
-    "next": "male_intro_4_1"
   },
   {
     "id": "heroine_protocol_1_1",
@@ -280,7 +280,7 @@
   {
     "id": "heroine_protocol_1_2",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "开始同步本地现实参数……",
     "next": "heroine_protocol_1_3"
@@ -288,7 +288,7 @@
   {
     "id": "heroine_protocol_1_3",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "(设备哔声)",
     "next": "heroine_protocol_1_4"
@@ -296,7 +296,7 @@
   {
     "id": "heroine_protocol_1_4",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "报告总部，\"青藤高中\"象限，",
     "next": "heroine_protocol_1_5"
@@ -304,7 +304,7 @@
   {
     "id": "heroine_protocol_1_5",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "现实稳定度基准值73%。",
     "next": "heroine_protocol_2_1",
@@ -313,7 +313,7 @@
   {
     "id": "heroine_protocol_2_1",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "确认存在三级\"模因污染\"。",
     "next": "heroine_protocol_2_2",
@@ -322,7 +322,7 @@
   {
     "id": "heroine_protocol_2_2",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "污染源：未知的\"都市传说\"类故事原型。",
     "next": "heroine_protocol_2_3"
@@ -330,7 +330,7 @@
   {
     "id": "heroine_protocol_2_3",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "正在三号段落呈指数级扩散。",
     "next": "heroine_protocol_3_1"
@@ -338,7 +338,7 @@
   {
     "id": "heroine_protocol_3_1",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "请求总部AI\"亚里士多德\"授权，",
     "next": "heroine_protocol_3_2"
@@ -346,7 +346,7 @@
   {
     "id": "heroine_protocol_3_2",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "执行\"圣痕共鸣\"协议，",
     "next": "heroine_protocol_3_3",
@@ -355,7 +355,7 @@
   {
     "id": "heroine_protocol_3_3",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "对当前书页建立初始锚点。",
     "next": "heroine_protocol_3_4"
@@ -363,7 +363,7 @@
   {
     "id": "heroine_protocol_3_4",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "吟唱开始……",
     "next": "heroine_protocol_4_1"
@@ -371,7 +371,7 @@
   {
     "id": "heroine_protocol_4_1",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "(突然停顿，小声嘀咕)",
     "next": "heroine_protocol_4_2"
@@ -379,7 +379,7 @@
   {
     "id": "heroine_protocol_4_2",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "诶？这个咒语的第三段是什么来着……",
     "next": "heroine_protocol_4_3"
@@ -387,7 +387,7 @@
   {
     "id": "heroine_protocol_4_3",
     "type": "dialogue",
-    "background": "game/videos/backgrounds/heroine_ritual_background.mp4",
+    "background": "game/videos/bg/bg_heroine_ritual.mp4",
     "speaker": "魏娇娇",
     "text": "<shake>啊啊啊，又忘词了！</shake>",
     "next": "heroine_cute_moment_1_1"
@@ -403,7 +403,7 @@
   {
     "id": "heroine_cute_moment_1_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_cute_moment.mp4",
+    "background": "game/videos/cg/cg_heroine_cute.mp4",
     "speaker": "魏娇娇",
     "text": "等等等等……小抄在哪里……",
     "next": "heroine_cute_moment_1_3"
@@ -411,7 +411,7 @@
   {
     "id": "heroine_cute_moment_1_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_cute_moment.mp4",
+    "background": "game/videos/cg/cg_heroine_cute.mp4",
     "speaker": "魏娇娇",
     "text": "(掏出一张皱巴巴的纸条)",
     "next": "heroine_cute_moment_1_4"
@@ -419,7 +419,7 @@
   {
     "id": "heroine_cute_moment_1_4",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_cute_moment.mp4",
+    "background": "game/videos/cg/cg_heroine_cute.mp4",
     "speaker": "魏娇娇",
     "text": "啊！找到了！",
     "next": "heroine_cute_moment_2_1"
@@ -427,7 +427,7 @@
   {
     "id": "heroine_cute_moment_2_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_cute_moment.mp4",
+    "background": "game/videos/cg/cg_heroine_cute.mp4",
     "speaker": "魏娇娇",
     "text": "咳咳……重新开始……",
     "next": "heroine_cute_moment_2_2"
@@ -435,7 +435,7 @@
   {
     "id": "heroine_cute_moment_2_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_cute_moment.mp4",
+    "background": "game/videos/cg/cg_heroine_cute.mp4",
     "speaker": "魏娇娇",
     "text": "(清了清嗓子，重新摆出严肃的姿态)",
     "next": "heroine_cute_moment_2_3"
@@ -443,7 +443,7 @@
   {
     "id": "heroine_cute_moment_2_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_cute_moment.mp4",
+    "background": "game/videos/cg/cg_heroine_cute.mp4",
     "speaker": "魏娇娇",
     "text": "呃……刚才那个不算！",
     "next": "heroine_cute_moment_2_4"
@@ -451,7 +451,7 @@
   {
     "id": "heroine_cute_moment_2_4",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_cute_moment.mp4",
+    "background": "game/videos/cg/cg_heroine_cute.mp4",
     "speaker": "魏娇娇",
     "text": "从现在开始才是正式的！",
     "next": "male_observation_1_1"
@@ -467,7 +467,7 @@
   {
     "id": "male_observation_1_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_observation.mp4",
+    "background": "game/videos/cg/cg_male_observation.mp4",
     "speaker": "陈星",
     "text": "那些符号……和我祖父那本古书里",
     "next": "male_observation_1_3"
@@ -475,7 +475,7 @@
   {
     "id": "male_observation_1_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_observation.mp4",
+    "background": "game/videos/cg/cg_male_observation.mp4",
     "speaker": "陈星",
     "text": "描绘的\"世界基盘符文\"一模一样！",
     "next": "male_observation_2_1"
@@ -483,7 +483,7 @@
   {
     "id": "male_observation_2_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_observation.mp4",
+    "background": "game/videos/cg/cg_male_observation.mp4",
     "speaker": "陈星",
     "text": "她不是在玩角色扮演……",
     "next": "male_observation_2_2"
@@ -491,7 +491,7 @@
   {
     "id": "male_observation_2_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_observation.mp4",
+    "background": "game/videos/cg/cg_male_observation.mp4",
     "speaker": "陈星",
     "text": "她说的每一个字，都像是一句句指令，",
     "next": "male_observation_2_3"
@@ -499,7 +499,7 @@
   {
     "id": "male_observation_2_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_observation.mp4",
+    "background": "game/videos/cg/cg_male_observation.mp4",
     "speaker": "陈星",
     "text": "在……在给这个空间\"打补丁\"！",
     "next": "male_observation_3_1"
@@ -507,105 +507,25 @@
   {
     "id": "male_observation_3_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_observation.mp4",
+    "background": "game/videos/cg/cg_male_observation.mp4",
     "speaker": "陈星",
-    "text": "等等……她刚才是在看小抄吗？",
+    "text": "我必须接近她，了解更多……",
     "next": "male_observation_3_2"
   },
   {
     "id": "male_observation_3_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_observation.mp4",
+    "background": "game/videos/cg/cg_male_observation.mp4",
     "speaker": "陈星",
-    "text": "这么神秘的仪式，居然还需要小抄？",
+    "text": "但如果我就这样过去，她会不会觉得我是个奇怪的人？",
     "next": "male_observation_3_3"
   },
   {
     "id": "male_observation_3_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/male_observation.mp4",
+    "background": "game/videos/cg/cg_male_observation.mp4",
     "speaker": "陈星",
-    "text": "这反差也太大了吧……",
-    "next": "heroine_restart_1_1"
-  },
-  {
-    "id": "heroine_restart_1_1",
-    "type": "dialogue",
-    "background": "game/videos/cg/cg_heroine_restart.mp4",
-    "speaker": "魏娇娇",
-    "text": "(重新摆出专业姿态，但声音还是有点紧张)",
-    "next": "heroine_restart_1_2"
-  },
-  {
-    "id": "heroine_restart_1_2",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_restart_and_notice.mp4",
-    "speaker": "魏娇娇",
-    "text": "咳咳……重新初始化协议……",
-    "next": "heroine_restart_1_3"
-  },
-  {
-    "id": "heroine_restart_1_3",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_restart_and_notice.mp4",
-    "speaker": "魏娇娇",
-    "text": "\"卡珊德拉\"正式上线！",
-    "next": "heroine_restart_2_1"
-  },
-  {
-    "id": "heroine_restart_2_1",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_restart_and_notice.mp4",
-    "speaker": "魏娇娇",
-    "text": "(偷偷瞄了一眼小抄)",
-    "next": "heroine_restart_2_2"
-  },
-  {
-    "id": "heroine_restart_2_2",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_restart_and_notice.mp4",
-    "speaker": "魏娇娇",
-    "text": "执行……呃……\"圣痕共鸣\"协议！",
-    "next": "heroine_restart_2_3"
-  },
-  {
-    "id": "heroine_restart_2_3",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_restart_and_notice.mp4",
-    "speaker": "魏娇娇",
-    "text": "建立现实锚点！",
-    "next": "heroine_restart_2_4"
-  },
-  {
-    "id": "heroine_restart_2_4",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_restart_and_notice.mp4",
-    "speaker": "魏娇娇",
-    "text": "(符文开始在空中闪烁)",
-    "next": "heroine_restart_3_1"
-  },
-  {
-    "id": "heroine_restart_3_1",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_restart_and_notice.mp4",
-    "speaker": "魏娇娇",
-    "text": "成功了！太好了！",
-    "next": "heroine_restart_3_2"
-  },
-  {
-    "id": "heroine_restart_3_2",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_restart_and_notice.mp4",
-    "speaker": "魏娇娇",
-    "text": "(突然意识到自己太兴奋了，赶紧恢复严肃)",
-    "next": "heroine_restart_3_3"
-  },
-  {
-    "id": "heroine_restart_3_3",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_restart_and_notice.mp4",
-    "speaker": "魏娇娇",
-    "text": "咳咳……我是说，协议执行完毕。",
+    "text": "不管了，这可能是我唯一的机会！",
     "next": "heroine_notices_1_1"
   },
   {
@@ -613,224 +533,204 @@
     "type": "dialogue",
     "background": "game/videos/cg/cg_heroine_notices.mp4",
     "speaker": "魏娇娇",
-    "text": "警告：高能级\"认知敏感\"个体出现！",
+    "text": "嗯？",
     "next": "heroine_notices_1_2"
   },
   {
     "id": "heroine_notices_1_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_notices.mp4",
+    "background": "game/videos/cg/cg_heroine_notices.mp4",
     "speaker": "魏娇娇",
-    "text": "权限超越普通\"目击者\"！",
+    "text": "(突然转身，惊讶地看着你)",
     "next": "heroine_notices_1_3"
   },
   {
     "id": "heroine_notices_1_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_notices.mp4",
+    "background": "game/videos/cg/cg_heroine_notices.mp4",
     "speaker": "魏娇娇",
-    "text": "(转身看向陈星，眼神瞬间变得锐利)",
+    "text": "你……你能看到？",
     "next": "heroine_notices_1_4"
   },
   {
     "id": "heroine_notices_1_4",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_notices.mp4",
+    "background": "game/videos/cg/cg_heroine_notices.mp4",
     "speaker": "魏娇娇",
-    "text": "你……你看得见？！回答我！",
+    "text": "不，不可能……普通人不应该能看到认知圈境的……",
     "next": "heroine_notices_2_1"
   },
   {
     "id": "heroine_notices_2_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_notices.mp4",
+    "background": "game/videos/cg/cg_heroine_notices.mp4",
     "speaker": "魏娇娇",
-    "text": "(但紧接着又有点慌张)",
+    "text": "(她的眼睛突然亮了起来)",
     "next": "heroine_notices_2_2"
   },
   {
     "id": "heroine_notices_2_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_notices.mp4",
+    "background": "game/videos/cg/cg_heroine_notices.mp4",
     "speaker": "魏娇娇",
-    "text": "等等……你不会把我刚才忘词的事情说出去吧？",
-    "next": "heroine_notices_2_3"
+    "text": "等等，你是……你也是万象行者？",
+    "next": "first_meeting_choice"
   },
   {
-    "id": "heroine_notices_2_3",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_notices.mp4",
-    "speaker": "魏娇娇",
-    "text": "那个……其实我是新人，还在实习期……",
-    "next": "heroine_notices_3_1"
-  },
-  {
-    "id": "heroine_notices_3_1",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_notices.mp4",
-    "speaker": "魏娇娇",
-    "text": "(立刻摇头)",
-    "next": "heroine_notices_3_2"
-  },
-  {
-    "id": "heroine_notices_3_2",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_notices.mp4",
-    "speaker": "魏娇娇",
-    "text": "不对不对！现在不是说这个的时候！",
-    "next": "heroine_notices_3_3"
-  },
-  {
-    "id": "heroine_notices_3_3",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/heroine_notices.mp4",
-    "speaker": "魏娇娇",
-    "text": "你到底是什么人？！",
-    "next": "first_response_choice"
-  },
-  {
-    "id": "first_response_choice",
+    "id": "first_meeting_choice",
     "type": "choice",
     "background": "game/videos/cg/cg_first_choice.mp4",
-    "speaker": "旁白",
-    "text": "面对这个既神秘又有点可爱的女生，你决定……",
+    "speaker": "陈星",
+    "text": "你该如何回应这个神秘少女？",
     "choices": [
       {
-        "text": "我……在我祖父留下的古书上，见过这种符号。",
-        "next": "response_book_1"
+        "text": "\"我不知道什么万象行者，但我能看到你周围的符文。\"",
+        "next": "honest_response_1"
       },
       {
-        "text": "你是在…拍科幻短视频吗？这特效做得真棒。",
-        "next": "response_video_1"
+        "text": "\"我只是个普通学生，不知道你在说什么。\"",
+        "next": "cautious_response_1"
       },
       {
-        "text": "抱歉，我什么都没看见。我只是路过。",
-        "next": "response_denial_1"
-      },
-      {
-        "text": "你刚才忘词的样子挺可爱的。",
-        "next": "response_cute_1"
+        "text": "\"我祖父留给我一本《星图异闻录》，里面提到过类似的事情。\"",
+        "next": "book_response_1"
       }
     ]
   },
   {
-    "id": "response_book_1",
+    "id": "honest_response_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
     "speaker": "陈星",
-    "text": "我……在我祖父留下的古书上，见过这种符号。",
-    "next": "response_book_2"
+    "text": "我不知道什么万象行者，但我能看到你周围的符文。",
+    "next": "heroine_excited_1"
   },
   {
-    "id": "response_book_2",
+    "id": "cautious_response_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
-    "speaker": "魏娇娇",
-    "text": "什么？！古书？难道说……你不是普通人？快给我看看！",
-    "next": "response_book_3"
-  },
-  {
-    "id": "response_book_3",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
     "speaker": "陈星",
-    "text": "书不在我身上...但是，我好像在梦里见过你。",
-    "next": "response_book_4"
+    "text": "我只是个普通学生，不知道你在说什么。",
+    "next": "heroine_suspicious_1"
   },
   {
-    "id": "response_book_4",
+    "id": "book_response_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
-    "speaker": "魏娇娇",
-    "text": "梦里？这...这是'认知回响'的迹象！你绝对是'野生万象行者'！",
-    "next": "story_convergence_1"
-  },
-  {
-    "id": "response_video_1",
-    "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
     "speaker": "陈星",
-    "text": "你是在…拍科幻短视频吗？这特效做得真棒。",
-    "next": "response_video_2"
+    "text": "我祖父留给我一本《星图异闻录》，里面提到过类似的事情。",
+    "next": "heroine_shocked_1"
   },
   {
-    "id": "response_video_2",
+    "id": "heroine_excited_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_perform.mp4",
     "speaker": "魏娇娇",
-    "text": "短视频？特效？(气鼓鼓) 我这是在执行神圣的任务！你以为这是在过家家吗？",
-    "next": "response_video_3"
+    "text": "你真的能看到！这太不可思议了！",
+    "next": "heroine_excited_2"
   },
   {
-    "id": "response_video_3",
+    "id": "heroine_excited_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_perform.mp4",
     "speaker": "魏娇娇",
-    "text": "不过...你能看到这些'特效'，就说明你不是普通人。别装了，你肯定能看到！",
-    "next": "story_convergence_1"
+    "text": "我叫魏娇娇，是个万象行者——呃，就是能看到并影响'故事'的人。",
+    "next": "heroine_excited_3"
   },
   {
-    "id": "response_denial_1",
+    "id": "heroine_excited_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_perform.mp4",
+    "speaker": "魏娇娇",
+    "text": "你也有这种能力吗？太棒了！我终于不是一个人了！",
+    "next": "heroine_excited_4"
+  },
+  {
+    "id": "heroine_excited_4",
+    "type": "dialogue",
+    "background": "game/videos/cg/cg_heroine_ritual_perform.mp4",
     "speaker": "陈星",
-    "text": "抱歉，我什么都没看见。我只是路过。",
-    "next": "response_denial_2"
+    "text": "我叫陈星，刚转学过来。我不确定我有什么能力，但我能看到一些别人看不到的东西。",
+    "next": "heroine_excited_5"
   },
   {
-    "id": "response_denial_2",
+    "id": "heroine_excited_5",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_perform.mp4",
     "speaker": "魏娇娇",
-    "text": "路过？(眯起眼睛) 你的'信息素'波动可骗不了我。普通人现在应该已经陷入'认知模糊'状态，自己走开了。",
-    "next": "response_denial_3"
+    "text": "那就对了！你肯定是个潜在的万象行者！我们得赶紧向总部报告！",
+    "next": "act2_transition_1"
   },
   {
-    "id": "response_denial_3",
+    "id": "heroine_suspicious_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
     "speaker": "魏娇娇",
-    "text": "你还站在这里，就说明你肯定有问题！快从实招来！",
-    "next": "story_convergence_1"
+    "text": "(狐疑地看着你) 真的吗？那你为什么能看到我的符文？",
+    "next": "heroine_suspicious_2"
   },
   {
-    "id": "response_cute_1",
+    "id": "heroine_suspicious_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
+    "speaker": "魏娇娇",
+    "text": "算了，既然你能看到，那就说明你不是普通人。我叫魏娇娇，是个万象行者。",
+    "next": "heroine_suspicious_3"
+  },
+  {
+    "id": "heroine_suspicious_3",
+    "type": "dialogue",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
     "speaker": "陈星",
-    "text": "你刚才忘词的样子挺可爱的。",
-    "next": "response_cute_2"
+    "text": "我叫陈星，刚转学过来。万象行者是什么？",
+    "next": "heroine_suspicious_4"
   },
   {
-    "id": "response_cute_2",
+    "id": "heroine_suspicious_4",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
     "speaker": "魏娇娇",
-    "text": "<blush>可、可爱？！(脸红) 你、你胡说什么！那、那只是战略性停顿！为了积蓄能量！</blush>",
-    "next": "response_cute_3"
+    "text": "是能看到并影响'故事'的人。看来你还不知道自己的能力。我们得向总部报告！",
+    "next": "act2_transition_1"
   },
   {
-    "id": "response_cute_3",
+    "id": "heroine_shocked_1",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
     "speaker": "魏娇娇",
-    "text": "不对！别想转移话题！你居然能察觉到我刚才的...失误，说明你的'观察者'等级很高！你到底是谁？！",
-    "next": "story_convergence_1"
+    "text": "《星图异闻录》？！那是万象行者的古老典籍！你祖父是……",
+    "next": "heroine_shocked_2"
   },
   {
-    "id": "story_convergence_1",
+    "id": "heroine_shocked_2",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
     "speaker": "魏娇娇",
-    "text": "不管你怎么说，你的存在本身就是个异常。根据《万象行者实习守则》第17条，我必须对你进行紧急评估。",
-    "next": "story_convergence_2"
+    "text": "等等，你姓什么？",
+    "next": "heroine_shocked_3"
   },
   {
-    "id": "story_convergence_2",
+    "id": "heroine_shocked_3",
     "type": "dialogue",
-    "background": "game/videos/cutscenes/first_choice_scene.mp4",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
+    "speaker": "陈星",
+    "text": "我姓陈，叫陈星。",
+    "next": "heroine_shocked_4"
+  },
+  {
+    "id": "heroine_shocked_4",
+    "type": "dialogue",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
     "speaker": "魏娇娇",
-    "text": "跟我来吧，'新人'。我们的故事，才刚刚开始。",
+    "text": "陈星？！你是陈老先生的孙子？他是我们组织的传奇人物！",
+    "next": "heroine_shocked_5"
+  },
+  {
+    "id": "heroine_shocked_5",
+    "type": "dialogue",
+    "background": "game/videos/cg/cg_heroine_ritual_scene.mp4",
+    "speaker": "魏娇娇",
+    "text": "我们必须立刻向总部报告！你可能是我们一直在寻找的关键人物！",
     "next": "act2_transition_1"
   }
 ]

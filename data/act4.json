@@ -10,7 +10,7 @@
     {
         "id": "ai_debriefing_2",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/final_choice_background.mp4",
+        "background": "game/videos/bg/bg_final_choice.mp4",
         "speaker": "魏娇娇",
         "text": "症状？亚里士多德，你什么意思？",
         "next": "ai_debriefing_3"
@@ -18,7 +18,7 @@
     {
         "id": "ai_debriefing_3",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/final_choice_background.mp4",
+        "background": "game/videos/bg/bg_final_choice.mp4",
         "speaker": "AI亚里士多德",
         "text": "这些'蚀影体'，这些被扭曲的故事，都源于一个更深层的存在——一个以制造冲突、放大偏见、将一切有意义的叙事都拆解为无用碎片的'混沌算法'。",
         "next": "ai_debriefing_4"
@@ -26,7 +26,7 @@
     {
         "id": "ai_debriefing_4",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/final_choice_background.mp4",
+        "background": "game/videos/bg/bg_final_choice.mp4",
         "speaker": "AI亚里士多德",
         "text": "更重要的是，陈星，你的存在已经惊动了'监察局'。",
         "next": "bureau_warning_1"
@@ -42,7 +42,7 @@
     {
         "id": "bureau_warning_2",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/bureau_warning_background.mp4",
+        "background": "game/videos/bg/bg_bureau_warning.mp4",
         "speaker": "AI亚里士多德",
         "text": "对他们而言，你这种能随意调用不同'故事原型'的'野生行者'，是最大的不稳定因素。他们会来'修正'你。",
         "next": "heroine_comfort_1"
@@ -50,7 +50,7 @@
     {
         "id": "heroine_comfort_1",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/bureau_warning_background.mp4",
+        "background": "game/videos/bg/bg_bureau_warning.mp4",
         "speaker": "魏娇娇",
         "text": "(紧紧抓住你的手) 我不会让他们伤害你的！陈星，现在你必须做出选择。这不仅是我们的未来，也是你选择要守护一个怎样的世界。",
         "next": "final_choice"
@@ -58,7 +58,7 @@
     {
         "id": "final_choice",
         "type": "choice",
-        "background": "game/videos/backgrounds/final_choice_background.mp4",
+        "background": "game/videos/bg/bg_final_choice.mp4",
         "speaker": "旁白",
         "text": "她的眼神无比坚定。你选择……",
         "choices": [
@@ -83,7 +83,7 @@
     {
         "id": "partnership_ending_2",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/partner_ending_background.mp4",
+        "background": "game/videos/bg/bg_ending_partner.mp4",
         "speaker": "魏娇娇",
         "text": "(眼神有些复杂，但还是点了点头) 我明白了...我会向总部和监察局报告。欢迎你，我的搭档。",
         "next": "ending_scene_partnership"
@@ -91,7 +91,7 @@
     {
         "id": "romance_ending",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/final_choice_background.mp4",
+        "background": "game/videos/bg/bg_final_choice.mp4",
         "speaker": "陈星",
         "text": "我选择真相，哪怕它充满混乱。我要和你一起，守护那些不该被抹去的故事。",
         "next": "romance_ending_2"
@@ -107,7 +107,7 @@
     {
         "id": "ending_scene_partnership",
         "type": "narration",
-        "background": "game/videos/backgrounds/partner_ending_background.mp4",
+        "background": "game/videos/bg/bg_ending_partner.mp4",
         "speaker": "旁白",
         "text": "在夕阳的余晖下，两人的身影被拉得很长。无论前路如何，一个属于他们自己的故事，才刚刚开始。",
         "next": "credits_page"
@@ -115,7 +115,7 @@
     {
         "id": "ending_scene_romance",
         "type": "narration",
-        "background": "game/videos/backgrounds/lover_ending_background.mp4",
+        "background": "game/videos/bg/bg_ending_lover.mp4",
         "speaker": "旁白",
         "text": "在夕阳的余晖下，两人的身影被拉得很长。无论前路如何，一个属于他们自己的故事，才刚刚开始。",
         "next": "credits_page"
