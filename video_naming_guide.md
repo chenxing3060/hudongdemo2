@@ -1,48 +1,24 @@
-# 视频文件命名规范指南
+# 视频文件命名与分类规范
 
-## 当前问题
-- `8月13日 (2).mp4` 文件命名不符合项目规范
-- 包含中文字符和特殊符号，可能影响跨平台兼容性
+为了保持项目结构的清晰和可维护性，所有视频文件都应遵循以下规范进行命名和分类。
 
-## 建议的命名规范
+## 目录结构
 
-### 1. 背景视频 (backgrounds/)
-```
-dream_prologue.mp4          -> 保持不变
-dream_sludge_floating.mp4   -> 保持不变
-eva_route_background.mp4    -> 保持不变
-heroine_ritual_background.mp4 -> 保持不变
-8月13日 (2).mp4            -> battle_aftermath_background.mp4
-```
+所有视频文件都存放在 `game/videos/` 目录下，并根据其用途分为三个子目录：
 
-### 2. 过场视频 (cutscenes/)
-```
-act2_intro.mp4              -> 保持不变
-ai_and_truth.mp4            -> 保持不变
-awakening_and_partnership.mp4 -> 保持不变
-dva_route_main_cg.mp4       -> 保持不变
-eva_route_lance_of_longinus.mp4 -> 保持不变
-first_choice_scene.mp4      -> 保持不变
-heroine_cute_moment.mp4     -> 保持不变
-heroine_notices.mp4         -> 保持不变
-heroine_restart_and_notice.mp4 -> 保持不变
-male_intro.mp4              -> 保持不变
-male_intro_34.mp4           -> 保持不变
-male_observation.mp4        -> 保持不变
-male_observes_heroine.mp4   -> 保持不变
-opening.mp4                 -> 保持不变
-saber_route_excalibur_cutscene.mp4 -> 保持不变
-saber_route_main_cg.mp4     -> 保持不变
-```
+- `game/videos/bg/`: 用于存放循环播放的 **背景视频**。这些视频通常作为场景的动态背景。
+- `game/videos/cg/`: 用于存放 **过场动画 (Cutscene/CG)**。这些是推动剧情发展的、非循环的全屏视频。
+- `game/videos/ui/`: 用于存放构成 **用户界面** 一部分的视频，例如主菜单的动态背景。
 
-## 命名规则
-1. 使用英文和下划线
-2. 描述性命名，便于理解用途
-3. 按功能分类：background_, cutscene_, route_, battle_等前缀
-4. 避免特殊字符和空格
+## 命名约定
 
-## 重命名建议
-将 `8月13日 (2).mp4` 重命名为 `battle_aftermath_background.mp4`
-- 符合英文命名规范
-- 描述了视频用途（战斗后的背景）
-- 与其他文件命名风格一致
+文件名应清晰地反映视频内容，并遵循以下格式：
+
+- **背景 (bg):** `bg_[场景描述].mp4`
+  - 示例: `bg_school_day.mp4`, `bg_final_choice.mp4`
+- **过场动画 (cg):** `cg_[剧情/角色]_[动作/事件].mp4`
+  - 示例: `cg_act1_intro.mp4`, `cg_heroine_notices.mp4`, `cg_dva_climax.mp4`
+- **界面 (ui):** `ui_[界面元素].mp4`
+  - 示例: `ui_opening.mp4`
+
+遵循此规范有助于快速定位和理解每个视频文件的作用。

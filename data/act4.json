@@ -2,7 +2,7 @@
     {
         "id": "ai_debriefing_1",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/final_choice_background.mp4",
+        "background": "game/videos/bg/bg_final_choice.mp4",
         "speaker": "AI亚里士多德",
         "text": "干得不错。但不要高兴得太早。你们解决的，只是一个症状。",
         "next": "ai_debriefing_2"
@@ -34,7 +34,7 @@
     {
         "id": "bureau_warning_1",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/bureau_warning_background.mp4",
+        "background": "game/videos/bg/bg_bureau_warning.mp4",
         "speaker": "魏娇娇",
         "text": "监察局？！那群为了'绝对稳定'，连善意的故事都要'格式化'的家伙？",
         "next": "bureau_warning_2"
@@ -75,7 +75,7 @@
     {
         "id": "partnership_ending",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/partner_ending_background.mp4",
+        "background": "game/videos/bg/bg_ending_partner.mp4",
         "speaker": "陈星",
         "text": "我相信秩序。我会加入你们，在规则内守护一个稳定的世界。",
         "next": "partnership_ending_2"
@@ -99,7 +99,7 @@
     {
         "id": "romance_ending_2",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/lover_ending_background.mp4",
+        "background": "game/videos/bg/bg_ending_lover.mp4",
         "speaker": "魏娇娇",
         "text": "(眼中闪烁着光芒) 我就知道！这或许是一条更艰难的路...但只要和你在一起，我就无所畏惧！",
         "next": "ending_scene_romance"

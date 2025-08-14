@@ -46,9 +46,11 @@ class GameController {
         const isAutoPlay = this.stateManager.toggleAutoPlay();
         this.uiManager.updateAutoplayIndicator(isAutoPlay);
         
-        // 如果刚开启自动播放，则立即触发下一句
-        if (isAutoPlay) {
-            this.scenePlayer.nextDialogue(false); // 程序化调用
+        // 如果刚开启自动播放，并且当前有场景，则立即触发下一句
+        if (isAutoPlay && this.scenePlayer.currentScene && this.scenePlayer.currentScene.next) {
+            console.log('自动播放已开启，立即播放下一场景');
+            // 直接调用 onDialogueComplete 来触发自动播放逻辑
+            this.scenePlayer.onDialogueComplete(this.scenePlayer.currentScene);
         }
     }
 

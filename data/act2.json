@@ -2,7 +2,7 @@
     {
         "id": "act2_transition_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/act2_intro.mp4",
+        "background": "game/videos/cg/cg_act2_intro.mp4",
         "speaker": "魏娇娇",
         "text": "情况紧急！我感应到了强烈的'模因污染'，必须立刻召唤'万象法典'建立防护圈境！",
         "next": "act2_transition_2"
@@ -58,7 +58,7 @@
     {
         "id": "ai_voice_1_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/ai_and_truth.mp4",
+        "background": "game/videos/cg/cg_ai_truth.mp4",
         "speaker": "AI亚里士多德",
         "text": "检测到新的万象行者。验证完成。欢迎，陈星，你的祖父是我们的老朋友。",
         "next": "ai_voice_2_1"
@@ -114,7 +114,7 @@
     {
         "id": "heroine_mission_explanation_1",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/awakening_and_partnership.mp4",
+        "background": "game/videos/cg/cg_awakening_partnership.mp4",
         "speaker": "魏娇娇",
         "text": "没错！我们就是故事的守护者！虽然我还是新手……",
         "next": "walker_awakening_1"
@@ -165,6 +165,6 @@
         "background": "game/videos/cutscenes/awakening_and_partnership.mp4",
         "speaker": "魏娇娇",
         "text": "太好了！我们一定会成为最棒的搭档！",
-        "next": "act3_transition_1"
+        "next": "act3_start"
     }
 ]

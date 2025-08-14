@@ -1,169 +1,68 @@
 [
     {
-        "id": "act3_transition_1",
-        "type": "dialogue",
-        "background": "game/videos/backgrounds/dream_sludge_floating.mp4",
-        "speaker": "魏娇娇",
-        "text": "警告！前方高能反应！一个'故事'被污染了，它正在变成一个'蚀影体'——一堆充满了恶意、断章取义的碎片化信息！",
-        "next": "battle_scene_intro_1"
+        "id": "act3_start",
+        "type": "narration",
+        "background": "game/videos/bg/bg_dream_sludge.mp4",
+        "text": "你感觉自己的意识穿过了无数层叠的'故事'碎片，最终来到了三条清晰的道路前。",
+        "next": "final_route_choice"
     },
     {
-        "id": "battle_scene_intro_1",
-        "type": "dialogue",
-        "background": "game/videos/backgrounds/dream_sludge_floating.mp4",
-        "speaker": "魏娇娇",
-        "text": "要对抗这种信息污染，我们必须用一个更强大的'故事原型'去覆盖它！你选择哪种'哲学'来战斗？",
-        "next": "battle_style_choice"
-    },
-    {
-        "id": "battle_style_choice",
+        "id": "final_route_choice",
         "type": "choice",
-        "background": "game/videos/backgrounds/dream_sludge_floating.mp4",
-        "speaker": "旁白",
-        "text": "面对由谎言和碎片构成的敌人，你选择用何种信念对抗？",
-        "choices": [
-            {
-                "text": "用内心的真实抵御外界的喧嚣。——EVA",
-                "next": "eva_route_battle_1"
-            },
-            {
-                "text": "用不变的理想斩断扭曲的现实。——Saber",
-                "next": "saber_route_battle_1"
-            },
-            {
-                "text": "用解构的玩法战胜既定的规则。——D.Va",
-                "next": "dva_route_battle_1"
-            }
-        ]
-    },
-    {
-        "id": "eva_route_battle_1",
-        "type": "dialogue",
-        "background": "game/videos/backgrounds/eva_route_background.mp4",
+        "background": "game/videos/bg/bg_final_choice.mp4",
         "speaker": "魏娇娇",
-        "text": "(眼神变得空洞) '原型'同步...Rei Ayanami。展开'心之壁'(AT Field)，拒绝一切虚假信息的侵蚀。",
-        "next": "eva_route_battle_2"
+        "text": "选择吧，陈星。我们要进入哪个'故事'的核心，去面对最后的真相？",
+        "choices": [{
+            "text": "进入EVA路线：直面'故事'残响",
+            "next": "eva_route_intro"
+        }, {
+            "text": "进入Saber路线：回应英雄召唤",
+            "next": "saber_route_intro"
+        }, {
+            "text": "进入D.Va路线：执行战术行动",
+            "next": "dva_route_intro"
+        }]
     },
     {
-        "id": "eva_route_battle_2",
-        "type": "dialogue",
-        "background": "game/videos/backgrounds/eva_route_background.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然变回自己，慌张地) 哇！这个同步率好高！感觉自己快要没有感情了！不过...只要微笑就好了，对吗？",
-        "next": "eva_route_battle_3"
-    },
-    {
-        "id": "eva_route_battle_3",
-        "type": "dialogue",
-        "background": "game/videos/backgrounds/eva_route_background.mp4",
-        "speaker": "陈星",
-        "text": "它的攻击就是那些恶意的弹幕和评论！娇娇，相信你的心，用你的AT力场挡住它们！",
-        "next": "eva_route_battle_4"
-    },
-    {
-        "id": "eva_route_battle_4",
-        "type": "dialogue",
-        "background": "game/videos/backgrounds/eva_route_background.mp4",
-        "speaker": "魏娇娇",
-        "text": "(再次进入状态，眼神坚定) 命令确认。朗基努斯之枪，再构成。以真实，击穿虚伪。",
-        "next": "eva_route_video_1"
-    },
-    {
-        "id": "eva_route_video_1",
+        "id": "eva_route_intro",
         "type": "video",
-        "video": "game/videos/cutscenes/eva_route_lance_of_longinus.mp4",
-        "next": "battle_victory_1"
+        "video": "game/videos/bg/bg_eva_route.mp4",
+        "next": "eva_route_main_cg"
     },
     {
-        "id": "saber_route_battle_1",
+        "id": "eva_route_main_cg",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/saber_route_main_cg.mp4",
+        "background": "game/videos/cg/cg_eva_climax.mp4",
         "speaker": "魏娇娇",
-        "text": "(气质变得庄严，手握光剑) Servant Saber，遵从召唤而来。我将以我的理想，斩断一切歪曲的言论！",
-        "next": "saber_route_battle_2"
+        "text": "我们成功了！真相终于被守护了。",
+        "next": "ai_debriefing_1"
     },
     {
-        "id": "saber_route_battle_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/saber_route_main_cg.mp4",
-        "speaker": "魏娇娇",
-        "text": "(突然变回自己，有点不好意思) 那个...我的剑术还不是很熟练，万一砍歪了你可不许笑我！",
-        "next": "saber_route_battle_3"
-    },
-    {
-        "id": "saber_route_battle_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/saber_route_main_cg.mp4",
-        "speaker": "陈星",
-        "text": "它的谎言正在实体化！娇娇，用你守护的信念，展现真正的'骑士道'！",
-        "next": "saber_route_battle_4"
-    },
-    {
-        "id": "saber_route_battle_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/saber_route_main_cg.mp4",
-        "speaker": "魏娇娇",
-        "text": "(眼神变得锐利) 我明白了！我的誓言就是守护真相！Excalibur！",
-        "next": "saber_route_excalibur_cutscene"
-    },
-    {
-        "id": "saber_route_excalibur_cutscene",
+        "id": "saber_route_intro",
         "type": "video",
-        "video": "game/videos/cutscenes/saber_route_excalibur_cutscene.mp4",
-        "next": "battle_victory_1"
+        "video": "game/videos/cg/cg_saber_intro.mp4",
+        "next": "saber_route_main_cg"
     },
     {
-        "id": "dva_route_battle_1",
+        "id": "saber_route_main_cg",
         "type": "dialogue",
-        "background": "game/videos/cutscenes/dva_route_main_cg.mp4",
+        "background": "game/videos/cg/cg_saber_climax.mp4",
         "speaker": "魏娇娇",
-        "text": "(戴上虚拟耳机，语气俏皮) D.Va，上线！管他什么阴谋诡计，当成游戏打就对了！看我操作！",
-        "next": "dva_route_battle_2"
+        "text": "我们成功了！真相终于被守护了。",
+        "next": "ai_debriefing_1"
     },
     {
-        "id": "dva_route_battle_2",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/dva_route_main_cg.mp4",
-        "speaker": "魏娇娇",
-        "text": "(小声嘀咕) 嘿，这不比开着直播打排位刺激多了？不过...输了应该不会掉分吧？",
-        "next": "dva_route_battle_3"
-    },
-    {
-        "id": "dva_route_battle_3",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/dva_route_main_cg.mp4",
-        "speaker": "陈星",
-        "text": "它在用'404'屏障防御！娇娇，用你的'防御矩阵'吸收伤害，找到它的核心代码！",
-        "next": "dva_route_battle_4"
-    },
-    {
-        "id": "dva_route_battle_4",
-        "type": "dialogue",
-        "background": "game/videos/cutscenes/dva_route_main_cg.mp4",
-        "speaker": "魏娇娇",
-        "text": "收到！正在积攒最终技能！Nerf this！(游戏结束！) 爱你哟~",
-        "next": "dva_route_nerf_this_cutscene"
-    },
-    {
-        "id": "dva_route_nerf_this_cutscene",
+        "id": "dva_route_intro",
         "type": "video",
-        "video": "game/videos/cutscenes/dva_route_nerf_this_cutscene.mp4",
-        "next": "battle_victory_1"
+        "video": "game/videos/cg/cg_dva_intro.mp4",
+        "next": "dva_route_main_cg"
     },
     {
-        "id": "battle_victory_1",
+        "id": "dva_route_main_cg",
         "type": "dialogue",
-        "background": "game/videos/backgrounds/dream_sludge_floating.mp4",
+        "background": "game/videos/cg/cg_dva_climax.mp4",
         "speaker": "魏娇娇",
-        "text": "呼...净化完成！这个'故事'的真相被还原了！",
-        "next": "battle_victory_2"
-    },
-    {
-        "id": "battle_victory_2",
-        "type": "dialogue",
-        "background": "game/videos/backgrounds/dream_sludge_floating.mp4",
-        "speaker": "魏娇娇",
-        "text": "(兴奋地抱住你) 陈星，我们做到了！我们一起守护了真相！",
+        "text": "我们成功了！真相终于被守护了。",
         "next": "ai_debriefing_1"
     }
 ]

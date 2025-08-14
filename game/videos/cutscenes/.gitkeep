@@ -1,9 +1,0 @@
-# 过场/结局视频目录
-# 用于存放游戏的过场动画和结局视频
-
-## 文件清单（根据CONTENT_INVENTORY.md）
-- start.mp4 - 游戏启动封面视频
-- opening.mp4 - 开始菜单背景视频
-- good_ending.mp4 - 好结局视频
-- neutral_ending.mp4 - 中性结局视频
-- bad_ending.mp4 - 坏结局视频

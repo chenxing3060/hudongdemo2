@@ -3,7 +3,7 @@ class UIManager {
         this.musicManager = musicManager;
         this.codexData = {}; // 用于存储名词解释数据
         this.initializeElements();
-        this.textSpeed = 50; // 默认打字速度
+        this.textSpeed = 30; // 加快打字速度，便于测试自动播放
         this.loadCodexData(); // 初始化时加载名词解释数据
         this.transitionManager = new TransitionManager();
     }
@@ -274,13 +274,20 @@ class UIManager {
     }
 
     // 设置游戏背景
-    setVideoBackground(videoPath) {
+    setVideoBackground(videoPath, playOnce = false) {
         const backgroundElement = this.gameElements.background;
         if (!backgroundElement) return;
 
         const currentVideo = backgroundElement.querySelector('video');
-        // 如果请求的是同一个视频，并且它已暂停，则重新播放
+        
+        // 如果请求的是同一个视频
         if (currentVideo && currentVideo.src.endsWith(videoPath)) {
+            // 如果是特殊视频且已播放完毕，则不执行任何操作，直接返回
+            if (playOnce && currentVideo.ended) {
+                console.log('特殊视频已播放完毕，不再重新播放。');
+                return;
+            }
+            // 如果视频已暂停（适用于循环视频或未播放完的特殊视频），则继续播放
             if (currentVideo.paused) {
                 currentVideo.play().catch(e => console.error('恢复视频播放失败:', e));
             }
@@ -293,7 +300,7 @@ class UIManager {
         
         const video = document.createElement('video');
         video.src = videoPath;
-        video.loop = true;
+        video.loop = !playOnce; // 如果playOnce为true，则不循环
         video.playsInline = true;
         // 使用 MusicManager 的静音状态
         video.muted = this.musicManager.getIsMuted();
@@ -406,8 +413,13 @@ class UIManager {
         const type = () => {
             if (nodeIndex >= nodes.length) {
                 clearInterval(intervalId);
+                console.log('打字机效果完成，调用 onComplete 回调');
                 // 不再由打字机效果控制显示，交由ScenePlayer控制
-                if (onComplete) onComplete();
+                if (onComplete) {
+                    onComplete();
+                } else {
+                    console.warn('onComplete 回调为空');
+                }
                 return;
             }
 
