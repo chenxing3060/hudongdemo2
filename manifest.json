@@ -1,0 +1,21 @@
+{
+  "name": "万象行者",
+  "short_name": "万象行者",
+  "description": "探索隐藏在日常之下的奇异世界，与神秘少女魏娇娇一起守护现实的稳定。",
+  "start_url": "/index.html",
+  "display": "standalone",
+  "background_color": "#0a0a14",
+  "theme_color": "#7e57c2",
+  "icons": [
+    {
+      "src": "game/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "game/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

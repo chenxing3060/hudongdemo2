@@ -56,3 +56,10 @@ yarn.lock
 .env.productionthecodexwalker.zip
 .DS_Store
 game/.DS_Store
+
+# Tencent Cloud EdgeOne
+.env
+.edgeone/*
+!.edgeone/project.json
+.tef_dist/*
+  

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>创建PWA图标</title>
+</head>
+<body>
+    <h1>创建PWA图标</h1>
+    <canvas id="icon192" width="192" height="192"></canvas>
+    <a id="download192" download="icon-192.png">下载192x192图标</a>
+    <br><br>
+    <canvas id="icon512" width="512" height="512"></canvas>
+    <a id="download512" download="icon-512.png">下载512x512图标</a>
+
+    <script>
+        function drawIcon(canvas, size) {
+            const ctx = canvas.getContext('2d');
+            
+            // 背景
+            const gradient = ctx.createLinearGradient(0, 0, size, size);
+            gradient.addColorStop(0, '#0a0a14');
+            gradient.addColorStop(1, '#1a1a2e');
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, size, size);
+            
+            // 外圆
+            ctx.beginPath();
+            ctx.arc(size/2, size/2, size*0.4, 0, Math.PI * 2);
+            ctx.strokeStyle = '#7e57c2';
+            ctx.lineWidth = size * 0.05;
+            ctx.stroke();
+            
+            // 内部符文
+            ctx.font = `bold ${size*0.5}px Arial`;
+            ctx.fillStyle = '#b39ddb';
+            ctx.textAlign = 'center';
+            ctx.textBaseline = 'middle';
+            ctx.fillText('万', size/2, size/2);
+            
+            // 准备下载
+            const link = document.getElementById(`download${size}`);
+            link.href = canvas.toDataURL('image/png');
+        }
+        
+        window.onload = function() {
+            drawIcon(document.getElementById('icon192'), 192);
+            drawIcon(document.getElementById('icon512'), 512);
+        };
+    </script>
+</body>
+</html>
