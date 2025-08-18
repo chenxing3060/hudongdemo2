@@ -62,4 +62,7 @@ game/.DS_Store
 .edgeone/*
 !.edgeone/project.json
 .tef_dist/*
+
+# 大型文件
+zi2ft633
   
