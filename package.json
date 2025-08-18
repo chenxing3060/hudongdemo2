@@ -1,0 +1,31 @@
+{
+  "name": "thecodexwalker",
+  "version": "1.5.0",
+  "description": "万象行者 - The Codex Walker Game",
+  "main": "index.html",
+  "scripts": {
+    "build": "mkdir -p dist && cp -r *.html *.css *.js assets/ videos/ data/ dist/ 2>/dev/null || true",
+    "dev": "python3 -m http.server 8080",
+    "clean": "rm -rf dist",
+    "android:build": "npm run build && npx cap sync android && cd android && ./gradlew assembleDebug",
+    "android:run": "npm run android:build && npx cap run android",
+    "test:mobile": "./scripts/test-mobile.sh",
+    "test:emulator": "./scripts/test-mobile.sh emulator",
+    "test:livereload": "./scripts/test-mobile.sh livereload",
+    "test:chrome": "./scripts/test-mobile.sh chrome",
+    "test:device": "./scripts/test-mobile.sh device",
+    "debug:remote": "./scripts/remote-debug.sh debug",
+    "debug:check": "./scripts/remote-debug.sh check",
+    "debug:install": "./scripts/remote-debug.sh install",
+    "debug:logs": "./scripts/remote-debug.sh logs",
+    "debug:screenshot": "./scripts/remote-debug.sh screenshot"
+  },
+  "dependencies": {
+    "@capacitor/android": "^7.4.2",
+    "@capacitor/core": "^7.4.2"
+  },
+  "devDependencies": {},
+  "keywords": ["game", "pwa", "android", "capacitor"],
+  "author": "万象行者开发团队",
+  "license": "MIT"
+}

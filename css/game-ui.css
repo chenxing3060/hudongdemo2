@@ -1,26 +1,28 @@
 /* 游戏UI样式 */
 
-/* 基础布局 - 9:16比例锁定 */
+/* 基础布局 - 响应式设计 */
 .screen {
     position: fixed !important;
-    top: 50% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    width: 56.25vh !important; /* 9:16比例 */
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
     height: 100vh !important;
-    max-width: 100vw !important;
-    max-height: 177.78vw !important; /* 16:9比例的倒数 */
     z-index: 1;
     background: #000;
     box-sizing: border-box !important;
+    overflow: hidden;
 }
 
-/* 当屏幕宽度不足时，以宽度为准 */
-@media (max-aspect-ratio: 9/16) {
+/* 移动端优化 */
+@media (max-width: 768px) {
     .screen {
+        /* 确保在移动设备上完全填充屏幕 */
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
         width: 100vw !important;
-        height: 177.78vw !important; /* 16:9比例 */
-        max-height: 100vh !important;
+        height: 100vh !important;
+        height: 100dvh !important; /* 动态视口高度，避免地址栏问题 */
     }
 }
 
@@ -60,6 +62,9 @@
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
     animation: slideUp 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* 移动端触摸优化 */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
 }
 
 .dialogue-header {
@@ -198,6 +203,10 @@ body.auto-play-active .next-indicator {
     overflow: hidden;
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    /* 移动端触摸优化 */
+    -webkit-tap-highlight-color: transparent;
+    touch-action: manipulation;
+    min-height: 48px;
 }
 
 .choice-button::before {
@@ -956,8 +965,10 @@ body.auto-play-active .next-indicator {
     
     .choice-button {
         min-width: 280px;
-        padding: 15px 25px;
+        padding: 20px 25px; /* 增加触摸区域 */
         font-size: 1rem;
+        margin: 15px 0; /* 增加按钮间距 */
+        min-height: 56px; /* 确保足够的触摸目标 */
     }
     
     .game-controls {
@@ -1099,15 +1110,25 @@ body.auto-play-active .next-indicator {
         padding: 15px 18px;
     }
     
+    .speaker-name {
+        font-size: 1.1rem;
+        margin-bottom: 8px;
+    }
+    
     .dialogue-text {
-        font-size: 1rem;
-        min-height: 50px;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        min-height: 60px;
+        letter-spacing: 0.2px;
     }
     
     .choice-button {
-        min-width: 250px;
-        padding: 14px 20px;
+        min-width: 100%; /* 在小屏幕上占满宽度 */
+        max-width: 320px;
+        padding: 18px 20px; /* 保持足够的触摸区域 */
         font-size: 0.95rem;
+        margin: 12px auto; /* 居中显示并增加间距 */
+        min-height: 52px; /* 确保足够的触摸目标 */
     }
     
     .game-controls {
@@ -1931,9 +1952,9 @@ body.auto-play-active .next-indicator {
 #video-player video {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    border-radius: 8px;
-    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8);
+    object-fit: cover;
+    border-radius: 0;
+    box-shadow: none;
 }
 
 .video-controls {
@@ -2016,20 +2037,347 @@ body.auto-play-active .next-indicator {
 
 /* 视频播放器响应式设计 */
 @media (max-width: 768px) {
+    #video-player {
+        width: 100vw !important;
+        height: 100vh !important;
+        height: 100dvh !important; /* 动态视口高度，避免地址栏问题 */
+    }
+    
+    #video-player video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
+    .start-video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
     .skip-video-btn {
         bottom: 20px;
         right: 20px;
         padding: 10px 20px;
         font-size: 0.9rem;
     }
+    
+    /* 移动端初始加载界面适配 */
+    #initial-loading {
+        width: 100vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 9999 !important;
+        overflow: hidden !important;
+        background: 
+            radial-gradient(ellipse at center, #0a0a1a 0%, #000 70%),
+            linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+    
+    .codex-background {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 1 !important;
+    }
+    
+    .cognitive-sphere {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 300px !important;
+        height: 300px !important;
+        z-index: 2 !important;
+    }
+    
+    .story-fragments {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 3 !important;
+        pointer-events: none !important;
+    }
+    
+    .fragment {
+        position: absolute !important;
+        font-size: 1.2rem !important;
+        opacity: 0.6 !important;
+    }
+    
+    .fragment-1 { top: 15% !important; left: 20% !important; }
+    .fragment-2 { top: 25% !important; right: 25% !important; }
+    .fragment-3 { top: 65% !important; left: 15% !important; }
+    .fragment-4 { top: 75% !important; right: 20% !important; }
+    .fragment-5 { top: 45% !important; left: 10% !important; }
+    .fragment-6 { top: 55% !important; right: 15% !important; }
+    
+    .loading-content {
+        position: relative !important;
+        z-index: 10 !important;
+        padding: 40px 25px !important;
+        max-width: 95% !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100% !important;
+        text-align: center !important;
+    }
+    
+    .main-title {
+        font-size: 2.5rem !important;
+        white-space: normal !important;
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    .sub-title {
+        font-size: 1.1rem !important;
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    .world-desc {
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    .codex-emblem {
+        width: 100px !important;
+        height: 100px !important;
+        margin: 0 auto 2rem !important;
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    .sphere-ring-1 {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
+    .sphere-ring-2 {
+        width: 200px !important;
+        height: 200px !important;
+    }
+    
+    .sphere-ring-3 {
+        width: 280px !important;
+        height: 280px !important;
+    }
+    
+    .loading-progress {
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    .system-status {
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    #enter-prompt {
+        position: relative !important;
+        z-index: 11 !important;
+    }
 }
 
 @media (max-width: 480px) {
+    #video-player {
+        width: 100vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+    }
+    
+    #video-player video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
+    .start-video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: cover !important;
+    }
+    
     .skip-video-btn {
         bottom: 15px;
         right: 15px;
         padding: 8px 16px;
         font-size: 0.85rem;
+    }
+    
+    /* 移动端初始加载界面适配 */
+    #initial-loading {
+        width: 100vw !important;
+        height: 100vh !important;
+        height: 100dvh !important;
+        position: fixed !important;
+        top: 0 !important;
+        left: 0 !important;
+        z-index: 9999 !important;
+        overflow: hidden !important;
+    }
+    
+    .codex-background {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 1 !important;
+    }
+    
+    .cognitive-sphere {
+        position: absolute !important;
+        top: 50% !important;
+        left: 50% !important;
+        transform: translate(-50%, -50%) !important;
+        width: 250px !important;
+        height: 250px !important;
+        z-index: 2 !important;
+    }
+    
+    .story-fragments {
+        position: absolute !important;
+        top: 0 !important;
+        left: 0 !important;
+        width: 100% !important;
+        height: 100% !important;
+        z-index: 3 !important;
+        pointer-events: none !important;
+    }
+    
+    .fragment {
+        position: absolute !important;
+        font-size: 1.2rem !important;
+        opacity: 0.8 !important;
+        color: #fff !important;
+        text-shadow: 0 0 10px rgba(255, 255, 255, 0.8) !important;
+        z-index: 5 !important;
+        pointer-events: none !important;
+    }
+    
+    .fragment-1 { top: 12% !important; left: 15% !important; }
+    .fragment-2 { top: 22% !important; right: 20% !important; }
+    .fragment-3 { top: 68% !important; left: 12% !important; }
+    .fragment-4 { top: 78% !important; right: 18% !important; }
+    .fragment-5 { top: 42% !important; left: 8% !important; }
+    .fragment-6 { top: 58% !important; right: 12% !important; }
+    
+    .loading-content {
+        position: relative !important;
+        z-index: 10 !important;
+        padding: 30px 20px !important;
+        max-width: 90% !important;
+        margin: 0 auto !important;
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100% !important;
+        text-align: center !important;
+    }
+    
+    .main-title {
+        font-size: 2rem !important;
+        white-space: normal !important;
+        line-height: 1.2 !important;
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    .sub-title {
+        font-size: 1rem !important;
+        margin: 0.3rem 0 !important;
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    .world-desc {
+        font-size: 0.9rem !important;
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    .codex-emblem {
+        width: 80px !important;
+        height: 80px !important;
+        margin: 0 auto 1.5rem !important;
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    .emblem-core {
+        font-size: 1.2rem !important;
+    }
+    
+    .sphere-ring-1 {
+        width: 100px !important;
+        height: 100px !important;
+    }
+    
+    .sphere-ring-2 {
+        width: 170px !important;
+        height: 170px !important;
+    }
+    
+    .sphere-ring-3 {
+        width: 240px !important;
+        height: 240px !important;
+    }
+    
+    .loading-progress {
+        max-width: 100% !important;
+        margin-top: 1.5rem !important;
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    .sync-status {
+        font-size: 0.8rem !important;
+    }
+    
+    .progress-runes {
+        top: -20px !important;
+    }
+    
+    .rune {
+        font-size: 1rem !important;
+    }
+    
+    #loading-text {
+        font-size: 0.9rem !important;
+    }
+    
+    .status-item {
+        font-size: 0.8rem !important;
+    }
+    
+    .system-status {
+        position: relative !important;
+        z-index: 11 !important;
+    }
+    
+    .enter-prompt-text {
+        font-size: 1rem !important;
+    }
+    
+    #enter-prompt {
+        position: relative !important;
+        z-index: 11 !important;
     }
 }
 

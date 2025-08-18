@@ -1,0 +1,18 @@
+{
+  "appId": "com.thecodexwalker.app",
+  "appName": "万象行者",
+  "webDir": "dist",
+  "server": {
+    "url": "http://localhost:8080",
+    "cleartext": true
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 3000,
+      "launchAutoHide": true,
+      "backgroundColor": "#ffffffff",
+      "androidSplashResourceName": "splash",
+      "androidScaleType": "CENTER_CROP"
+    }
+  }
+}

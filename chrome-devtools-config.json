@@ -1,0 +1,80 @@
+{
+  "name": "万象行者移动端调试配置",
+  "description": "Chrome DevTools移动端设备模拟配置",
+  "devices": [
+    {
+      "name": "iPhone 12 Pro",
+      "width": 390,
+      "height": 844,
+      "deviceScaleFactor": 3,
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1",
+      "touch": true,
+      "mobile": true
+    },
+    {
+      "name": "Samsung Galaxy S21",
+      "width": 384,
+      "height": 854,
+      "deviceScaleFactor": 2.75,
+      "userAgent": "Mozilla/5.0 (Linux; Android 11; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+      "touch": true,
+      "mobile": true
+    },
+    {
+      "name": "iPad Air",
+      "width": 820,
+      "height": 1180,
+      "deviceScaleFactor": 2,
+      "userAgent": "Mozilla/5.0 (iPad; CPU OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1",
+      "touch": true,
+      "mobile": true
+    },
+    {
+      "name": "小屏手机 (360x640)",
+      "width": 360,
+      "height": 640,
+      "deviceScaleFactor": 2,
+      "userAgent": "Mozilla/5.0 (Linux; Android 10; SM-A205U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+      "touch": true,
+      "mobile": true
+    },
+    {
+      "name": "中屏手机 (375x667)",
+      "width": 375,
+      "height": 667,
+      "deviceScaleFactor": 2,
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 13_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0 Mobile/15E148 Safari/604.1",
+      "touch": true,
+      "mobile": true
+    },
+    {
+      "name": "大屏手机 (414x896)",
+      "width": 414,
+      "height": 896,
+      "deviceScaleFactor": 3,
+      "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1",
+      "touch": true,
+      "mobile": true
+    }
+  ],
+  "testing_checklist": [
+    "页面布局在不同屏幕尺寸下的适配",
+    "触摸交互响应（点击、滑动、缩放）",
+    "字体大小和可读性",
+    "按钮和链接的点击区域大小",
+    "视频播放和全屏功能",
+    "横竖屏切换适配",
+    "页面加载性能",
+    "网络状态变化处理",
+    "滚动行为和性能",
+    "表单输入体验"
+  ],
+  "debugging_tips": [
+    "使用Console面板查看JavaScript错误",
+    "使用Network面板监控资源加载",
+    "使用Performance面板分析性能问题",
+    "使用Elements面板检查CSS样式",
+    "使用Application面板检查本地存储",
+    "使用Lighthouse进行性能审计"
+  ]
+}

@@ -95,7 +95,7 @@
         <div id="gradient-bg" class="gradient-background"></div>
         
         <!-- 开始菜单视频 -->
-        <video id="start-video" class="start-video" loop playsinline muted>
+        <video id="start-video" class="start-video" autoplay muted loop playsinline preload="auto" webkit-playsinline>
             <source src="game/videos/ui/ui_opening.mp4" type="video/mp4">
             您的浏览器不支持视频播放。
         </video>
@@ -171,9 +171,7 @@
 
     <!-- 视频播放器 -->
     <div id="video-player" class="screen" style="display: none;">
-        <video id="game-video" controls autoplay>
-            <source src="" type="video/mp4">
-            <source src="" type="video/webm">
+        <video id="game-video" playsinline muted preload="auto" webkit-playsinline>
             您的浏览器不支持视频播放。
         </video>
         <div class="video-controls">
@@ -268,6 +266,28 @@
         // 初始化游戏
         document.addEventListener('DOMContentLoaded', () => {
             console.log('游戏初始化完成');
+            
+            // 处理开始菜单视频加载错误
+            const startVideo = document.getElementById('start-video');
+            const gradientBg = document.getElementById('gradient-bg');
+            
+            if (startVideo && gradientBg) {
+                startVideo.addEventListener('error', () => {
+                    console.log('视频加载失败，使用渐变背景');
+                    startVideo.style.display = 'none';
+                    gradientBg.style.display = 'block';
+                });
+                
+                startVideo.addEventListener('loadstart', () => {
+                    console.log('开始加载视频');
+                });
+                
+                startVideo.addEventListener('canplay', () => {
+                    console.log('视频可以播放');
+                    gradientBg.style.display = 'none';
+                    startVideo.style.display = 'block';
+                });
+            }
         });
     </script>
 </body>

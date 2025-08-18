@@ -112,6 +112,24 @@ class UIManager {
             
             callbacks.onNextDialogue();
         });
+        
+        // 添加移动端触摸事件支持
+        this.screens.game?.addEventListener('touchend', (e) => {
+            // 防止触摸事件和点击事件重复触发
+            e.preventDefault();
+            
+            // 如果触摸的是名词解释，则显示弹窗
+            if (e.target.classList.contains('codex-term')) {
+                this.showCodexModal(e.target.dataset.term);
+                return;
+            }
+            // 如果触摸的是智能图标、选项按钮或顶部控制按钮，则不触发下一句
+            if (e.target.closest('.next-indicator, .choice-button, .top-controls')) {
+                return;
+            }
+            
+            callbacks.onNextDialogue();
+        });
 
         // 视频播放器
         document.getElementById('skip-video')?.addEventListener('click', callbacks.onSkipVideo);
@@ -350,10 +368,20 @@ class UIManager {
             const button = document.createElement('button');
             button.className = 'choice-button';
             button.textContent = choice.text;
+            
+            // 添加点击事件
             button.addEventListener('click', () => {
                 container.style.display = 'none';
                 onChoiceSelected(choice, index);
             });
+            
+            // 添加触摸事件支持
+            button.addEventListener('touchend', (e) => {
+                e.preventDefault(); // 防止触摸事件和点击事件重复触发
+                container.style.display = 'none';
+                onChoiceSelected(choice, index);
+            });
+            
             container.appendChild(button);
         });
     }

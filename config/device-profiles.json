@@ -1,0 +1,263 @@
+{
+  "devices": {
+    "phones": {
+      "iphone_12_pro": {
+        "name": "iPhone 12 Pro",
+        "width": 390,
+        "height": 844,
+        "pixelRatio": 3,
+        "userAgent": "Mozilla/5.0 (iPhone; CPU iPhone OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1",
+        "viewport": {
+          "width": 390,
+          "height": 844,
+          "deviceScaleFactor": 3,
+          "isMobile": true,
+          "hasTouch": true
+        }
+      },
+      "samsung_galaxy_s21": {
+        "name": "Samsung Galaxy S21",
+        "width": 384,
+        "height": 854,
+        "pixelRatio": 2.75,
+        "userAgent": "Mozilla/5.0 (Linux; Android 11; SM-G991B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+        "viewport": {
+          "width": 384,
+          "height": 854,
+          "deviceScaleFactor": 2.75,
+          "isMobile": true,
+          "hasTouch": true
+        }
+      },
+      "pixel_6": {
+        "name": "Google Pixel 6",
+        "width": 393,
+        "height": 851,
+        "pixelRatio": 2.75,
+        "userAgent": "Mozilla/5.0 (Linux; Android 12; Pixel 6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+        "viewport": {
+          "width": 393,
+          "height": 851,
+          "deviceScaleFactor": 2.75,
+          "isMobile": true,
+          "hasTouch": true
+        }
+      },
+      "xiaomi_mi_11": {
+        "name": "Xiaomi Mi 11",
+        "width": 393,
+        "height": 873,
+        "pixelRatio": 3,
+        "userAgent": "Mozilla/5.0 (Linux; Android 11; Mi 11) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+        "viewport": {
+          "width": 393,
+          "height": 873,
+          "deviceScaleFactor": 3,
+          "isMobile": true,
+          "hasTouch": true
+        }
+      },
+      "huawei_p40": {
+        "name": "Huawei P40",
+        "width": 360,
+        "height": 780,
+        "pixelRatio": 3,
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; ELS-NX9) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+        "viewport": {
+          "width": 360,
+          "height": 780,
+          "deviceScaleFactor": 3,
+          "isMobile": true,
+          "hasTouch": true
+        }
+      }
+    },
+    "tablets": {
+      "ipad_air": {
+        "name": "iPad Air",
+        "width": 820,
+        "height": 1180,
+        "pixelRatio": 2,
+        "userAgent": "Mozilla/5.0 (iPad; CPU OS 14_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.0 Mobile/15E148 Safari/604.1",
+        "viewport": {
+          "width": 820,
+          "height": 1180,
+          "deviceScaleFactor": 2,
+          "isMobile": true,
+          "hasTouch": true
+        }
+      },
+      "samsung_galaxy_tab_s7": {
+        "name": "Samsung Galaxy Tab S7",
+        "width": 753,
+        "height": 1037,
+        "pixelRatio": 2.625,
+        "userAgent": "Mozilla/5.0 (Linux; Android 11; SM-T870) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Safari/537.36",
+        "viewport": {
+          "width": 753,
+          "height": 1037,
+          "deviceScaleFactor": 2.625,
+          "isMobile": true,
+          "hasTouch": true
+        }
+      }
+    },
+    "generic": {
+      "small_phone": {
+        "name": "小屏手机",
+        "width": 320,
+        "height": 568,
+        "pixelRatio": 2,
+        "userAgent": "Mozilla/5.0 (Linux; Android 9; SM-A102U) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+        "viewport": {
+          "width": 320,
+          "height": 568,
+          "deviceScaleFactor": 2,
+          "isMobile": true,
+          "hasTouch": true
+        }
+      },
+      "medium_phone": {
+        "name": "中屏手机",
+        "width": 375,
+        "height": 667,
+        "pixelRatio": 2,
+        "userAgent": "Mozilla/5.0 (Linux; Android 10; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+        "viewport": {
+          "width": 375,
+          "height": 667,
+          "deviceScaleFactor": 2,
+          "isMobile": true,
+          "hasTouch": true
+        }
+      },
+      "large_phone": {
+        "name": "大屏手机",
+        "width": 414,
+        "height": 896,
+        "pixelRatio": 3,
+        "userAgent": "Mozilla/5.0 (Linux; Android 11; SM-G998B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36",
+        "viewport": {
+          "width": 414,
+          "height": 896,
+          "deviceScaleFactor": 3,
+          "isMobile": true,
+          "hasTouch": true
+        }
+      }
+    }
+  },
+  "testingProfiles": {
+    "performance": {
+      "name": "性能测试",
+      "description": "测试应用在不同设备上的性能表现",
+      "devices": ["small_phone", "medium_phone", "large_phone"],
+      "metrics": [
+        "页面加载时间",
+        "JavaScript执行时间",
+        "内存使用情况",
+        "CPU使用率",
+        "网络请求时间"
+      ]
+    },
+    "compatibility": {
+      "name": "兼容性测试",
+      "description": "测试应用在不同设备和浏览器上的兼容性",
+      "devices": ["iphone_12_pro", "samsung_galaxy_s21", "pixel_6", "xiaomi_mi_11", "huawei_p40"],
+      "testCases": [
+        "页面布局是否正常",
+        "交互功能是否正常",
+        "媒体文件是否能正常播放",
+        "表单提交是否正常",
+        "导航功能是否正常"
+      ]
+    },
+    "responsive": {
+      "name": "响应式测试",
+      "description": "测试应用的响应式设计",
+      "devices": ["small_phone", "medium_phone", "large_phone", "ipad_air", "samsung_galaxy_tab_s7"],
+      "orientations": ["portrait", "landscape"],
+      "testCases": [
+        "不同屏幕尺寸下的布局适配",
+        "横竖屏切换时的布局变化",
+        "文字大小和可读性",
+        "按钮和链接的可点击性",
+        "图片和媒体的缩放"
+      ]
+    },
+    "touch": {
+      "name": "触摸交互测试",
+      "description": "测试触摸交互功能",
+      "devices": ["iphone_12_pro", "samsung_galaxy_s21", "ipad_air"],
+      "testCases": [
+        "点击事件响应",
+        "滑动手势",
+        "双指缩放",
+        "长按操作",
+        "多点触控"
+      ]
+    }
+  },
+  "networkProfiles": {
+    "wifi": {
+      "name": "WiFi",
+      "downloadThroughput": 10000000,
+      "uploadThroughput": 5000000,
+      "latency": 20
+    },
+    "4g": {
+      "name": "4G",
+      "downloadThroughput": 4000000,
+      "uploadThroughput": 1000000,
+      "latency": 100
+    },
+    "3g": {
+      "name": "3G",
+      "downloadThroughput": 1500000,
+      "uploadThroughput": 750000,
+      "latency": 300
+    },
+    "slow_3g": {
+      "name": "慢速3G",
+      "downloadThroughput": 500000,
+      "uploadThroughput": 250000,
+      "latency": 2000
+    },
+    "offline": {
+      "name": "离线",
+      "downloadThroughput": 0,
+      "uploadThroughput": 0,
+      "latency": 0
+    }
+  },
+  "testingChecklist": {
+    "visual": [
+      "页面布局是否正确",
+      "文字是否清晰可读",
+      "图片是否正常显示",
+      "颜色对比度是否足够",
+      "动画效果是否流畅"
+    ],
+    "functional": [
+      "所有链接是否可点击",
+      "表单是否能正常提交",
+      "搜索功能是否正常",
+      "导航菜单是否正常",
+      "页面跳转是否正确"
+    ],
+    "performance": [
+      "页面加载速度是否合理",
+      "滚动是否流畅",
+      "内存使用是否正常",
+      "CPU使用率是否合理",
+      "电池消耗是否正常"
+    ],
+    "accessibility": [
+      "屏幕阅读器兼容性",
+      "键盘导航支持",
+      "颜色对比度",
+      "字体大小调节",
+      "语音控制支持"
+    ]
+  }
+}

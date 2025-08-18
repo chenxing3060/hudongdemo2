@@ -63,6 +63,23 @@ game/.DS_Store
 !.edgeone/project.json
 .tef_dist/*
 
+# APK文件和Android构建文件
+*.apk
+*.aab
+android/app/build/
+android/build/
+android/.gradle/
+android/app/release/
+android/app/debug/
+
+# Capacitor相关
+android/app/src/main/assets/public/
+ios/App/App/public/
+
+# 构建脚本生成的文件
+*.sh.log
+build-*.log
+
 # 大型文件
 zi2ft633
   

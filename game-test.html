@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏功能测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+        .status {
+            padding: 5px 10px;
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+        .success { background: #2d5a2d; }
+        .error { background: #5a2d2d; }
+        .warning { background: #5a5a2d; }
+        button {
+            background: #4a4a4a;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #6a6a6a;
+        }
+    </style>
+</head>
+<body>
+    <h1>万象行者 - 游戏功能测试</h1>
+    
+    <div class="test-section">
+        <h2>资源加载测试</h2>
+        <div id="resource-status"></div>
+        <button onclick="testResources()">测试资源加载</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>JavaScript模块测试</h2>
+        <div id="js-status"></div>
+        <button onclick="testJavaScript()">测试JavaScript模块</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>视频测试</h2>
+        <div id="video-status"></div>
+        <button onclick="testVideo()">测试视频加载</button>
+        <video id="test-video" width="320" height="240" controls style="display:none;">
+            <source src="game/videos/ui/ui_opening.mp4" type="video/mp4">
+        </video>
+    </div>
+    
+    <div class="test-section">
+        <h2>数据文件测试</h2>
+        <div id="data-status"></div>
+        <button onclick="testDataFiles()">测试数据文件</button>
+    </div>
+    
+    <script>
+        function addStatus(containerId, message, type = 'success') {
+            const container = document.getElementById(containerId);
+            const div = document.createElement('div');
+            div.className = `status ${type}`;
+            div.textContent = message;
+            container.appendChild(div);
+        }
+        
+        function clearStatus(containerId) {
+            document.getElementById(containerId).innerHTML = '';
+        }
+        
+        async function testResources() {
+            clearStatus('resource-status');
+            addStatus('resource-status', '开始测试资源加载...', 'warning');
+            
+            const resources = [
+                'css/style.css',
+                'js/GameController.js',
+                'js/UIManager.js',
+                'manifest.json'
+            ];
+            
+            for (const resource of resources) {
+                try {
+                    const response = await fetch(resource);
+                    if (response.ok) {
+                        addStatus('resource-status', `✓ ${resource} - 加载成功`);
+                    } else {
+                        addStatus('resource-status', `✗ ${resource} - 状态码: ${response.status}`, 'error');
+                    }
+                } catch (error) {
+                    addStatus('resource-status', `✗ ${resource} - 错误: ${error.message}`, 'error');
+                }
+            }
+        }
+        
+        function testJavaScript() {
+            clearStatus('js-status');
+            addStatus('js-status', '开始测试JavaScript模块...', 'warning');
+            
+            const scripts = [
+                'js/GameStateManager.js',
+                'js/RouteManager.js',
+                'js/UIManager.js',
+                'js/GameController.js'
+            ];
+            
+            scripts.forEach(script => {
+                const scriptElement = document.createElement('script');
+                scriptElement.src = script;
+                scriptElement.onload = () => {
+                    addStatus('js-status', `✓ ${script} - 加载成功`);
+                };
+                scriptElement.onerror = () => {
+                    addStatus('js-status', `✗ ${script} - 加载失败`, 'error');
+                };
+                document.head.appendChild(scriptElement);
+            });
+        }
+        
+        function testVideo() {
+            clearStatus('video-status');
+            addStatus('video-status', '开始测试视频加载...', 'warning');
+            
+            const video = document.getElementById('test-video');
+            video.style.display = 'block';
+            
+            video.addEventListener('loadstart', () => {
+                addStatus('video-status', '视频开始加载...');
+            });
+            
+            video.addEventListener('canplay', () => {
+                addStatus('video-status', '✓ 视频可以播放');
+            });
+            
+            video.addEventListener('error', (e) => {
+                addStatus('video-status', `✗ 视频加载错误: ${e.message || '未知错误'}`, 'error');
+            });
+            
+            video.load();
+        }
+        
+        async function testDataFiles() {
+            clearStatus('data-status');
+            addStatus('data-status', '开始测试数据文件...', 'warning');
+            
+            const dataFiles = [
+                'data/act1.json',
+                'data/act2.json',
+                'data/act3.json',
+                'data/act4.json',
+                'data/codex.json'
+            ];
+            
+            for (const file of dataFiles) {
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const data = await response.json();
+                        addStatus('data-status', `✓ ${file} - 加载成功 (${Object.keys(data).length} 个键)`);
+                    } else {
+                        addStatus('data-status', `✗ ${file} - 状态码: ${response.status}`, 'error');
+                    }
+                } catch (error) {
+                    addStatus('data-status', `✗ ${file} - 错误: ${error.message}`, 'error');
+                }
+            }
+        }
+        
+        // 页面加载完成后自动运行基础测试
+        document.addEventListener('DOMContentLoaded', () => {
+            addStatus('resource-status', '页面加载完成，可以开始测试');
+        });
+    </script>
+</body>
+</html>

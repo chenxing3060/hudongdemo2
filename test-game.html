@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏功能测试</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background: #1a1a1a;
+            color: #fff;
+        }
+        .test-section {
+            margin: 20px 0;
+            padding: 15px;
+            border: 1px solid #333;
+            border-radius: 5px;
+        }
+        .status {
+            padding: 5px 10px;
+            margin: 5px 0;
+            border-radius: 3px;
+        }
+        .success { background: #2d5a2d; }
+        .error { background: #5a2d2d; }
+        .warning { background: #5a5a2d; }
+        button {
+            background: #4a4a4a;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            margin: 5px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        button:hover {
+            background: #6a6a6a;
+        }
+    </style>
+</head>
+<body>
+    <h1>游戏功能测试页面</h1>
+    
+    <div class="test-section">
+        <h2>资源加载测试</h2>
+        <div id="resource-status"></div>
+        <button onclick="testResources()">测试资源加载</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>JavaScript模块测试</h2>
+        <div id="js-status"></div>
+        <button onclick="testJavaScript()">测试JavaScript</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>游戏数据测试</h2>
+        <div id="data-status"></div>
+        <button onclick="testGameData()">测试游戏数据</button>
+    </div>
+    
+    <div class="test-section">
+        <h2>控制台错误检查</h2>
+        <div id="console-status"></div>
+        <button onclick="checkConsoleErrors()">检查控制台错误</button>
+    </div>
+    
+    <script>
+        let consoleErrors = [];
+        
+        // 捕获控制台错误
+        const originalError = console.error;
+        console.error = function(...args) {
+            consoleErrors.push(args.join(' '));
+            originalError.apply(console, args);
+        };
+        
+        function addStatus(containerId, message, type = 'success') {
+            const container = document.getElementById(containerId);
+            const div = document.createElement('div');
+            div.className = `status ${type}`;
+            div.textContent = message;
+            container.appendChild(div);
+        }
+        
+        async function testResources() {
+            const container = document.getElementById('resource-status');
+            container.innerHTML = '';
+            
+            const resources = [
+                '/style.css',
+                '/css/game-ui.css',
+                '/js/GameController.js',
+                '/data/act1.json'
+            ];
+            
+            for (const resource of resources) {
+                try {
+                    const response = await fetch(resource);
+                    if (response.ok) {
+                        addStatus('resource-status', `✓ ${resource} - 加载成功`, 'success');
+                    } else {
+                        addStatus('resource-status', `✗ ${resource} - HTTP ${response.status}`, 'error');
+                    }
+                } catch (error) {
+                    addStatus('resource-status', `✗ ${resource} - 加载失败: ${error.message}`, 'error');
+                }
+            }
+        }
+        
+        function testJavaScript() {
+            const container = document.getElementById('js-status');
+            container.innerHTML = '';
+            
+            // 检查全局对象
+            const checks = [
+                { name: 'GameStateManager', exists: typeof GameStateManager !== 'undefined' },
+                { name: 'GameController', exists: typeof GameController !== 'undefined' },
+                { name: 'UIManager', exists: typeof UIManager !== 'undefined' },
+                { name: 'ScenePlayer', exists: typeof ScenePlayer !== 'undefined' }
+            ];
+            
+            checks.forEach(check => {
+                if (check.exists) {
+                    addStatus('js-status', `✓ ${check.name} - 已加载`, 'success');
+                } else {
+                    addStatus('js-status', `✗ ${check.name} - 未找到`, 'error');
+                }
+            });
+        }
+        
+        async function testGameData() {
+            const container = document.getElementById('data-status');
+            container.innerHTML = '';
+            
+            try {
+                const response = await fetch('/data/act1.json');
+                const data = await response.json();
+                
+                if (data && data.scenes) {
+                    addStatus('data-status', `✓ Act1数据加载成功 - ${Object.keys(data.scenes).length} 个场景`, 'success');
+                } else {
+                    addStatus('data-status', '✗ Act1数据格式错误', 'error');
+                }
+            } catch (error) {
+                addStatus('data-status', `✗ 游戏数据加载失败: ${error.message}`, 'error');
+            }
+        }
+        
+        function checkConsoleErrors() {
+            const container = document.getElementById('console-status');
+            container.innerHTML = '';
+            
+            if (consoleErrors.length === 0) {
+                addStatus('console-status', '✓ 没有发现控制台错误', 'success');
+            } else {
+                addStatus('console-status', `发现 ${consoleErrors.length} 个错误:`, 'warning');
+                consoleErrors.forEach(error => {
+                    addStatus('console-status', `• ${error}`, 'error');
+                });
+            }
+        }
+        
+        // 页面加载完成后自动运行测试
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                testResources();
+                testJavaScript();
+                testGameData();
+                checkConsoleErrors();
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
