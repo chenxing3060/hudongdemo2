@@ -14,6 +14,18 @@
   "categories": ["games", "entertainment"],
   "iarc_rating_id": "e84b072d-71b3-4d3e-86ae-31a8ce4e53b7",
   "prefer_related_applications": false,
+  "related_applications": [
+    {
+      "platform": "play",
+      "url": "https://play.google.com/store/apps/details?id=com.codexwalker.game",
+      "id": "com.codexwalker.game"
+    }
+  ],
+  "scope_extensions": [
+    {
+      "origin": "https://chenxing3060.github.io"
+    }
+  ],
   "launch_handler": {
     "client_mode": "navigate-existing"
   },
